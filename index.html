@@ -18,20 +18,25 @@
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <meta name="theme-color" content="#0b1220">
 
-        <!-- Open Graph (Facebook/LinkedIn) -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sam-ciber-dev.github.io/">
+
+    <!-- Open Graph (Facebook/LinkedIn) -->
         <meta property="og:site_name" content="Samuel Oliveira — Portfólio">
         <meta property="og:title" content="Samuel Oliveira — Cibersegurança | Cybersecurity Portfolio">
         <meta property="og:description" content="Portfólio profissional de Samuel Oliveira (Cybersecurity Portfolio). Penetration testing, análise de vulnerabilidades, segurança web e redes.">
         <meta property="og:type" content="website">
-        <!-- Dica: quando publicar, adicione og:url e og:image absolutas -->
+    <meta property="og:url" content="https://sam-ciber-dev.github.io/">
+    <!-- Opcional: adicione og:image absoluta quando tiver a imagem -->
         <meta property="og:locale" content="pt_PT">
         <meta property="og:locale:alternate" content="en_US">
 
         <!-- Twitter Cards -->
-        <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Samuel Oliveira — Cibersegurança | Cybersecurity Portfolio">
         <meta name="twitter:description" content="Portfólio profissional de Samuel Oliveira (Cybersecurity Portfolio). Penetration testing, análise de vulnerabilidades, segurança web e redes.">
-        <!-- Dica: quando publicar, adicione twitter:image absoluta -->
+    <meta name="twitter:url" content="https://sam-ciber-dev.github.io/">
+    <!-- Opcional: adicione twitter:image absoluta quando tiver a imagem -->
 
         <!-- Performance hints for external assets -->
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -47,7 +52,8 @@
             "@graph": [
                 {
                     "@type": "WebSite",
-                    "@id": "#website",
+                    "@id": "https://sam-ciber-dev.github.io/#website",
+                    "url": "https://sam-ciber-dev.github.io/",
                     "name": "Samuel Oliveira — Portfólio",
                     "inLanguage": ["pt-PT", "en"],
                     "description": "Portfólio profissional de Samuel Oliveira. Cybersecurity portfolio."
@@ -69,7 +75,8 @@
                 {
                     "@type": "WebPage",
                     "name": "Samuel Oliveira — Portfólio",
-                    "isPartOf": { "@id": "#website" },
+                    "isPartOf": { "@id": "https://sam-ciber-dev.github.io/#website" },
+                    "url": "https://sam-ciber-dev.github.io/",
                     "inLanguage": ["pt-PT", "en"],
                     "description": "Portfólio profissional de Samuel Oliveira com foco em cibersegurança (cybersecurity)."
                 }

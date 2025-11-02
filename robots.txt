@@ -2,5 +2,4 @@
 User-agent: *
 Allow: /
 
-# After publishing, replace with your real URL and uncomment the next line:
-# Sitemap: https://<username>.github.io/<repo-name>/sitemap.xml
+Sitemap: https://sam-ciber-dev.github.io/sitemap.xml

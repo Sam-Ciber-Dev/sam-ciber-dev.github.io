@@ -7,14 +7,9 @@
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://SEU-DOMINIO-AQUI/</loc>
+    <loc>https://sam-ciber-dev.github.io/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://SEU-DOMINIO-AQUI/404.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
   </url>
   <!-- Adiciona novas páginas se existirem (ex.: /en/). -->
 </urlset>
