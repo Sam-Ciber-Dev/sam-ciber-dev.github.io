@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjM2I4MmY2IiBkPSJNMTU5LjMgNS40YzcuOC03LjMgMTkuOS03LjIgMjcuNyAuMWMyNy42IDI1LjkgNTMuNSA1My44IDc3LjcgODRjMTEtMTQuNCAyMy41LTMwLjEgMzctNDIuOWM3LjktNy40IDIwLjEtNy40IDI4IC4xYzM0LjYgMzMgNjMuOSA3Ni42IDg0LjUgMTE4YzIwLjMgNDAuOCAzMy44IDgyLjUgMzMuOCAxMTEuOUM0NDggNDA0LjIgMzQ4LjIgNTEyIDIyNCA1MTJDOC40IDUxMiAwIDQwNC4xIDAgMjc2LjVjMC0zOC40IDE3LjgtODUuMyA0NS40LTEzMS43QzczLjMgOTcuNyAxMTIuNyA0OC42IDE1OS4zIDUuNHpNMjI1LjcgNDE2YzI1LjMgMCA0Ny43LTcgNjguOC0yMWM0Mi4xLTI5LjQgNTMuNC04OC4yIDI4LjEtMTM0LjRjLTQuNS05LTE2LTkuNi0yMi41LTJsLTI1LjIgMjkuM2MtNi42IDcuNi0xOC41IDcuNC0yNC43LS41Yy0xNi41LTIxLTQ2LTU4LjUtNjIuOC03OS44Yy02LjMtOC0xOC4zLTguMS0yNC43LS4xYy0zMy44IDQyLjUtNTAuOCA2OS4zLTUwLjggOTkuNEMxMTIgMzc1LjQgMTYyLjYgNDE2IDIyNS43IDQxNnoiLz48L3N2Zz4K" type="image/svg+xml">
+    <link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjM2I4MmY2IiBkPSJNMTU5LjMgNS40YzcuOC03LjMgMTkuOS03LjIgMjcuNyAuMWMyNy42IDI1LjkgNTMuNSA1My44IDc3LjcgODRjMTEtMTQuNCAyMy41LTMwLjEgMzctNDIuOWM3LjktNy40IDIwLjEtNy40IDI4IC4xYzM0LjYgMzMgNjMuOSA3Ni42IDg0LjUgMTE4YzIwLjMgNDAuOCAzMy44IDgyLjUgMzMuOCAxMTEuOUM0NDggNDA0LjIgMzQ4LjIgNTEyIDIyNCA1MTJDOC40IDUxMiAwIDQwNC4xIDAgMjc2LjVjMC0zOC40IDE3LjgtODUuMyA0NS40LTEzMS43QzczLjMgOTcuNyAxMTIuNyA0OC42IDE1OS4zIDUuNHpNMjI1LjcgNDE2YzI1LjMgMCA0Ny43LTcgNjguOC0yMWM0Mi4xLTI5LjQgNTMuNC04OC4yIDI4LjEtMTM0LjRjLTQuNS05LTE2LTkuNi0yMi41LTJsLTI1LjIgMjkuM2MtNi42IDcuNi0xOC41IDcuNC0yNC43LS41Yy0xNi41LTIxLTQ2LTU4LjUtNjIuOC03OS44Yy02LjMtOC0xOC4zLTguMS0yNC43LS4xYy0zMy44IDQyLjUtNTAuOCA2OS4zLTUwLjggOTkuNEMxMTIgMzc1LjQgMTYyLjYgNDE2IDIyNS43IDQxNnoiLz48L3N2Zz4K" type="image/x-icon">
+    
+        <title>Samuel Oliveira — Cibersegurança | Cybersecurity Portfolio</title>
+        <meta name="description" content="Portfólio profissional de Samuel Oliveira (Cybersecurity Portfolio): penetration testing, análise de vulnerabilidades, segurança web e redes.">
+        <meta name="author" content="Samuel Oliveira">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        <meta name="theme-color" content="#0b1220">
+
+        <!-- Open Graph (Facebook/LinkedIn) -->
+        <meta property="og:site_name" content="Samuel Oliveira — Portfólio">
+        <meta property="og:title" content="Samuel Oliveira — Cibersegurança | Cybersecurity Portfolio">
+        <meta property="og:description" content="Portfólio profissional de Samuel Oliveira (Cybersecurity Portfolio). Penetration testing, análise de vulnerabilidades, segurança web e redes.">
+        <meta property="og:type" content="website">
+        <!-- Dica: quando publicar, adicione og:url e og:image absolutas -->
+        <meta property="og:locale" content="pt_PT">
+        <meta property="og:locale:alternate" content="en_US">
+
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Samuel Oliveira — Cibersegurança | Cybersecurity Portfolio">
+        <meta name="twitter:description" content="Portfólio profissional de Samuel Oliveira (Cybersecurity Portfolio). Penetration testing, análise de vulnerabilidades, segurança web e redes.">
+        <!-- Dica: quando publicar, adicione twitter:image absoluta -->
+
+        <!-- Performance hints for external assets -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "#website",
+                    "name": "Samuel Oliveira — Portfólio",
+                    "inLanguage": ["pt-PT", "en"],
+                    "description": "Portfólio profissional de Samuel Oliveira. Cybersecurity portfolio."
+                },
+                {
+                    "@type": "Person",
+                    "name": "Samuel Oliveira",
+                    "jobTitle": ["Estudante de Cibersegurança", "Cybersecurity Enthusiast"],
+                    "email": "mailto:sam.oliveira.dev@gmail.com",
+                    "sameAs": [
+                        "https://www.linkedin.com/in/jos%C3%A9-samuel-oliveira-367299377/",
+                        "https://github.com/Sam-Ciber-Dev"
+                    ],
+                    "knowsAbout": [
+                        "Cibersegurança", "Cybersecurity", "Pentesting", "Análise de vulnerabilidades",
+                        "Red Teaming", "Blue Teaming", "OSINT", "Python", "JavaScript", "Node.js"
+                    ]
+                },
+                {
+                    "@type": "WebPage",
+                    "name": "Samuel Oliveira — Portfólio",
+                    "isPartOf": { "@id": "#website" },
+                    "inLanguage": ["pt-PT", "en"],
+                    "description": "Portfólio profissional de Samuel Oliveira com foco em cibersegurança (cybersecurity)."
+                }
+            ]
+        }
+        </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#home" class="logo"><i class="fas fa-fire" style="margin-right: 0.5rem;"></i>Ph0enix</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#experience" class="nav-link">Experiência</a></li>
+                <li><a href="#skills" class="nav-link">Competências</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h1>Samuel Oliveira</h1>
+            <p class="hero-subtitle"></p>
+            <p class="hero-description">
+                Profissional dedicado à proteção de sistemas e dados, com experiência em penetration testing, 
+                análise de vulnerabilidades e implementação de soluções de segurança robustas.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Contactar
+                </a>
+                <a href="CV/Jose_Oliveira_CV_publico.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="Abrir CV em nova aba (PDF)">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title fade-in">Sobre Mim</h2>
+        <div class="about-content fade-in">
+            <div class="about-image">
+                <i class="fas fa-user-secret"></i>
+            </div>
+            <div class="about-text">
+                <p>
+                    Eu sempre tive uma paixão enorme pela informática. Desde muito jovem sempre tive aquela curiosidade de perceber como as coisas funcionavam por trás dos ecrãs, e isso ao longo do tempo levou-me a explorar diversas áreas da informática, programação, gestão, redes, entre outras.
+                </p>
+                <p>
+                    Mas foi na área de cibersegurança que eu realmente encontrei o meu lugar. Eu sempre fui uma pessoa que gosta de ajudar as outras pessoas, e isso é o que mais me motiva a continuar a aprender nesta área. Proteger dados, prevenir ataques e garantir que toda a gente está seguro no mundo digital.
+                </p>
+                <p>
+                    Estou recentemente a estudar mais sobre esta área, e faço questão de me manter atualizado sobre tudo acerca dela. Eu gostaria muito de um dia poder trabalhar como profissional de cibersegurança e continuar a crescer, tanto a nível técnico como pessoa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2 class="section-title fade-in">Experiência Profissional</h2>
+        <div class="timeline fade-in">
+            <div class="timeline-item">
+                <div class="timeline-date">2024 (3 meses)</div>
+                <h3 class="timeline-title">Estágio em desenvolvimento de software e base de dados </h3>
+                <div class="timeline-company">Mindforge Tech Solutions, Lda</div>
+                <p class="timeline-description">
+                    Desenvolvimento de uma plataforma web para gestão hospitalar, focando na criação e estruturação de bases de dados para armazenamento de informação clínica. Esta experiência proporcionou uma compreensão valiosa sobre a sensibilidade dos dados de saúde e a importância da sua proteção, despertando o interesse pelas questões de privacidade e segurança de dados. O contacto com sistemas que lidam com informação crítica reforçou a necessidade de implementar medidas de proteção adequadas, conhecimento fundamental para a área de cibersegurança. Estágio realizado no âmbito da formação na Escola Profissional de Valongo.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2023 (1 mês)</div>
+                <h3 class="timeline-title">Estágio em desenvolvimento de software</h3>
+                <div class="timeline-company">Mobnor</div>
+                <p class="timeline-description">
+                    Primeiro contacto com o ambiente profissional de desenvolvimento web, responsável pela criação de um website corporativo para a empresa. Durante este estágio, implementei medidas básicas de segurança web, incluindo validação de inputs, proteção CSRF, e otimização SEO (Search Engine Optimization). Esta experiência inicial despertou o meu interesse pela importância da segurança no desenvolvimento web e estabeleceu as bases para o meu percurso na área de cibersegurança. Estágio realizado no âmbito da formação na Escola Profissional de Valongo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section">
+        <h2 class="section-title fade-in">Formação Acadêmica</h2>
+        <div class="timeline fade-in">
+            <div class="timeline-item">
+                <div class="timeline-date">2024 - 2026</div>
+                <h3 class="timeline-title">CTeSP de Cibersegurança</h3>
+                <div class="timeline-company">Instituto Superior de Tecnologias Avançadas do Porto</div>
+                <p class="timeline-description">
+                    Curso Técnico Superior Profissional especializado em cibersegurança, abordando os fundamentos teóricos e práticos da proteção de sistemas informáticos. O programa inclui módulos de segurança de redes, análise de vulnerabilidades, gestão de incidentes de segurança, criptografia aplicada e conformidade com regulamentações. Esta formação está a proporcionar competências específicas e atualizadas para enfrentar os desafios modernos da cibersegurança empresarial.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2021 - 2024</div>
+                <h3 class="timeline-title">Curso de Gestão de Programação de Sistemas Informáticos</h3>
+                <div class="timeline-company">Escola Profissional de Valongo</div>
+                <p class="timeline-description">
+                    Formação técnica profissional focada na programação e gestão de sistemas informáticos. Este curso foi fundamental para estabelecer uma base sólida em desenvolvimento de software, administração de sistemas e gestão de infraestruturas tecnológicas. O conhecimento adquirido sobre arquiteturas de sistemas, redes e programação revelou-se essencial para compreender as vulnerabilidades e vetores de ataque que são explorados em cibersegurança, proporcionando uma perspetiva técnica valiosa sobre como os sistemas podem ser protegidos desde a sua conceção.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Projects Section -->
+    <section class="section">
+        <h2 class="section-title fade-in">Projetos Académicos</h2>
+        <div class="timeline fade-in">
+            <div class="timeline-item">
+                <div class="timeline-date">2025</div>
+                <h3 class="timeline-title">Participação na Joteca</h3>
+                <div class="timeline-company">Instituto Superior de Tecnologias Avançadas do Porto</div>
+                <p class="timeline-description">
+                    A Joteca foi uma organização académica do ISTEC no Porto, onde apresentei o projeto EyeWeb para representantes de empresas e outras instituições de ensino superior. Esta experiência desenvolveu competências de comunicação, trabalho em equipa, e exposição técnica em ambiente profissional, além de fortalecer o interesse por acessibilidade digital e segurança na web.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title fade-in">Competências Técnicas</h2>
+        <div class="skills-grid fade-in">
+            <div class="skill-category">
+                <h3><i class="fas fa-shield-alt"></i> Áreas de Atuação</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Áreas de Atuação</span>
+                    <span class="skill-tag">Análise de Vulnerabilidades</span>
+                    <span class="skill-tag">Forense Digital</span>
+                    <span class="skill-tag">Pentesting</span>
+                    <span class="skill-tag">Crypto</span>
+                    <span class="skill-tag">OSINT</span>
+                    <span class="skill-tag">Red Teaming</span>
+                    <span class="skill-tag">Blue Teaming</span>
+                    <span class="skill-tag">Scripting</span>
+                    <span class="skill-tag">Arquitetura de Redes</span>
+                    <span class="skill-tag">Cloud Security</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Linguagens de Programação e Scripting</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">Visual Basic</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">.sh</span>
+                    <span class="skill-tag">PowerShell</span>
+                    <span class="skill-tag">GML</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-database"></i> Banco de Dados</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">SQL Server</span>
+                    <span class="skill-tag">SQLite</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-file-code"></i> Linguagens e Formatos de Dados</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JSON</span>
+                    <span class="skill-tag">.csv</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Ferramentas de Pentest</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">theHarvester</span>
+                    <span class="skill-tag">Nikto</span>
+                    <span class="skill-tag">Nmap</span>
+                    <span class="skill-tag">Metasploit</span>
+                    <span class="skill-tag">Meterpreter</span>
+                    <span class="skill-tag">Hydra</span>
+                    <span class="skill-tag">Bettercap</span>
+                    <span class="skill-tag">Burp Suite</span>
+                    <span class="skill-tag">Wifite</span>
+                    <span class="skill-tag">SET (Social-Engineer Toolkit)</span>
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">Caido</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-search"></i> Ferramentas Forense</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">ExifTool</span>
+                    <span class="skill-tag">FTK Imager</span>
+                    <span class="skill-tag">Autopsy</span>
+                    <span class="skill-tag">CiberChef</span>
+                    <span class="skill-tag">Binwalk</span>
+                    <span class="skill-tag">Volatility</span>
+                    <span class="skill-tag">Wireshark</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-desktop"></i> Sistemas Operativos</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Ubuntu</span>
+                    <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">Windows</span>
+                    <span class="skill-tag">Whonix</span>
+                    <span class="skill-tag">Parrot OS</span>
+                    <span class="skill-tag">Tails</span>
+                    <span class="skill-tag">BlackArch</span>
+                    <span class="skill-tag">Qubes OS</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-flask"></i> Ambientes de Desenvolvimento e Testes</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Visual Studio 2017</span>
+                    <span class="skill-tag">WAMP</span>
+                    <span class="skill-tag">XAMPP</span>
+                    <span class="skill-tag">Cisco Packet Tracer</span>
+                    <span class="skill-tag">VirtualBox</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Docker Compose</span>
+                    <span class="skill-tag">Docker Swarm</span>
+                    <span class="skill-tag">Docker Hub</span>
+                    <span class="skill-tag">Supabase</span>
+                    <span class="skill-tag">Infinity Free</span>
+                    <span class="skill-tag">Byet.host</span>
+                    <span class="skill-tag">Neocities</span>
+                    <span class="skill-tag">Freenom</span>
+                    <span class="skill-tag">GitHub Pages</span>
+                    <span class="skill-tag">Vercel</span>
+                    <span class="skill-tag">FileZila</span>
+                    <span class="skill-tag">Cyberduck</span>
+                    <span class="skill-tag">Termux</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-cogs"></i> Ferramentas de Produtividade</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">PyCharm</span>
+                    <span class="skill-tag">Warp</span>
+                    <span class="skill-tag">Notepad++</span>
+                    <span class="skill-tag">Microsoft Excel</span>
+                    <span class="skill-tag">Microsoft Word</span>
+                    <span class="skill-tag">Trello</span>
+                    <span class="skill-tag">Microsoft Powerpoint</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section">
+        <h2 class="section-title fade-in">Certificações e Qualificações</h2>
+        <div class="certifications-grid fade-in">
+            <div class="certification-category">
+                <h3><i class="fas fa-graduation-cap"></i> Certificações Académicas</h3>
+                <div class="certification-items">
+                    <a href="#" class="certification-item" onclick="handleCertificationClick('Certificado CTeSP Cibersegurança')">
+                        <div>
+                            <div class="cert-name">CTeSP de Cibersegurança</div>
+                            <div class="cert-status">Instituto Superior de Tecnologias Avançadas do Porto</div>
+                        </div>
+                        <i class="fas fa-external-link-alt cert-icon"></i>
+                    </a>
+                    <a href="certeficados/JoseOliveira_certeficado_GPSI.pdf" class="certification-item" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="Abrir certificado GPSI em nova aba (PDF)">
+                        <div>
+                            <div class="cert-name">Gestão de Programação de Sistemas Informáticos</div>
+                            <div class="cert-status">Escola Profissional de Valongo</div>
+                        </div>
+                        <i class="fas fa-external-link-alt cert-icon"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="certification-category">
+                <h3><i class="fas fa-award"></i> Certificações Profissionais</h3>
+                <div class="certification-items">
+                    <div class="certification-item" style="pointer-events: none; opacity: 0.7;">
+                        <div>
+                            <div class="cert-name">Sem certificados profissionais adquiridos</div>
+                            <div class="cert-status">Em desenvolvimento de competências</div>
+                        </div>
+                        <i class="fas fa-clock cert-icon"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certification-category">
+                <h3><i class="fas fa-users"></i> Certificações de Participação</h3>
+                <div class="certification-items">
+                    <a href="certeficados/JoseOliveira_certeficado_Joteca.pdf" class="certification-item" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="Abrir certificado de participação Joteca em nova aba (PDF)">
+                        <div>
+                            <div class="cert-name">Participação na Joteca</div>
+                            <div class="cert-status">Projeto EyeWeb - ISTEC Porto</div>
+                        </div>
+                        <i class="fas fa-external-link-alt cert-icon"></i>
+                    </a>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title fade-in">Projetos</h2>
+        
+        <!-- Cybersecurity Projects -->
+        <div class="projects-category fade-in">
+            <h3 class="projects-category-title">
+                <i class="fas fa-shield-alt"></i>
+                Projetos de Cibersegurança
+            </h3>
+            <div class="projects-grid">
+                <button class="nav-button" id="cybersecurity-prev-btn" onclick="prevPage('cybersecurity')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-cards-container" id="cybersecurity-projects-container">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+                <button class="nav-button" id="cybersecurity-next-btn" onclick="nextPage('cybersecurity')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Network Projects -->
+        <div class="projects-category fade-in">
+            <h3 class="projects-category-title">
+                <i class="fas fa-network-wired"></i>
+                Projetos de Redes
+            </h3>
+            <div class="projects-grid">
+                <button class="nav-button" id="networking-prev-btn" onclick="prevPage('networking')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-cards-container" id="networking-projects-container">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+                <button class="nav-button" id="networking-next-btn" onclick="nextPage('networking')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Programming Projects -->
+        <div class="projects-category fade-in">
+            <h3 class="projects-category-title">
+                <i class="fas fa-code"></i>
+                Projetos de Programação
+            </h3>
+            <div class="projects-grid">
+                <button class="nav-button" id="programming-prev-btn" onclick="prevPage('programming')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-cards-container" id="programming-projects-container">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+                <button class="nav-button" id="programming-next-btn" onclick="nextPage('programming')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Web Development Projects -->
+        <div class="projects-category fade-in">
+            <h3 class="projects-category-title">
+                <i class="fas fa-globe"></i>
+                Projetos Web & Bootstrap
+            </h3>
+            <div class="projects-grid">
+                <button class="nav-button" id="web-prev-btn" onclick="prevPage('web')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-cards-container" id="web-projects-container">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+                <button class="nav-button" id="web-next-btn" onclick="nextPage('web')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Hardware Projects -->
+        <div class="projects-category fade-in">
+            <h3 class="projects-category-title">
+                <i class="fas fa-microchip"></i>
+                Projetos de Hardware
+            </h3>
+            <div class="projects-grid">
+                <button class="nav-button" id="hardware-prev-btn" onclick="prevPage('hardware')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-cards-container" id="hardware-projects-container">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+                <button class="nav-button" id="hardware-next-btn" onclick="nextPage('hardware')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title fade-in">Contacto</h2>
+        <div class="contact-content fade-in">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p><span class="copy-text" data-copy="sam.oliveira.dev@gmail.com" style="color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                            sam.oliveira.dev@gmail.com
+                            <i class="fas fa-copy" style="font-size: 0.9rem; opacity: 0.7;"></i>
+                        </span></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h3>Telefone</h3>
+                        <p>
+                            <span class="copy-text" data-copy="phone-info" style="color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                                Número de telemóvel
+                                <i class="fas fa-info-circle" style="font-size: 0.9rem; opacity: 0.7;"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://www.linkedin.com/in/jos%C3%A9-samuel-oliveira-367299377/" target="_blank" style="color: var(--text-secondary); text-decoration: none;">Samuel Oliveira</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/Sam-Ciber-Dev" target="_blank" style="color: var(--text-secondary); text-decoration: none;">Sam-Ciber-Dev</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form" action="https://formspree.io/f/xyzpyyrn" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Seu Email</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto</label>
+                    <select id="subject" name="subject" class="form-input" required>
+                        <option value="" disabled selected hidden>Selecione um assunto</option>
+                        <option value="Interesse em Colaboração">Interesse em Colaboração</option>
+                        <option value="Oportunidade de Emprego">Oportunidade de Emprego</option>
+                        <option value="Projeto de Cibersegurança">Realização de um projeto</option>
+                        <option value="Consultoria em Segurança">Consultoria em Segurança</option>
+                        <option value="Parceria Empresarial">Parceria Empresarial</option>
+                        <option value="Pergunta Técnica">Pergunta Técnica</option>
+                        <option value="Feedback sobre Portfólio">Feedback sobre Portfólio</option>
+                        <option value="Outro Assunto">Outro Assunto</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" class="form-input" required></textarea>
+                </div>
+          <!-- Honeypots e armadilhas anti-bot (invisíveis para utilizadores reais) -->
+          <!-- 1) Honeypot reconhecido pelo Formspree (server-side) -->
+          <input type="text" id="hp" name="_gotcha" autocomplete="off" tabindex="-1" aria-hidden="true"
+              style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;" />
+          <!-- 2) Decoy extra comum "website" (muitos bots preenchem) -->
+          <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" aria-hidden="true"
+              style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;" />
+          <!-- 3) Armadilha de tempo: timestamp de carregamento -->
+          <input type="hidden" id="ts" name="ts" value="">
+                <!-- Campos ocultos para configuração do Formspree -->
+                <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/jos%C3%A9-samuel-oliveira-367299377/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Sam-Ciber-Dev" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <span class="copy-text social-link" data-copy="sam.oliveira.dev@gmail.com" style="cursor: pointer;">
+                    <i class="fas fa-envelope"></i>
+                </span>
+            </div>
+            <p>&copy; 2025 Samuel Oliveira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#home" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- External JS -->
+    <script src="index.js" defer></script>
+</body>
+</html>

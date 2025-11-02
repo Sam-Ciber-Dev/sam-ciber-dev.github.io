@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Atualiza <loc> com o teu domínio final após publicar (GitHub Pages ou custom domain).
+  Exemplos:
+    https://sam-ciber-dev.github.io/
+    https://samuel-oliveira.pt/
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://SEU-DOMINIO-AQUI/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://SEU-DOMINIO-AQUI/404.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <!-- Adiciona novas páginas se existirem (ex.: /en/). -->
+</urlset>
