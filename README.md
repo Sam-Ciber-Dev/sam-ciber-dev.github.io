@@ -38,7 +38,7 @@ Static portfolio website hosted on GitHub Pages. Focused on cybersecurity projec
 
 ## License
 
-This repository is licensed under the [**MIT License**](LICENSE) and [**CC BY 4.0**](LICENSE-CC-BY-4.0.md). See LICENSE [**LICENSE**](LICENSE) and [**LICENSE-CC-BY-4.0.md**](LICENSE-CC-BY-4.0.md) for details.
+This repository is licensed under the [**MIT License**](LICENSE) and [**CC BY 4.0**](LICENSE-CC-BY-4.0.md). See [**LICENSE**](LICENSE) and [**LICENSE-CC-BY-4.0.md**](LICENSE-CC-BY-4.0.md) for details.
 
 ## Social Preview
 
