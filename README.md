@@ -23,7 +23,7 @@ Static portfolio website hosted on GitHub Pages. Focused on cybersecurity projec
 - index.css — styles
 - index.js — interactions, validations, anti‑spam
 - robots.txt — indexing rules + Sitemap
-- sitemap.xml — site map for crawlers
+- sitemap.xml — Sitemap for crawlers
 - .nojekyll — serve as pure static site on GitHub Pages
 - CV/ — public (PDF)
 - certeficados/ — certificate PDFs
@@ -34,11 +34,11 @@ Static portfolio website hosted on GitHub Pages. Focused on cybersecurity projec
 - **Email:** sam.oliveira.dev@gmail.com 
 - **Compose in Gmail:** [Gmail](https://mail.google.com/mail/?view=cm&fs=1&to=sam.oliveira.dev@gmail.com&su=Portfolio%20inquiry&body=Hi%20Samuel%2C%0A)
 - **Compose in Outlook:** [Outlook](https://outlook.live.com/owa/?path=/mail/action/compose&to=sam.oliveira.dev@gmail.com&subject=Portfolio%20inquiry&body=Hi%20Samuel%2C%0A)  
-- **LinkedIn:** [linkedin.com/in/jose-samuel-oliveira](https://www.linkedin.com/in/jose-samuel-oliveira)
+- **LinkedIn:** [Samuel Oliveira](https://www.linkedin.com/in/jose-samuel-oliveira)
 
-  ## License
+## License
 
-This repository is licensed under the [**MIT License**](LICENSE). See LICENSE for details.
+This repository is licensed under the [**MIT License**](LICENSE) and [**CC BY 4.0**](LICENSE-CC-BY-4.0.md). See LICENSE [**LICENSE**](LICENSE) and [**LICENSE-CC-BY-4.0.md**](LICENSE-CC-BY-4.0.md) for details.
 
 ## Social Preview
 
