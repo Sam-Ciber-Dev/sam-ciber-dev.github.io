@@ -6,11 +6,11 @@ Static portfolio website hosted on GitHub Pages. Focused on cybersecurity projec
 
 ## Features
 
-   - Advanced SEO: canonical, Open Graph/Twitter tags, structured data (JSON‑LD)
-   - robots.txt + sitemap.xml configured
-   - Anti‑spam contact form (Formspree + honeypot + time‑trap)
-   - CV and certificates open in new tabs (PDF)
-   - Responsive layout and accessible semantics (keyboard‑friendly, semantic HTML)
+- Advanced SEO: canonical, Open Graph/Twitter tags, structured data (JSON‑LD)
+- robots.txt + sitemap.xml configured
+- Anti‑spam contact form (Formspree + honeypot + time‑trap)
+- CV and certificates open in new tabs (PDF)
+- Responsive layout and accessible semantics (keyboard‑friendly, semantic HTML)
 
 ## Tech stack
 
@@ -25,7 +25,7 @@ Static portfolio website hosted on GitHub Pages. Focused on cybersecurity projec
 - robots.txt — indexing rules + Sitemap
 - sitemap.xml — site map for crawlers
 - .nojekyll — serve as pure static site on GitHub Pages
-- CV/ — public résumé (PDF)
+- CV/ — public (PDF)
 - certeficados/ — certificate PDFs
 - assets/ — images (e.g., social preview), optional
 
