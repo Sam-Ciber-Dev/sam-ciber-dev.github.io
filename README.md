@@ -1,5 +1,7 @@
 # Samuel Oliveira Portfolio Website
 
+**Live:** https://sam-ciber-dev.github.io
+
 ## Overview
 
 Static portfolio website hosted on GitHub Pages. Focused on cybersecurity projects, skills, certificates, and a contact form.
@@ -22,8 +24,8 @@ Static portfolio website hosted on GitHub Pages. Focused on cybersecurity projec
 - index.html — main page
 - index.css — styles
 - index.js — interactions, validations, anti‑spam
-- robots.txt — indexing rules + Sitemap
-- sitemap.xml — Sitemap for crawlers
+- robots.txt — indexing rules + sitemap
+- sitemap.xml — sitemap for crawlers
 - .nojekyll — serve as pure static site on GitHub Pages
 - CV/ — public (PDF)
 - certeficados/ — certificate PDFs
@@ -46,7 +48,7 @@ The social preview image used for link cards:
 
 <img src="assets/social-preview.png" alt="Samuel Oliveira Portfolio — Cybersecurity, DevOps, Web, Software" width="640">
 
-## Banners
+## Badjes
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
