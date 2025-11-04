@@ -4,7 +4,7 @@
 
 ## Overview
 
-Static portfolio website hosted on GitHub Pages. Focused on cybersecurity projects, skills, certificates, and a contact form.
+A static portfolio website hosted on GitHub Pages, focused on cybersecurity projects, technical skills, certificates, and a contact form.
 
 ## Features
 
@@ -14,10 +14,57 @@ Static portfolio website hosted on GitHub Pages. Focused on cybersecurity projec
 - CV and certificates open in new tabs (PDF)
 - Responsive layout and accessible semantics (keyboard‑friendly, semantic HTML)
 
-## Tech stack
+## How it works
 
-- HTML5, CSS3, Vanilla JavaScript
-- Formspree (contact backend)
+The site is fully static and client-driven, yet behaves like a small application.  
+All interactions, including the contact form, project rendering, and anti-spam logic, are handled in index.js without external dependencies.
+
+### Contact form
+
+- The form uses Formspree as a lightweight backend.
+- Data is sent via POST with the required fields: name, email, subject, and message.
+- Successful submissions trigger inline confirmation (via Formspree response) or can optionally redirect to a thank-you page.
+- All external links and documents open in a new browser tab to keep navigation frictionless.
+
+### Anti-spam measures
+
+To protect the form from automated spam, several layers are applied:
+
+- Honeypot: hidden _gotcha field must remain empty; bots filling it are discarded.
+- Decoy field: a fake website input acts as a secondary trap for less sophisticated crawlers.
+- Time-trap: a hidden timestamp (ts) is set on load; forms submitted in under a few seconds are flagged or ignored.
+
+These traps reduce automated spam submissions without relying on third-party captchas, preserving accessibility and user privacy.
+
+### Dynamic project rendering
+
+- index.js dynamically generates project cards from a JSON-like dataset: [{ title, description, tags, links }]
+- Projects are grouped by category with simple client-side pagination (previous/next controls per category).
+- Cards are created with accessible semantics and automatically injected into containers by ID.
+
+## Tech details
+
+- **Stack:** HTML5, CSS3, Vanilla JavaScript — no framework or build tools.
+- **Icons:** Font Awesome 6.4.0 (via CDN).
+- **Fonts:** Inter, loaded from Google Fonts.
+- **Forms:** Formspree (serverless email form backend).
+- **Hosting:** GitHub Pages, pure static deployment (.nojekyll ensures no Jekyll processing).
+- **Meta & SEO:** canonical URL, Open Graph and Twitter tags, JSON-LD structured data, sitemap, and robots.txt for crawl control.
+- **Accessibility:** keyboard-friendly navigation, semantic markup, proper labels and focus states.
+
+## Browser support
+
+Designed and tested for modern evergreen browsers, following the “last-two-versions” rule:
+
+- Chrome, Edge, Firefox, Safari, Vivaldi, and Opera GX (Chromium-based).
+- iOS Safari ≥ 12 and latest Chrome/Firefox on Android.
+- Legacy browsers like Internet Explorer are not supported, prioritizing modern standards, security, and smaller code footprint.
+
+## Performance
+
+The site uses a lightweight, no-build architecture optimized for a fast first paint and minimal blocking resources. It preconnects to font and CDN domains to reduce handshake latency, defers all JavaScript to allow early content rendering, and keeps the critical path minimal with no external dependencies. The site follows **Google Lighthouse** best practices for SEO and accessibility; meta tags and structured data are validated via the Rich Results Test.
+
+**Potential next steps:** preload the Inter font, compress images (PNG → WebP), and minify CSS/JS once the site stabilizes.
 
 ## Project structure
 
