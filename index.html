@@ -68,6 +68,10 @@
                     "@type": "Person",
                     "name": "Samuel Oliveira",
                     "jobTitle": ["Estudante de Cibersegurança", "Cybersecurity Enthusiast"],
+                    "alumniOf": {
+                        "@type": "CollegeOrUniversity",
+                        "name": "Instituto Superior de Tecnologias Avançadas do Porto"
+                    },
                     "email": "mailto:sam.oliveira.dev@gmail.com",
                     "sameAs": [
                         "https://www.linkedin.com/in/jos%C3%A9-samuel-oliveira-367299377/",
@@ -93,8 +97,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts (preload + noscript fallback) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    </noscript>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="index.css">
@@ -104,7 +111,7 @@
     <header class="header">
         <nav class="nav">
             <a href="#home" class="logo"><i class="fas fa-fire" style="margin-right: 0.5rem;"></i>Ph0enix</a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Início</a></li>
                 <li><a href="#about" class="nav-link">Sobre</a></li>
                 <li><a href="#experience" class="nav-link">Experiência</a></li>
@@ -112,7 +119,7 @@
                 <li><a href="#projects" class="nav-link">Projetos</a></li>
                 <li><a href="#contact" class="nav-link">Contacto</a></li>
             </ul>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>

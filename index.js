@@ -422,6 +422,7 @@ function openMobileMenu() {
     navMenu.offsetHeight;
     navMenu.classList.add('show');
     navMenu.classList.remove('hide');
+    if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'true');
     const icon = mobileMenuBtn.querySelector('i');
     icon.classList.remove('fa-bars');
     icon.classList.add('fa-times');
@@ -430,6 +431,7 @@ function openMobileMenu() {
 function closeMobileMenu() {
     navMenu.classList.add('hide');
     navMenu.classList.remove('show');
+    if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
     const icon = mobileMenuBtn.querySelector('i');
     icon.classList.remove('fa-times');
     icon.classList.add('fa-bars');
