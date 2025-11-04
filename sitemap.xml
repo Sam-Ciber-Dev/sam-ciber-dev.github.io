@@ -8,8 +8,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sam-ciber-dev.github.io/</loc>
+    <lastmod>2025-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/CV/Jose_Oliveira_CV_publico.pdf</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/certeficados/JoseOliveira_certeficado_GPSI.pdf</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/certeficados/JoseOliveira_certeficado_Joteca.pdf</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <!-- Adiciona novas páginas se existirem (ex.: /en/). -->
 </urlset>
