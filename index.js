@@ -822,7 +822,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Projetos inicializados!');
 
     // ======================
-    // Alt+S: Navegação principal (Início, Sobre, Experiência, Competências, Projetos, Contacto)
+    // Shift+S / Shift+A: Navegação principal (Início, Sobre, Experiência, Competências, Projetos, Contacto)
     // ======================
     (function initPrimarySectionNavigator(){
         const SECTION_IDS = ['home','about','experience','skills','projects','contact'];
@@ -856,11 +856,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         document.addEventListener('keydown', (e)=>{
-            if(!e.altKey) return;
+            // Usa Shift+S para avançar e Shift+A para recuar
+            if(!e.shiftKey) return;
             const active = document.activeElement;
-            if(isInteractive(active)) return; // não interrompe escrita
+            if(isInteractive(active)) return; // não interrompe escrita em inputs
             const key = (e.key || '').toLowerCase();
-            if(key === 's'){
+            if(key === 's') {
                 e.preventDefault();
                 goNext();
             } else if(key === 'a') {
@@ -879,7 +880,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const target = document.getElementById(id);
                 if(target){
-                    // Ajusta índice para refletir a section atual; Alt+S vai para a seguinte e Alt+A para a anterior
+                    // Ajusta índice para refletir a section atual; Shift+S vai para a seguinte e Shift+A para a anterior
                     const idx = SECTION_IDS.indexOf(id);
                     currentIndex = idx;
                     scrollTo(target);
