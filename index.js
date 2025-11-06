@@ -820,6 +820,73 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProjectsPage('web');
     renderProjectsPage('hardware');
     console.log('Projetos inicializados!');
+
+    // ======================
+    // Alt+S: Navegação principal (Início, Sobre, Experiência, Competências, Projetos, Contacto)
+    // ======================
+    (function initPrimarySectionNavigator(){
+        const SECTION_IDS = ['home','about','experience','skills','projects','contact'];
+        const sections = SECTION_IDS.map(id => document.getElementById(id)).filter(Boolean);
+        let currentIndex = -1;
+        const HEADER_OFFSET = 100;
+
+        function isInteractive(el){
+            if(!el) return false;
+            const tag = el.tagName;
+            return ['INPUT','TEXTAREA','SELECT','BUTTON'].includes(tag) || el.isContentEditable;
+        }
+
+        function scrollTo(el){
+            const top = Math.max(0, el.offsetTop - HEADER_OFFSET);
+            window.scrollTo({top, behavior:'smooth'});
+        }
+
+        function goNext(){
+            if(!sections.length) return;
+            currentIndex = (currentIndex + 1) % sections.length;
+            const target = sections[currentIndex];
+            scrollTo(target);
+        }
+
+        function goPrev(){
+            if(!sections.length) return;
+            currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+            const target = sections[currentIndex];
+            scrollTo(target);
+        }
+
+        document.addEventListener('keydown', (e)=>{
+            if(!e.altKey) return;
+            const active = document.activeElement;
+            if(isInteractive(active)) return; // não interrompe escrita
+            const key = (e.key || '').toLowerCase();
+            if(key === 's'){
+                e.preventDefault();
+                goNext();
+            } else if(key === 'a') {
+                e.preventDefault();
+                goPrev();
+            }
+        });
+
+        // Integração opcional com navbar
+        document.querySelectorAll('.nav-link').forEach(link => {
+            const href = link.getAttribute('href');
+            if(!href || !href.startsWith('#')) return;
+            const id = href.slice(1);
+            if(!SECTION_IDS.includes(id)) return; // ignora se não for principal
+            link.addEventListener('click', (e)=>{
+                e.preventDefault();
+                const target = document.getElementById(id);
+                if(target){
+                    // Ajusta índice para refletir a section atual; Alt+S vai para a seguinte e Alt+A para a anterior
+                    const idx = SECTION_IDS.indexOf(id);
+                    currentIndex = idx;
+                    scrollTo(target);
+                }
+            });
+        });
+    })();
 });
 
 let resizeTimeout;
