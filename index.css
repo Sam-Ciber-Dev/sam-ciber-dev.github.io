@@ -44,6 +44,11 @@ button {
     --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     --border-radius: 12px;
     --transition: all 0.3s ease;
+    /* Hero/header safe-offsets to avoid avatar clipping under fixed header */
+    --header-height-desktop: 72px;
+    --header-height-mobile: 60px;
+    --float-amplitude: 10px; /* matches @keyframes float translateY */
+    --hero-safe-offset: calc(var(--header-height-desktop) + var(--float-amplitude) + 8px);
 }
 
 body {
@@ -162,7 +167,9 @@ body.loaded {
     text-align: center;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* keep animated background confined */
+    /* Ensure floating avatar never goes under the fixed header */
+    padding-top: var(--hero-safe-offset);
     /* ISOLAMENTO COMPLETO - evita que o background vaze para outras seções */
     isolation: isolate;
     contain: layout style paint;
@@ -1776,6 +1783,10 @@ textarea.form-input {
     
     .section {
         padding: 2rem 0.5rem;
+    /* Recalculate safe offset for smaller header */
+    :root {
+        --hero-safe-offset: calc(var(--header-height-mobile) + var(--float-amplitude) + 8px);
+    }
     }
     
     .section-title {
