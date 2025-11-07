@@ -601,7 +601,12 @@ body.loaded {
 .projects-grid {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    gap: 4rem; /* Distância consistente entre botões e cards */
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .projects-cards-container {
@@ -1070,6 +1075,13 @@ textarea.form-input {
     .mobile-menu-btn {
         display: none !important;
     }
+    /* Desktop - Layout normal (botões laterais) */
+    .projects-grid { flex-direction: row; }
+    .nav-button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4rem;
+    }
 }
 
 /* Tablet Landscape (1024px e abaixo) */
@@ -1339,52 +1351,26 @@ textarea.form-input {
         gap: 0.75rem;
     }
     
+    /* Mobile & Tablet - Botões abaixo dos cards (CSS-only, sem HTML extra) */
     .projects-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "cards cards"
+            "prev  next";
+        align-items: start;
+        gap: 1.5rem 2.5rem;
     }
-    
     .projects-cards-container {
+        grid-area: cards;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         max-width: 100%;
         margin: 0;
-        order: 1;
-        margin-bottom: 1.5rem;
     }
-    
-    /* Reposicionar os botões */
-    .projects-grid > .nav-button:first-child {
-        order: 2;
-        position: relative;
-        margin-right: 6rem;
-        margin-bottom: 0;
-        display: inline-flex;
-    }
-    
-    .projects-grid > .nav-button:last-child {
-        order: 2;
-        position: relative;
-        margin-left: 6rem;
-        margin-top: -45px; /* Coloca na mesma linha do primeiro botão */
-        margin-bottom: 0;
-        display: inline-flex;
-    }
-    
-    .projects-grid > .nav-button {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-    }
-    
-    .nav-button {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-        position: relative;
-    }
+    .projects-grid > .nav-button:first-child { grid-area: prev; justify-self: end; }
+    .projects-grid > .nav-button:last-child { grid-area: next; justify-self: start; }
+    .nav-button { width: 45px; height: 45px; font-size: 1.1rem; position: static; margin: 0; }
     
     .project-card {
         height: 380px;
@@ -1593,48 +1579,18 @@ textarea.form-input {
     }
     
     .projects-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "cards cards"
+            "prev  next";
+        align-items: start;
+        gap: 1.25rem 2rem;
     }
-    
-    .projects-cards-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        order: 1;
-        margin-bottom: 1.5rem;
-    }
-    
-    /* Reposicionar os botões */
-    .projects-grid > .nav-button:first-child {
-        order: 2;
-        position: relative;
-        margin-right: 4rem;
-        margin-bottom: 0;
-        display: inline-flex;
-    }
-    
-    .projects-grid > .nav-button:last-child {
-        order: 2;
-        position: relative;
-        margin-left: 4rem;
-        margin-top: -40px; /* Coloca na mesma linha do primeiro botão */
-        margin-bottom: 0;
-        display: inline-flex;
-    }
-    
-    .projects-grid > .nav-button {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-    
-    .nav-button {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
+    .projects-cards-container { grid-area: cards; grid-template-columns: 1fr; gap: 1rem; }
+    .projects-grid > .nav-button:first-child { grid-area: prev; justify-self: end; }
+    .projects-grid > .nav-button:last-child { grid-area: next; justify-self: start; }
+    .nav-button { width: 40px; height: 40px; font-size: 1rem; }
     
     .project-card {
         height: 420px;
@@ -1844,34 +1800,19 @@ textarea.form-input {
         line-height: 1.4;
     }
     
-    .projects-cards-container {
-        order: 1;
-        margin-bottom: 1.5rem;
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "cards cards"
+            "prev  next";
+        align-items: start;
+        gap: 1rem 1.5rem;
     }
-    
-    /* Reposicionar os botões */
-    .projects-grid > .nav-button:first-child {
-        order: 2;
-        position: relative;
-        margin-right: 2rem;
-        margin-bottom: 0;
-        display: inline-flex;
-    }
-    
-    .projects-grid > .nav-button:last-child {
-        order: 2;
-        position: relative;
-        margin-left: 2rem;
-        margin-top: -35px; /* Coloca na mesma linha do primeiro botão */
-        margin-bottom: 0;
-        display: inline-flex;
-    }
-    
-    .projects-grid > .nav-button {
-        width: 35px;
-        height: 35px;
-        font-size: 0.9rem;
-    }
+    .projects-cards-container { grid-area: cards; grid-template-columns: 1fr; gap: 1rem; }
+    .projects-grid > .nav-button:first-child { grid-area: prev; justify-self: end; }
+    .projects-grid > .nav-button:last-child { grid-area: next; justify-self: start; }
+    .nav-button { width: 35px; height: 35px; font-size: 0.9rem; }
     
     .btn {
         width: 160px;
