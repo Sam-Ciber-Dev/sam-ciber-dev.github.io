@@ -629,6 +629,48 @@ document.addEventListener('DOMContentLoaded', () => {
             copyToClipboard(textToCopy, message);
         });
     });
+
+    // Tornar ícones da secção Contacto clicáveis (sem alterar HTML)
+    (function initClickableContactIcons(){
+        const items = document.querySelectorAll('#contact .contact-item');
+        if(!items.length) return;
+        const openNew = (url) => window.open(url, '_blank', 'noopener');
+        const activate = (el, handler, label) => {
+            if(!el) return;
+            el.style.cursor = 'pointer';
+            el.setAttribute('role', 'link');
+            if(label) el.setAttribute('aria-label', label);
+            el.setAttribute('tabindex', '0');
+            el.addEventListener('click', handler);
+            el.addEventListener('keydown', (ev)=>{
+                const k = ev.key || ev.code;
+                if(k === 'Enter' || k === ' ' || k === 'Spacebar'){
+                    ev.preventDefault();
+                    handler();
+                }
+            });
+        };
+
+        items.forEach(item => {
+            const iconBox = item.querySelector('.contact-icon');
+            if(!iconBox) return;
+            const has = (sel) => !!iconBox.querySelector(sel);
+            if (has('.fa-envelope')) {
+                const email = 'sam.oliveira.dev@gmail.com';
+                activate(iconBox, ()=>{ window.location.href = `mailto:${email}`; }, 'Enviar email para Samuel');
+            } else if (has('.fa-phone')) {
+                activate(iconBox, ()=>{ showCopyNotification('Para mais informações, entre em contacto por email / Linkdin'); }, 'Informação telefónica sob pedido');
+            } else if (has('.fa-linkedin')) {
+                const link = item.querySelector('a[href*="linkedin.com"]');
+                const href = link ? link.href : 'https://www.linkedin.com/in/jose-samuel-oliveira/';
+                activate(iconBox, ()=> openNew(href), 'Abrir LinkedIn em nova aba');
+            } else if (has('.fa-github')) {
+                const link = item.querySelector('a[href*="github.com"]');
+                const href = link ? link.href : 'https://github.com/Sam-Ciber-Dev';
+                activate(iconBox, ()=> openNew(href), 'Abrir GitHub em nova aba');
+            }
+        });
+    })();
 });
 
 // Função para lidar com cliques nos certificados
