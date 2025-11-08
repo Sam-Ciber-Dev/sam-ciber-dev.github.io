@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--
+  Atualiza <loc> com o teu domínio final após publicar (GitHub Pages ou custom domain).
+  Exemplos:
+    https://sam-ciber-dev.github.io/
+    https://samuel-oliveira.pt/
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://sam-ciber-dev.github.io/</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/CV/Jose_Oliveira_CV_publico.pdf</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/certeficados/JoseOliveira_certeficado_GPSI.pdf</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/certeficados/JoseOliveira_certeficado_Joteca.pdf</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <!-- Adiciona novas páginas se existirem (ex.: /en/). -->
 </urlset>
