@@ -12,6 +12,10 @@ html {
     margin: 0;
     padding: 0;
     width: 100%;
+    /* Remove scroll snapping; keep smooth behavior */
+    overscroll-behavior-y: contain;
+    /* Global anchor offset so sections align correctly below fixed header */
+    scroll-padding-top: var(--header-height-desktop);
 }
 
 /* Mobile optimizations */
@@ -160,7 +164,10 @@ body.loaded {
 
 /* Hero Section */
 .hero {
+    /* Use dynamic viewport units to avoid mobile URL bar causing background seam */
     min-height: 100vh;
+    min-height: 100svh; /* small viewport height (Safari iOS) */
+    min-height: 100dvh; /* dynamic viewport height (modern browsers) */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,11 +175,8 @@ body.loaded {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     position: relative;
     overflow: hidden; /* keep animated background confined */
-    /* Ensure floating avatar never goes under the fixed header */
-    padding-top: var(--hero-safe-offset);
-    /* ISOLAMENTO COMPLETO - evita que o background vaze para outras seções */
-    isolation: isolate;
-    contain: layout style paint;
+    /* Offset handled by avatar margin to avoid extra gap below */
+    /* No scroll snap alignment */
     z-index: 0;
 }
 
@@ -185,6 +189,7 @@ body.loaded {
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%233b82f6" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
     opacity: 0.1;
+    pointer-events: none;
 }
 
 .hero::after {
@@ -200,7 +205,7 @@ body.loaded {
         radial-gradient(1px 1px at 90px 40px, var(--accent-color), transparent),
         radial-gradient(1px 1px at 130px 80px, rgba(59, 130, 246, 0.6), transparent),
         radial-gradient(2px 2px at 160px 30px, var(--accent-color), transparent);
-    background-repeat: repeat;
+    background-repeat: repeat, repeat, repeat, repeat, repeat;
     background-size: 200px 100px, 250px 120px, 180px 90px, 220px 110px, 240px 130px;
     animation: 
         movePoints1 15s linear infinite,
@@ -209,10 +214,9 @@ body.loaded {
         movePoints4 20s linear infinite,
         movePoints5 16s linear infinite;
     opacity: 0.3;
-    z-index: -1;
-    /* CONFINAMENTO TOTAL - mantém animação apenas na seção hero */
+    z-index: 0;
     clip-path: inset(0 0 0 0);
-    contain: strict;
+    contain: paint;
     will-change: transform;
 }
 
@@ -252,7 +256,8 @@ body.loaded {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin: 0 auto 2rem;
+    /* Apply safe offset locally so hero remains exactly 100vh/90vh */
+    margin: var(--hero-safe-offset) auto 2rem;
     background: var(--gradient);
     display: flex;
     align-items: center;
@@ -344,8 +349,11 @@ body.loaded {
     padding-left: 2rem;
     padding-right: 2rem;
     position: relative;
-    z-index: 1;
+    z-index: 2; /* ensure sections sit above hero decorative layer */
     background: var(--primary-color);
+    /* Make section occupy full viewport minus header for consistent layout */
+    min-height: calc(100vh - var(--header-height-desktop));
+    /* No scroll snap alignment */
 }
 
 .section-title {
@@ -1119,6 +1127,9 @@ textarea.form-input {
 
 /* Tablet Portrait (768px e abaixo) */
 @media (max-width: 768px) {
+    /* Override global anchor offset for smaller header height */
+    html { scroll-padding-top: var(--header-height-mobile); }
+    :root { --hero-safe-offset: calc(var(--header-height-mobile) + var(--float-amplitude) + 8px); }
     /* Header/Navigation */
     .header {
         padding: 0.8rem 0;
@@ -1249,7 +1260,8 @@ textarea.form-input {
 
     /* Hero Section */
     .hero {
-        min-height: 90vh;
+        /* Keep full viewport height for the first screen */
+        min-height: 100vh;
     }
     
     .hero-content {
@@ -1296,6 +1308,7 @@ textarea.form-input {
         padding: 3rem 0;
         padding-left: 1rem;
         padding-right: 1rem;
+        min-height: calc(100vh - var(--header-height-mobile));
     }
     
     .section-title {
@@ -1519,6 +1532,9 @@ textarea.form-input {
 
 /* Mobile Large (480px e abaixo) */
 @media (max-width: 480px) {
+    /* Ensure anchor offset uses mobile header height */
+    html { scroll-padding-top: var(--header-height-mobile); }
+    :root { --hero-safe-offset: calc(var(--header-height-mobile) + var(--float-amplitude) + 8px); }
     /* Header */
     .header {
         padding: 0.6rem 0;
@@ -1557,7 +1573,9 @@ textarea.form-input {
     /* Sections */
     .section {
         padding: 2.5rem 0.8rem;
+        min-height: calc(100vh - var(--header-height-mobile));
     }
+    /* Removed per-element scroll-margin-top; global html scroll-padding-top handles offset */
 
     .section-title {
         font-size: 1.8rem;
@@ -1777,17 +1795,18 @@ textarea.form-input {
 
 /* Mobile Small (360px e abaixo) */
 @media (max-width: 360px) {
+    /* Maintain correct anchor offset for very small devices */
+    html { scroll-padding-top: var(--header-height-mobile); }
+    :root { --hero-safe-offset: calc(var(--header-height-mobile) + var(--float-amplitude) + 8px); }
     .hero h1 {
         font-size: 1.8rem;
     }
     
     .section {
         padding: 2rem 0.5rem;
-    /* Recalculate safe offset for smaller header */
-    :root {
-        --hero-safe-offset: calc(var(--header-height-mobile) + var(--float-amplitude) + 8px);
+        min-height: calc(100vh - var(--header-height-mobile));
     }
-    }
+    /* Removed redundant scroll-margin-top; global strategy applied */
     
     .section-title {
         font-size: 1.6rem;
@@ -1851,6 +1870,8 @@ textarea.form-input {
 @media (max-height: 500px) and (orientation: landscape) {
     .hero {
         min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
         padding: 1rem;
     }
     

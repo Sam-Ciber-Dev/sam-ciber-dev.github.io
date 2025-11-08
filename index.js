@@ -1,33 +1,76 @@
 // Extracted from inline <script> in index.html
 
-// Smooth scrolling
+// Smooth scrolling + seam fix for hero -> about
+function getHeaderHeight() {
+    const root = document.documentElement;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const varName = isMobile ? '--header-height-mobile' : '--header-height-desktop';
+    const fromVar = parseInt(getComputedStyle(root).getPropertyValue(varName), 10);
+    const headerEl = document.querySelector('.header');
+    const fallback = headerEl ? headerEl.offsetHeight : 72;
+    return Number.isFinite(fromVar) ? fromVar : fallback;
+}
+
+function fixHeroSeamIfNeeded(target) {
+    try {
+        if (!target || target.id !== 'about') return;
+        const hero = document.querySelector('.hero');
+        if (!hero) return;
+        const headerH = getHeaderHeight();
+        const heroBottomDoc = hero.getBoundingClientRect().bottom + window.scrollY;
+        const targetTopDoc = target.getBoundingClientRect().top + window.scrollY;
+        const desiredTop = Math.max(
+            Math.max(0, Math.ceil(targetTopDoc - headerH + 2)),
+            Math.ceil(heroBottomDoc - headerH + 2)
+        );
+        if (Math.abs(window.scrollY - desiredTop) > 1) {
+            window.scrollTo({ top: desiredTop, behavior: 'auto' });
+        } else {
+            window.scrollBy({ top: 2, left: 0, behavior: 'auto' });
+        }
+    } catch (e) { /* no-op */ }
+}
+
+function scheduleSeamFix(target) {
+    // Try a few times while smooth scroll settles
+    const delays = [120, 260, 420];
+    delays.forEach(d => setTimeout(() => {
+        requestAnimationFrame(() => fixHeroSeamIfNeeded(target));
+    }, d));
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Apply seam fix only when going to #about
+            if (target.id === 'about') scheduleSeamFix(target);
+            // Update URL hash without jump
+            if (history.pushState && href.startsWith('#')) {
+                history.pushState(null, '', href);
+            }
         }
     });
 });
 
-// Active navigation
+// Active navigation (uses dynamic header height)
 function updateActiveNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const headerH = getHeaderHeight();
     
     let currentSection = '';
     let bestMatch = null;
     let bestMatchDistance = Infinity;
     
-    if (window.pageYOffset < 100) {
+    if (window.pageYOffset < headerH + 20) {
         currentSection = 'home';
     } else {
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 120;
+            const sectionTop = section.offsetTop - (headerH + 20);
             const sectionHeight = section.offsetHeight;
             const sectionBottom = sectionTop + sectionHeight;
             const scrollPos = window.pageYOffset;
@@ -47,7 +90,7 @@ function updateActiveNavigation() {
             const allSections = document.querySelectorAll('section');
             
             allSections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
+                const sectionTop = section.offsetTop - (headerH + 20);
                 const sectionHeight = section.offsetHeight;
                 const sectionBottom = sectionTop + sectionHeight;
                 const scrollPos = window.pageYOffset;
@@ -79,7 +122,7 @@ function updateActiveNavigation() {
         
         const contactSection = document.getElementById('contact');
         if (contactSection) {
-            const contactTop = contactSection.offsetTop - 200;
+            const contactTop = contactSection.offsetTop - (headerH + 120);
             const pageHeight = document.documentElement.scrollHeight;
             const windowHeight = window.innerHeight;
             const scrollPos = window.pageYOffset;
@@ -100,6 +143,25 @@ function updateActiveNavigation() {
 
 window.addEventListener('scroll', updateActiveNavigation);
 window.addEventListener('load', updateActiveNavigation);
+
+// Optional: nudge if About intersects with a tiny hero remainder
+try {
+    const aboutSec = document.getElementById('about');
+    if (aboutSec && 'IntersectionObserver' in window) {
+        const nudgeObserver = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                if (!entry.isIntersecting) continue;
+                // If top of About is within header band, do a tiny nudge
+                const headerH = getHeaderHeight();
+                const rect = aboutSec.getBoundingClientRect();
+                if (rect.top <= headerH + 1 && rect.top >= headerH - 3) {
+                    window.scrollBy({ top: 2, behavior: 'auto' });
+                }
+            }
+        }, { root: null, threshold: [0, 0.02], rootMargin: `-${getHeaderHeight()}px 0px 0px 0px` });
+        nudgeObserver.observe(aboutSec);
+    }
+} catch (e) { /* noop */ }
 
 // Scroll animations
 const observerOptions = {
@@ -828,7 +890,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const SECTION_IDS = ['home','about','experience','skills','projects','contact'];
         const sections = SECTION_IDS.map(id => document.getElementById(id)).filter(Boolean);
         let currentIndex = -1;
-        const HEADER_OFFSET = 100;
+        
+        function scrollToSection(el){
+            if (!el) return;
+            el.scrollIntoView({ behavior:'smooth', block:'start' });
+            if (el.id === 'about') scheduleSeamFix(el);
+        }
+
+        function getCurrentSectionIndex(){
+            const headerH = getHeaderHeight();
+            const pos = window.scrollY + headerH + 2;
+            let bestIdx = 0;
+            let bestDist = Infinity;
+            sections.forEach((sec, idx) => {
+                const top = sec ? sec.offsetTop : 0;
+                const d = pos >= top ? (pos - top) : Infinity;
+                if (d < bestDist) { bestDist = d; bestIdx = idx; }
+            });
+            return bestIdx;
+        }
 
         function isInteractive(el){
             if(!el) return false;
@@ -836,23 +916,20 @@ document.addEventListener('DOMContentLoaded', () => {
             return ['INPUT','TEXTAREA','SELECT','BUTTON'].includes(tag) || el.isContentEditable;
         }
 
-        function scrollTo(el){
-            const top = Math.max(0, el.offsetTop - HEADER_OFFSET);
-            window.scrollTo({top, behavior:'smooth'});
-        }
-
         function goNext(){
             if(!sections.length) return;
+            currentIndex = getCurrentSectionIndex();
             currentIndex = (currentIndex + 1) % sections.length;
             const target = sections[currentIndex];
-            scrollTo(target);
+            scrollToSection(target);
         }
 
         function goPrev(){
             if(!sections.length) return;
+            currentIndex = getCurrentSectionIndex();
             currentIndex = (currentIndex - 1 + sections.length) % sections.length;
             const target = sections[currentIndex];
-            scrollTo(target);
+            scrollToSection(target);
         }
 
         document.addEventListener('keydown', (e)=>{
@@ -883,7 +960,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Ajusta índice para refletir a section atual; Shift+S vai para a seguinte e Shift+A para a anterior
                     const idx = SECTION_IDS.indexOf(id);
                     currentIndex = idx;
-                    scrollTo(target);
+                    scrollToSection(target);
                 }
             });
         });
