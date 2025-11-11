@@ -671,6 +671,60 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     })();
+
+    // CV modal: open/close, focus trap, accessibility
+    (function initCvModal(){
+        const openBtn = document.getElementById('cv-modal-open');
+        const modal = document.getElementById('cv-modal');
+        if(!openBtn || !modal) return;
+        const dialog = modal.querySelector('.cv-modal__dialog');
+        const closeElements = modal.querySelectorAll('[data-cv-close]');
+        const focusableSelectors = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+        let lastFocused = null;
+
+        function trapFocus(e) {
+            const focusable = Array.from(dialog.querySelectorAll(focusableSelectors));
+            if (!focusable.length) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.key === 'Tab') {
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        }
+
+        function openModal(){
+            lastFocused = document.activeElement;
+            modal.setAttribute('aria-hidden','false');
+            openBtn.setAttribute('aria-expanded','true');
+            document.body.style.overflow = 'hidden';
+            document.addEventListener('keydown', onKeyDown);
+            const focusable = dialog.querySelectorAll(focusableSelectors);
+            if (focusable.length) focusable[0].focus();
+        }
+
+        function closeModal(){
+            modal.setAttribute('aria-hidden','true');
+            openBtn.setAttribute('aria-expanded','false');
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', onKeyDown);
+            if (lastFocused) lastFocused.focus();
+        }
+
+        function onKeyDown(e){
+            if (e.key === 'Escape') { closeModal(); return; }
+            trapFocus(e);
+        }
+
+        openBtn.addEventListener('click', (e)=>{ e.preventDefault(); openModal(); });
+        closeElements.forEach(el => el.addEventListener('click', (e)=>{ e.preventDefault(); closeModal(); }));
+        modal.addEventListener('click', (e)=>{ if (e.target === modal.querySelector('.cv-modal__backdrop')) closeModal(); });
+    })();
 });
 
 // Função para lidar com cliques nos certificados
