@@ -4,27 +4,30 @@
 
 ## Overview
 
-A static portfolio website hosted on GitHub Pages, focused on cybersecurity projects, technical skills, certificates, and a contact form.
+A static portfolio website hosted on GitHub Pages, focused on cybersecurity projects, technical skills, certificates, and a contact form. Built with a modular, security-oriented architecture in Vanilla JavaScript, emphasizing accessibility, privacy, and performance.
 
 ## Features
 
-- Advanced SEO: canonical, Open Graph/Twitter tags, structured data (JSON‑LD)
-- robots.txt + sitemap.xml configured
-- Anti‑spam contact form (Formspree + honeypot + time‑trap)
-- CV and certificates open in new tabs (PDF)
-- Responsive layout and accessible semantics (keyboard‑friendly, semantic HTML)
+- Advanced SEO: canonical, Open Graph/Twitter tags, structured data (JSON-LD).
+- robots.txt and sitemap.xml configured (includes CV and certificates).
+- Anti-spam contact form (Formspree + honeypot + decoy + time-trap + content validation).
+- Copy email to clipboard with notification.
+- CV selection modal (PT/EN) with full accessibility and focus trapping.
+- Keyboard shortcuts: **Shift+S** (next section), **Shift+A** (previous section).
+- Scroll lock until the transition completes.
+- Responsive layout and accessible semantics (keyboard-friendly, semantic HTML).
+- Smooth fade-in animations with IntersectionObserver.
 
 ## How it works
 
-The site is fully static and client-driven, yet behaves like a small application.  
-All interactions, including the contact form, project rendering, and anti-spam logic, are handled in index.js without external dependencies.
+The site is fully static and client-driven, yet behaves like a small application. All logic is modularized and handled through ES modules imported in `main.js`. Each module has a single responsibility.
 
 ### Contact form
 
 - The form uses Formspree as a lightweight backend.
 - Data is sent via POST with the required fields: name, email, subject, and message.
-- Successful submissions trigger inline confirmation (via Formspree response) or can optionally redirect to a thank-you page.
-- All external links and documents open in a new browser tab to keep navigation frictionless.
+- Successful submissions trigger inline confirmation (via Formspree response).
+- All external links and documents open in new browser tabs to ensure smooth navigation.
 
 ### Anti-spam measures
 
@@ -33,18 +36,35 @@ To protect the form from automated spam, several layers are applied:
 - Honeypot: hidden _gotcha field must remain empty; bots filling it are discarded.
 - Decoy field: a fake website input acts as a secondary trap for less sophisticated crawlers.
 - Time-trap: a hidden timestamp (ts) is set on load; forms submitted in under a few seconds are flagged or ignored.
+- Content validation: checks message length and suspicious patterns.
+- Domain blacklist: filters disposable addresses (tempmail, mailinator, etc.).
 
 These traps reduce automated spam submissions without relying on third-party captchas, preserving accessibility and user privacy.
 
 ### Dynamic project rendering
 
-- index.js dynamically generates project cards from a JSON-like dataset: [{ title, description, tags, links }]
-- Projects are grouped by category with simple client-side pagination (previous/next controls per category).
-- Cards are created with accessible semantics and automatically injected into containers by ID.
+- Projects are dynamically generated from projects-data.js.  
+- Cards are rendered with accessible semantics and adaptive pagination based on viewport size.  
+- Placeholder cards maintain layout consistency when fewer projects are available.  
+- Pagination buttons include loading state and anti-abuse lock during animations.
+
+### Accessibility
+
+- Fully keyboard-navigable.
+- Accessible modal semantics.
+- Focus trapping and restoration in modals.
+- Reduced motion support.
+- Logical heading order and descriptive labels.
+- Accessible color contrast and focus outlines.
+
+### Animations
+- Fade-in elements.
+- Animated hero background with fallback for reduced-motion users.
+- Seam fix applied between hero and about sections to prevent scroll jank.
 
 ## Tech details
 
-- **Stack:** HTML5, CSS3, Vanilla JavaScript — no framework or build tools.
+- **Stack:** HTML5, CSS3, Vanilla JavaScript. No framework or build tools.
 - **Icons:** Font Awesome 6.4.0 (via CDN).
 - **Fonts:** Inter, loaded from Google Fonts.
 - **Forms:** Formspree (serverless email form backend).
@@ -62,21 +82,47 @@ Designed and tested for modern evergreen browsers, following the “last-two-ver
 
 ## Performance
 
-The site uses a lightweight, no-build architecture optimized for a fast first paint and minimal blocking resources. It preconnects to font and CDN domains to reduce handshake latency, defers all JavaScript to allow early content rendering, and keeps the critical path minimal with no external dependencies. The site follows **Google Lighthouse** best practices for SEO and accessibility; meta tags and structured data are validated via the Rich Results Test.
+The site uses a lightweight, no-build architecture optimized for a fast first paint with minimal blocking resources. It preconnects to font and CDN domains (reducing handshake latency), preloads the Inter font, and loads JavaScript as a module at the end of the body (non-blocking), keeping the critical path minimal and avoiding external runtime dependencies. It follows Google Lighthouse best practices for SEO and accessibility; meta tags and structured data are validated using the Rich Results Test.
 
-**Potential next steps:** preload the Inter font, compress images (PNG → WebP), and minify CSS/JS once the site stabilizes.
+### Performance improvements implemented
+- Inter font preload configured
+- Animations driven by IntersectionObserver (respects prefers-reduced-motion)
+- Single non-blocking module script at the end of body
+- Single stylesheet to keep the critical path small
+
+### Potential next steps
+- Minify CSS and JavaScript for production
+- Integrate linting and JSDoc documentation
+- Add basic CI for validation and deployment
 
 ## Project structure
 
-- index.html — main page
-- index.css — styles
-- index.js — interactions, validations, anti‑spam
-- robots.txt — indexing rules + sitemap
-- sitemap.xml — sitemap for crawlers
-- .nojekyll — serve as pure static site on GitHub Pages
-- CV/ — public (PDF)
-- certeficados/ — certificate PDFs
-- assets/ — images (e.g., social preview), optional
+- index.html - main entry point
+- index.css - global styles
+- js/ - JavaScript modules
+  - main.js - module bootstrap
+  - anchors.js - smooth anchors + hero/about seam fix
+  - navigation.js - active link + header handling
+  - menu.js - mobile menu toggle
+  - modal.js - CV selector modal (ARIA, focus trap)
+  - form.js - contact form + anti-spam (honeypot/decoy/time-trap)
+  - projects.js - rendering + adaptive pagination + button lock/loader
+  - projects-data.js - dataset for projects
+  - validation.js - name/email/content validation (incl. disposable domains)
+  - keyboard-nav.js - Shift+S / Shift+A shortcuts with scroll lock
+  - layout.js - header height + layout utilities
+  - dom-utils.js - shared DOM helpers
+  - observer.js - fade-in animations via IntersectionObserver
+  - notifications.js - copy/feedback toast helpers
+  - copy.js - copy-to-clipboard behavior
+  - data-handlers.js - small helpers wiring actions (future)
+- robots.txt - indexing rules + sitemap reference
+- sitemap.xml - sitemap for crawlers (includes PDFs)
+- .nojekyll - ensures pure static deployment
+- .gitignore - ignores artifacts/backups
+- CV/ - public CV PDFs (PT and EN)
+- certificate PDFs
+- assets/ - images and social preview
 
 ## Contact
 
