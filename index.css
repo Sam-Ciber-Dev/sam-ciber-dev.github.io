@@ -1,4 +1,31 @@
+/* ========================================================================== */
+/* Base Reset & Global                                                         */
+/* ========================================================================== */
+/* (Structure comments added only – no style changes) */
 /* Extracted from inline <style> in index.html */
+/* -------------------------------------------------------------------------- */
+/* Table of Contents (maintenance aid only – do NOT remove)                    */
+/*  01. Base Reset & Global                                                   */
+/*  02. Header / Navigation                                                   */
+/*  03. Hero Section                                                          */
+/*  04. Generic Sections                                                      */
+/*  05. About Section                                                         */
+/*  06. Experience & Education (Timeline)                                     */
+/*  07. Skills Grid                                                           */
+/*  08. CV Modal                                                              */
+/*  09. Reduced Motion                                                        */
+/*  10. Certifications                                                        */
+/*  11. Projects Section                                                      */
+/*  12. Contact Section                                                       */
+/*  13. Footer                                                                */
+/*  14. Common Card Surfaces                                                  */
+/*  15. Responsive Design Breakpoints                                         */
+/*  16. Animations                                                            */
+/*  17. Copy Notification                                                     */
+/* Notes:                                                                     */
+/*  - Only comments added; selector order & declarations preserved.           */
+/*  - Any future refactors: keep section order to avoid cascade changes.      */
+/* -------------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -38,12 +65,15 @@ button {
 }
 
 :root {
+    /* Design tokens: update here first, then check dependent sections (hero, header offsets, sections min-heights). */
     --primary-color: #0f172a;
     --secondary-color: #1e293b;
     --accent-color: #3b82f6;
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
+    /* Default text color token for components expecting --text-color */
+    --text-color: var(--text-primary);
     --gradient: linear-gradient(135deg, #3b82f6, #1d4ed8);
     --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     --border-radius: 12px;
@@ -83,7 +113,9 @@ body.loaded {
     border-radius: 4px;
 }
 
-/* Header */
+/* ========================================================================== */
+/* Header / Navigation                                                         */
+/* ========================================================================== */
 .header {
     position: fixed;
     top: 0;
@@ -162,7 +194,9 @@ body.loaded {
     cursor: pointer;
 }
 
-/* Hero Section */
+/* ========================================================================== */
+/* Hero Section                                                                */
+/* ========================================================================== */
 .hero {
     /* Use dynamic viewport units to avoid mobile URL bar causing background seam */
     min-height: 100vh;
@@ -341,7 +375,22 @@ body.loaded {
     color: white;
 }
 
-/* Sections */
+/* Accessible focus styles */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible,
+.nav-button:focus-visible,
+.project-link:focus-visible,
+.social-link:focus-visible,
+.cv-modal__close:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* ========================================================================== */
+/* Generic Sections                                                            */
+/* ========================================================================== */
 .section {
     padding: 5rem 0;
     max-width: 1200px;
@@ -376,7 +425,9 @@ body.loaded {
     border-radius: 2px;
 }
 
-/* About Section */
+/* ========================================================================== */
+/* About Section                                                               */
+/* ========================================================================== */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -409,7 +460,9 @@ body.loaded {
     text-align: justify;
 }
 
-/* Experience & Education */
+/* ========================================================================== */
+/* Experience & Education (Timeline)                                           */
+/* ========================================================================== */
 .timeline {
     position: relative;
     padding-left: 2rem;
@@ -428,11 +481,7 @@ body.loaded {
 .timeline-item {
     position: relative;
     margin-bottom: 2rem;
-    background: var(--secondary-color);
     padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
 }
 
 .timeline-item:hover {
@@ -475,7 +524,9 @@ body.loaded {
     text-align: justify;
 }
 
-/* Skills */
+/* ========================================================================== */
+/* Skills Grid                                                                 */
+/* ========================================================================== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -483,11 +534,7 @@ body.loaded {
 }
 
 .skill-category {
-    background: var(--secondary-color);
     padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
 }
 
 .skill-category:hover {
@@ -508,7 +555,10 @@ body.loaded {
     gap: 0.5rem;
 }
 
-/* Modal styles for CV selector */
+/* ========================================================================== */
+/* CV Modal                                                                    */
+/* ========================================================================== */
+/* Coupled with js/modal.js: class names and [aria-hidden] attribute are toggled by JS. Keep selectors stable. */
 .cv-modal { position: fixed; inset: 0; z-index: 60; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .28s ease, visibility .28s ease; display: flex; }
 .cv-modal[aria-hidden="false"] { opacity: 1; visibility: visible; pointer-events: auto; }
 .cv-modal__backdrop { position: absolute; inset: 0; background: #030617; opacity: 0; transition: opacity .28s ease; }
@@ -527,9 +577,16 @@ body.loaded {
     .cv-modal__actions .btn { width: 100%; }
 }
 
-/* Prefer-reduced-motion: disable animations for accessibility */
+/* ========================================================================== */
+/* Reduced Motion                                                              */
+/* ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
     .cv-modal, .cv-modal__backdrop, .cv-modal__dialog { transition: none !important; }
+    .hero-avatar { animation: none !important; }
+    .hero::after { animation: none !important; }
+    .projects-cards-container { transition: none !important; animation: none !important; }
+    .nav-button.loading i { animation: none !important; }
 }
 
 .skill-tag {
@@ -541,7 +598,9 @@ body.loaded {
     border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
-/* Certificações */
+/* ========================================================================== */
+/* Certifications                                                              */
+/* ========================================================================== */
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -549,11 +608,7 @@ body.loaded {
 }
 
 .certification-category {
-    background: var(--secondary-color);
     padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
 }
 
 .certification-category:hover {
@@ -616,7 +671,10 @@ body.loaded {
     color: var(--accent-color);
 }
 
-/* Projects */
+/* ========================================================================== */
+/* Projects Section                                                            */
+/* ========================================================================== */
+/* Coupled with js/projects.js: slide-in/out classes and grid container are toggled for pagination. Keep class names stable. */
 .projects-category {
     margin-bottom: 4rem;
 }
@@ -697,11 +755,7 @@ body.loaded {
 }
 
 .project-card {
-    background: var(--secondary-color);
-    border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
     height: 500px; /* Altura fixa para todos os cards */
     display: flex;
     flex-direction: column;
@@ -888,6 +942,7 @@ body.loaded {
 
 /* Efeito de loading nos botões durante animação */
 .nav-button.loading {
+    /* Loading state toggled by JS during animation; do not rename class. */
     pointer-events: none;
     opacity: 0.7;
 }
@@ -905,7 +960,9 @@ body.loaded {
     display: none;
 }
 
-/* Contact */
+/* ========================================================================== */
+/* Contact Section                                                             */
+/* ========================================================================== */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -923,9 +980,6 @@ body.loaded {
     align-items: center;
     gap: 1rem;
     padding: 1.5rem;
-    background: var(--secondary-color);
-    border-radius: var(--border-radius);
-    transition: var(--transition);
 }
 
 .contact-item:hover {
@@ -1014,7 +1068,9 @@ textarea.form-input {
     background-color: rgba(16, 185, 129, 0.1);
 }
 
-/* Footer */
+/* ========================================================================== */
+/* Footer                                                                      */
+/* ========================================================================== */
 .footer {
     background: var(--secondary-color);
     padding: 3rem 0;
@@ -1052,6 +1108,20 @@ textarea.form-input {
     transform: translateY(-3px);
 }
 
+/* ========================================================================== */
+/* Common Card Surfaces                                                        */
+/* ========================================================================== */
+.timeline-item,
+.skill-category,
+.certification-category,
+.project-card,
+.contact-item {
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
 .scroll-top {
     position: fixed;
     bottom: 2rem;
@@ -1080,9 +1150,11 @@ textarea.form-input {
     transform: translateY(-3px);
 }
 
-/* Responsive Design */
+/* ========================================================================== */
+/* Responsive Design Breakpoints                                               */
+/* ========================================================================== */
 
-/* Desktop and large screens - Reset mobile menu styles */
+/* -- Desktop and large screens ------------------------------------------------ */
 @media (min-width: 769px) {
     .nav-menu {
         display: flex !important;
@@ -1123,7 +1195,7 @@ textarea.form-input {
     }
 }
 
-/* Tablet Landscape (1024px e abaixo) */
+/* -- Tablet Landscape (<=1024px) --------------------------------------------- */
 @media (max-width: 1024px) {
     .container {
         max-width: 90%;
@@ -1149,10 +1221,10 @@ textarea.form-input {
     }
 }
 
-/* Tablet Portrait (768px e abaixo) */
+/* -- Tablet Portrait (<=768px) ---------------------------------------------- */
 @media (max-width: 768px) {
     /* Override global anchor offset for smaller header height */
-    html { scroll-padding-top: var(--header-height-mobile); }
+    html { scroll-padding-top: var(--header-height-mobile); } /* Keep in sync with :root --header-height-mobile */
     :root { --hero-safe-offset: calc(var(--header-height-mobile) + var(--float-amplitude) + 8px); }
     /* Header/Navigation */
     .header {
@@ -1554,10 +1626,10 @@ textarea.form-input {
     }
 }
 
-/* Mobile Large (480px e abaixo) */
+/* -- Mobile Large (<=480px) ------------------------------------------------- */
 @media (max-width: 480px) {
     /* Ensure anchor offset uses mobile header height */
-    html { scroll-padding-top: var(--header-height-mobile); }
+    html { scroll-padding-top: var(--header-height-mobile); } /* Keep in sync with :root --header-height-mobile */
     :root { --hero-safe-offset: calc(var(--header-height-mobile) + var(--float-amplitude) + 8px); }
     /* Header */
     .header {
@@ -1817,10 +1889,10 @@ textarea.form-input {
     }
 }
 
-/* Mobile Small (360px e abaixo) */
+/* -- Mobile Small (<=360px) ------------------------------------------------- */
 @media (max-width: 360px) {
     /* Maintain correct anchor offset for very small devices */
-    html { scroll-padding-top: var(--header-height-mobile); }
+    html { scroll-padding-top: var(--header-height-mobile); } /* Keep in sync with :root --header-height-mobile */
     :root { --hero-safe-offset: calc(var(--header-height-mobile) + var(--float-amplitude) + 8px); }
     .hero h1 {
         font-size: 1.8rem;
@@ -1890,7 +1962,7 @@ textarea.form-input {
     }
 }
 
-/* Landscape mobile specific */
+/* -- Landscape Mobile Specific ---------------------------------------------- */
 @media (max-height: 500px) and (orientation: landscape) {
     .hero {
         min-height: 100vh;
@@ -1933,7 +2005,9 @@ textarea.form-input {
     }
 }
 
-/* Animações */
+/* ========================================================================== */
+/* Animations                                                                  */
+/* ========================================================================== */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -1945,7 +2019,9 @@ textarea.form-input {
     transform: translateY(0);
 }
 
-/* Notificação de cópia */
+/* ========================================================================== */
+/* Copy Notification                                                           */
+/* ========================================================================== */
 .copy-notification {
     position: fixed;
     top: 20px;

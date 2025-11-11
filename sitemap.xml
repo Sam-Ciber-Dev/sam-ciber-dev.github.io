@@ -16,8 +16,14 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sam-ciber-dev.github.io/CV/Jose_Oliveira_CV_publico.pdf</loc>
-    <lastmod>2025-11-02</lastmod>
+    <loc>https://sam-ciber-dev.github.io/CV/Samuel_Oliveira_CV_Publico_PT.pdf</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/CV/Samuel_Oliveira_CV_Public_ENG.pdf</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

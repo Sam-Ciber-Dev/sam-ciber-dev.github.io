@@ -115,7 +115,7 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="#home" class="logo"><i class="fas fa-fire" style="margin-right: 0.5rem;"></i>Ph0enix</a>
+            <a href="#home" class="logo"><i class="fas fa-fire" aria-hidden="true" style="margin-right: 0.5rem;"></i>Ph0enix</a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Início</a></li>
                 <li><a href="#about" class="nav-link">Sobre</a></li>
@@ -134,7 +134,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-avatar">
-                <i class="fas fa-shield-alt"></i>
+                <i class="fas fa-shield-alt" aria-hidden="true"></i>
             </div>
             <h1>Samuel Oliveira</h1>
             <p class="hero-subtitle"></p>
@@ -400,19 +400,19 @@
             <div class="certification-category">
                 <h3><i class="fas fa-graduation-cap"></i> Certificações Académicas</h3>
                 <div class="certification-items">
-                    <a href="#" class="certification-item" onclick="handleCertificationClick('Certificado CTeSP Cibersegurança')">
+                    <a href="#" class="certification-item" data-cert-name="Certificado CTeSP Cibersegurança">
                         <div>
                             <div class="cert-name">CTeSP de Cibersegurança</div>
                             <div class="cert-status">Instituto Superior de Tecnologias Avançadas do Porto</div>
                         </div>
-                        <i class="fas fa-external-link-alt cert-icon"></i>
+                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
                     </a>
                     <a href="certeficados/JoseOliveira_certeficado_GPSI.pdf" class="certification-item" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado GPSI em nova aba (PDF)">
                         <div>
                             <div class="cert-name">Gestão de Programação de Sistemas Informáticos</div>
                             <div class="cert-status">Escola Profissional de Valongo</div>
                         </div>
-                        <i class="fas fa-external-link-alt cert-icon"></i>
+                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -438,7 +438,7 @@
                             <div class="cert-name">Participação na Joteca</div>
                             <div class="cert-status">Projeto EyeWeb - ISTEC Porto</div>
                         </div>
-                        <i class="fas fa-external-link-alt cert-icon"></i>
+                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -458,13 +458,13 @@
                 Projetos de Cibersegurança
             </h3>
             <div class="projects-grid">
-                <button class="nav-button" id="cybersecurity-prev-btn" onclick="prevPage('cybersecurity')">
+                <button class="nav-button" id="cybersecurity-prev-btn" aria-label="Projetos de Cibersegurança: anterior" data-category="cybersecurity" data-dir="prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="projects-cards-container" id="cybersecurity-projects-container">
                     <!-- Projects will be dynamically loaded here -->
                 </div>
-                <button class="nav-button" id="cybersecurity-next-btn" onclick="nextPage('cybersecurity')">
+                <button class="nav-button" id="cybersecurity-next-btn" aria-label="Projetos de Cibersegurança: seguinte" data-category="cybersecurity" data-dir="next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -477,13 +477,13 @@
                 Projetos de Redes
             </h3>
             <div class="projects-grid">
-                <button class="nav-button" id="networking-prev-btn" onclick="prevPage('networking')">
+                <button class="nav-button" id="networking-prev-btn" aria-label="Projetos de Redes: anterior" data-category="networking" data-dir="prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="projects-cards-container" id="networking-projects-container">
                     <!-- Projects will be dynamically loaded here -->
                 </div>
-                <button class="nav-button" id="networking-next-btn" onclick="nextPage('networking')">
+                <button class="nav-button" id="networking-next-btn" aria-label="Projetos de Redes: seguinte" data-category="networking" data-dir="next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -496,13 +496,13 @@
                 Projetos de Programação
             </h3>
             <div class="projects-grid">
-                <button class="nav-button" id="programming-prev-btn" onclick="prevPage('programming')">
+                <button class="nav-button" id="programming-prev-btn" aria-label="Projetos de Programação: anterior" data-category="programming" data-dir="prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="projects-cards-container" id="programming-projects-container">
                     <!-- Projects will be dynamically loaded here -->
                 </div>
-                <button class="nav-button" id="programming-next-btn" onclick="nextPage('programming')">
+                <button class="nav-button" id="programming-next-btn" aria-label="Projetos de Programação: seguinte" data-category="programming" data-dir="next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -515,13 +515,13 @@
                 Projetos Web & Bootstrap
             </h3>
             <div class="projects-grid">
-                <button class="nav-button" id="web-prev-btn" onclick="prevPage('web')">
+                <button class="nav-button" id="web-prev-btn" aria-label="Projetos Web & Bootstrap: anterior" data-category="web" data-dir="prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="projects-cards-container" id="web-projects-container">
                     <!-- Projects will be dynamically loaded here -->
                 </div>
-                <button class="nav-button" id="web-next-btn" onclick="nextPage('web')">
+                <button class="nav-button" id="web-next-btn" aria-label="Projetos Web & Bootstrap: seguinte" data-category="web" data-dir="next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -534,13 +534,13 @@
                 Projetos de Hardware
             </h3>
             <div class="projects-grid">
-                <button class="nav-button" id="hardware-prev-btn" onclick="prevPage('hardware')">
+                <button class="nav-button" id="hardware-prev-btn" aria-label="Projetos de Hardware: anterior" data-category="hardware" data-dir="prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="projects-cards-container" id="hardware-projects-container">
                     <!-- Projects will be dynamically loaded here -->
                 </div>
-                <button class="nav-button" id="hardware-next-btn" onclick="nextPage('hardware')">
+                <button class="nav-button" id="hardware-next-btn" aria-label="Projetos de Hardware: seguinte" data-category="hardware" data-dir="next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -554,7 +554,7 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3>Email</h3>
@@ -566,7 +566,7 @@
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3>Telefone</h3>
@@ -580,20 +580,20 @@
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3>LinkedIn</h3>
-                        <p><a href="https://www.linkedin.com/in/jose-samuel-oliveira/" target="_blank" style="color: var(--text-secondary); text-decoration: none;">Samuel Oliveira</a></p>
+                            <p><a href="https://www.linkedin.com/in/jose-samuel-oliveira/" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none;">Samuel Oliveira</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">
-                        <i class="fab fa-github"></i>
+                            <i class="fab fa-github" aria-hidden="true"></i>
                     </div>
                     <div>
                         <h3>GitHub</h3>
-                        <p><a href="https://github.com/Sam-Ciber-Dev" target="_blank" style="color: var(--text-secondary); text-decoration: none;">Sam-Ciber-Dev</a></p>
+                            <p><a href="https://github.com/Sam-Ciber-Dev" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none;">Sam-Ciber-Dev</a></p>
                     </div>
                 </div>
             </div>
@@ -649,14 +649,14 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/jose-samuel-oliveira/" target="_blank" class="social-link" aria-label="LinkedIn de Samuel Oliveira">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/jose-samuel-oliveira/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn de Samuel Oliveira">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </a>
-                <a href="https://github.com/Sam-Ciber-Dev" target="_blank" class="social-link" aria-label="GitHub de Samuel Oliveira">
-                    <i class="fab fa-github"></i>
+                <a href="https://github.com/Sam-Ciber-Dev" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub de Samuel Oliveira">
+                    <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
-                <span class="copy-text social-link" data-copy="sam.oliveira.dev@gmail.com" style="cursor: pointer;">
-                    <i class="fas fa-envelope"></i>
+                <span class="copy-text social-link" data-copy="sam.oliveira.dev@gmail.com" style="cursor: pointer;" aria-label="Copiar email para a área de transferência" role="button" tabindex="0">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                 </span>
             </div>
             <p>&copy; 2025 Samuel Oliveira. Todos os direitos reservados.</p>
@@ -668,7 +668,7 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- External JS -->
-    <script src="index.js" defer></script>
+    <!-- Entry JS Module -->
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
