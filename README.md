@@ -134,16 +134,6 @@ The site uses a lightweight, no-build architecture optimized for a fast first pa
 
 ## License
 
-This repository is licensed under the [**MIT License**](LICENSE). See LICENSE for details.
-
-## Social Preview
-
-The social preview image used for link cards:
-
-<img src="assets/social-preview.png" alt="Samuel Oliveira Portfolio — Cybersecurity, DevOps, Web, Software" width="640">
-
-## License
-
 This repository is licensed under the [**MIT License**](LICENSE) and [**CC BY 4.0**](LICENSE-CC-BY-4.0.md). See [**LICENSE**](LICENSE) and [**LICENSE-CC-BY-4.0.md**](LICENSE-CC-BY-4.0.md) for details.
 
 ## Social Preview
