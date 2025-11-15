@@ -11,6 +11,7 @@ import { initCvModal } from './modal.js';
 import { initContactForm } from './form.js';
 import { initKeyboardNavigator } from './keyboard-nav.js';
 import { qs, on } from './dom-utils.js';
+import { initDataHandlers } from './data-handlers.js';
 
 // Typing animation (kept local)
 const subtitle = qs('.hero-subtitle');
@@ -26,6 +27,7 @@ initNavigation();
 initFadeInObserver();
 initMobileMenu();
 initCopyFeatures();
+initDataHandlers();
 initCvModal();
 initContactForm();
 initKeyboardNavigator();
