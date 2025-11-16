@@ -20,7 +20,6 @@ export function handleCertificationClick(e, certificationName) {
   const message = certificationName === 'Certificado CTeSP Cibersegurança'
     ? 'O Curso ainda não foi concluído'
     : `Certificado "${certificationName}" selecionado!`;
-  setTimeout(() => {
-    showCopyNotification(message, { iconClass: 'fas fa-certificate' });
-  }, 250);
+  // Use the same immediate toast behavior as copy notifications (no artificial delay)
+  showCopyNotification(message, { iconClass: 'fas fa-certificate' });
 }
