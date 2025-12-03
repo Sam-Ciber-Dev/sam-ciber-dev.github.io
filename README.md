@@ -4,7 +4,7 @@
 
 ## Overview
 
-A static portfolio website hosted on GitHub Pages, focused on cybersecurity projects, technical skills, certificates, and a contact form. Built with a modular, security-oriented architecture in Vanilla JavaScript, emphasizing accessibility, privacy, and performance.
+A static portfolio website hosted on GitHub Pages, focused on cybersecurity projects, technical skills, certificates, and a contact form. Built with a modular, security-oriented architecture in Vanilla JavaScript, emphasizing accessibility, privacy, and performance.AA
 
 ## Features
 
