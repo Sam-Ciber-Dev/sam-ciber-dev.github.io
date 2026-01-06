@@ -24,6 +24,9 @@ coverage/
 *.pem
 *.p12
 
+# ——— Cloudflare Worker (contém secret keys) ———
+cloudflare-worker/
+
 # ——— Uploads/ficheiros gerados em runtime (mantém a pasta com .gitkeep) ———
 uploads/*
 !uploads/.gitkeep

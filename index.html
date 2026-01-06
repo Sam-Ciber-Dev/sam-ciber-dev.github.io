@@ -102,6 +102,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    
     <!-- Google Fonts (preload + noscript fallback) -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -598,7 +601,7 @@
                 </div>
             </div>
             
-            <form class="contact-form" action="https://formspree.io/f/xyzpyyrn" method="POST" autocomplete="off">
+            <form class="contact-form" method="POST" autocomplete="off">
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input type="text" id="name" name="name" class="form-input" required>
@@ -637,6 +640,12 @@
                 <!-- Campos ocultos para configuração do Formspree -->
                 <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
                 <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Cloudflare Turnstile -->
+                <div class="form-group" style="display: flex; justify-content: center; margin: 20px 0;">
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAACKws8WKGgdv8CqP" data-theme="dark"></div>
+                </div>
+                
                 <button type="submit" class="btn btn-primary" id="submitBtn">
                     <i class="fas fa-paper-plane"></i>
                     Enviar Mensagem

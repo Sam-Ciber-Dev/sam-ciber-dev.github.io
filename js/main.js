@@ -8,7 +8,7 @@ import { initFadeInObserver } from './observer.js';
 import { initMobileMenu } from './menu.js';
 import { initCopyFeatures } from './copy.js';
 import { initCvModal } from './modal.js';
-import { initContactForm } from './form.js';
+import { initContactForm } from './form-secure.js';
 import { initKeyboardNavigator } from './keyboard-nav.js';
 import { qs, on } from './dom-utils.js';
 import { initDataHandlers } from './data-handlers.js';
