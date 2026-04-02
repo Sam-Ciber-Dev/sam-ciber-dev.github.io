@@ -3,7 +3,7 @@ import { qsa, on } from './dom-utils.js';
 import { getHeaderHeight, scheduleSeamFix } from './layout.js';
 
 export function initKeyboardNavigator(){
-  const SECTION_IDS = ['home','about','experience','skills','projects','contact'];
+  const SECTION_IDS = ['home','about','experience','certifications','skills','projects','contact'];
   const sections = SECTION_IDS.map(id => document.getElementById(id)).filter(Boolean);
   let currentIndex = -1;
   // Navigation lock to prevent repeated Shift+S/Shift+A until arrival

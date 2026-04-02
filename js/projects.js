@@ -1,11 +1,16 @@
-// Projects data and pagination
-import { projectsData } from './projects-data.js';
+// Projects data, pagination, and rendering with i18n + image support
+import { projectsData, loadProjectsData } from './projects-data.js';
+import { resolveI18n, getLang, t } from './i18n.js';
+import { on } from './dom-utils.js';
 
 export const paginationState = {
-  programming: { currentPage: 0 },
-  web: { currentPage: 0 },
-  cybersecurity: { currentPage: 0 },
+  offensive: { currentPage: 0 },
+  defensive: { currentPage: 0 },
+  reports: { currentPage: 0 },
+  ai: { currentPage: 0 },
   networking: { currentPage: 0 },
+  software: { currentPage: 0 },
+  web: { currentPage: 0 },
   hardware: { currentPage: 0 }
 };
 
@@ -25,15 +30,15 @@ function createEmptyCard() {
         <i class="fas fa-image"></i>
       </div>
       <div class="project-content">
-        <h3 class="project-title">Sem conteúdo disponível</h3>
-        <p class="project-description">Este espaço está reservado para futuros projetos que serão adicionados futuramente, para demonstrar competências e conhecimentos adquiridos.</p>
+        <h3 class="project-title">${t('projects.empty.title')}</h3>
+        <p class="project-description">${t('projects.empty.desc')}</p>
         <div class="project-tech">
-          <span class="tech-tag">Em breve</span>
+          <span class="tech-tag">${t('projects.empty.tag')}</span>
         </div>
         <div class="project-links">
           <span class="project-link disabled">
             <i class="fas fa-clock"></i>
-            Aguarde
+            ${t('projects.empty.wait')}
           </span>
         </div>
       </div>
@@ -41,16 +46,43 @@ function createEmptyCard() {
 }
 
 function createProjectCard(project) {
-  const technologies = project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('');
-  const links = project.links.map(link => `<a href="${link.href}" class="project-link"><i class="${link.icon}"></i>${link.text}</a>`).join('');
+  const title = resolveI18n(project.title);
+  const description = resolveI18n(project.description);
+  const technologies = (project.technologies || []).map(tech => `<span class="tech-tag">${tech}</span>`).join('');
+  const lang = getLang();
+
+  // Image: use downloaded social preview, or fall back to icon
+  let imageHTML;
+  if (project.image) {
+    imageHTML = `<div class="project-image project-image--photo"><img src="${project.image}" alt="${title}" loading="lazy"></div>`;
+  } else {
+    imageHTML = `<div class="project-image"><i class="${project.icon || 'fas fa-folder-open'}"></i></div>`;
+  }
+
+  // Links: new JSON format has { github, report: { pt, en } }
+  let linksHTML = '';
+  if (project.links) {
+    if (typeof project.links === 'object' && project.links.github) {
+      // New JSON format
+      linksHTML += `<a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>`;
+      const reportUrl = project.links.report?.[lang] || project.links.report?.pt || project.links.report?.en;
+      if (reportUrl) {
+        linksHTML += `<a href="${reportUrl}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-file-pdf"></i> ${t('projects.report')}</a>`;
+      }
+    } else if (Array.isArray(project.links)) {
+      // Legacy array format (backwards compatibility)
+      linksHTML = project.links.map(link => `<a href="${link.href}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="${link.icon}"></i> ${link.text}</a>`).join('');
+    }
+  }
+
   return `
     <div class="project-card">
-      <div class="project-image"><i class="${project.icon}"></i></div>
+      ${imageHTML}
       <div class="project-content">
-        <h3 class="project-title">${project.title}</h3>
-        <p class="project-description">${project.description}</p>
+        <h3 class="project-title">${title}</h3>
+        <p class="project-description">${description}</p>
         <div class="project-tech">${technologies}</div>
-        <div class="project-links">${links}</div>
+        <div class="project-links">${linksHTML}</div>
       </div>
     </div>`;
 }
@@ -155,12 +187,26 @@ export function prevPage(category) {
   }
 }
 
-export function initProjects() {
-  renderProjectsPage('cybersecurity');
+export async function initProjects() {
+  // Load project data from JSON before rendering
+  await loadProjectsData();
+
+  renderProjectsPage('offensive');
+  renderProjectsPage('defensive');
+  renderProjectsPage('reports');
+  renderProjectsPage('ai');
   renderProjectsPage('networking');
-  renderProjectsPage('programming');
+  renderProjectsPage('software');
   renderProjectsPage('web');
   renderProjectsPage('hardware');
+
+  // Re-render when language changes
+  on(window, 'lang-change', () => {
+    Object.keys(paginationState).forEach(category => {
+      renderProjectsPage(category);
+    });
+  });
+
   let resizeTimeout;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);

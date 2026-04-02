@@ -119,13 +119,15 @@
     <header class="header">
         <nav class="nav">
             <a href="#home" class="logo"><i class="fas fa-fire" aria-hidden="true" style="margin-right: 0.5rem;"></i>Ph0enix</a>
+            <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">EN</button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Início</a></li>
-                <li><a href="#about" class="nav-link">Sobre</a></li>
-                <li><a href="#experience" class="nav-link">Experiência</a></li>
-                <li><a href="#skills" class="nav-link">Competências</a></li>
-                <li><a href="#projects" class="nav-link">Projetos</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">Início</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experiência</a></li>
+                <li><a href="#certifications" class="nav-link" data-i18n="nav.certifications">Certificações</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Competências</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projetos</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu">
                 <i class="fas fa-bars"></i>
@@ -141,16 +143,16 @@
             </div>
             <h1>Samuel Oliveira</h1>
             <p class="hero-subtitle"></p>
-            <p class="hero-description">
+            <p class="hero-description" data-i18n="hero.description">
                 Estudante dedicado ao estudo de cibersegurança, de sistemas e dados, com foco em CTI, pentesting,
                 análise de vulnerabilidades, segurança digital, proteção de dados e ethical hacking, aplicando práticas de Red e Blue Team.
             </p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero.contact">
                     <i class="fas fa-envelope"></i>
                     Contactar
                 </a>
-                <button id="cv-modal-open" class="btn btn-secondary" aria-haspopup="dialog" aria-controls="cv-modal" aria-expanded="false">
+                <button id="cv-modal-open" class="btn btn-secondary" aria-haspopup="dialog" aria-controls="cv-modal" aria-expanded="false" data-i18n="hero.cv">
                     <i class="fas fa-download"></i>
                     Download CV
                 </button>
@@ -165,15 +167,15 @@
             <button class="cv-modal__close" aria-label="Fechar" title="Fechar" data-cv-close>
                 <i class="fas fa-times"></i>
             </button>
-            <h3 id="cv-modal-title" class="cv-modal__title">Escolher versão do CV</h3>
+            <h3 id="cv-modal-title" class="cv-modal__title" data-i18n="cv.title">Escolher versão do CV</h3>
             <div class="cv-modal__actions">
                 <a href="CV/Samuel_Oliveira_CV_Publico_PT.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" lang="pt">
                     <i class="fas fa-file-pdf"></i>
-                    Português
+                    <span data-i18n="cv.pt">Português</span>
                 </a>
                 <a href="CV/Samuel_Oliveira_CV_Public_ENG.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" lang="en">
                     <i class="fas fa-file-pdf"></i>
-                    English
+                    <span data-i18n="cv.en">English</span>
                 </a>
             </div>
         </div>
@@ -181,19 +183,19 @@
 
     <!-- About Section -->
     <section id="about" class="section">
-        <h2 class="section-title fade-in">Sobre Mim</h2>
+        <h2 class="section-title fade-in" data-i18n="about.title">Sobre Mim</h2>
         <div class="about-content fade-in">
             <div class="about-image">
                 <i class="fas fa-user-secret"></i>
             </div>
             <div class="about-text">
-                <p>
+                <p data-i18n="about.p1">
                     Eu sempre tive uma paixão enorme pela informática. Desde muito jovem sempre tive aquela curiosidade de perceber como as coisas funcionavam por trás dos ecrãs, e isso ao longo do tempo levou-me a explorar diversas áreas da informática, programação, gestão, redes, entre outras.
                 </p>
-                <p>
+                <p data-i18n="about.p2">
                     Mas foi na área de cibersegurança que eu realmente encontrei o meu lugar. Eu sempre fui uma pessoa que gosta de ajudar as outras pessoas, e isso é o que mais me motiva a continuar a aprender nesta área. Proteger dados, prevenir ataques e garantir que toda a gente está seguro no mundo digital.
                 </p>
-                <p>
+                <p data-i18n="about.p3">
                     Atualmente, estudo mais profundamente cibersegurança, com interesse especial em CTI, análise de vulnerabilidades e pentesting. Faço questão de me manter atualizado em todas as áreas e estou comprometido em aprender continuamente. Espero, um dia, trabalhar como profissional de cibersegurança e continuar a crescer, tanto a nível técnico como pessoal.
                 </p>
             </div>
@@ -202,21 +204,21 @@
 
     <!-- Experience Section -->
     <section id="experience" class="section">
-        <h2 class="section-title fade-in">Experiência Profissional</h2>
+        <h2 class="section-title fade-in" data-i18n="exp.title">Experiência Profissional</h2>
         <div class="timeline fade-in">
             <div class="timeline-item">
-                <div class="timeline-date">2024 (3 meses)</div>
-                <h3 class="timeline-title">Estágio em desenvolvimento de software e base de dados </h3>
+                <div class="timeline-date" data-i18n="exp.1.date">2024 (3 meses)</div>
+                <h3 class="timeline-title" data-i18n="exp.1.title">Estágio em desenvolvimento de software e base de dados </h3>
                 <div class="timeline-company">Mindforge Tech Solutions, Lda</div>
-                <p class="timeline-description">
+                <p class="timeline-description" data-i18n="exp.1.desc">
                     Desenvolvimento de uma plataforma web para gestão hospitalar, focando na criação e estruturação de bases de dados para armazenamento de informação clínica. Esta experiência proporcionou uma compreensão valiosa sobre a sensibilidade dos dados de saúde e a importância da sua proteção, despertando o interesse pelas questões de privacidade e segurança de dados. O contacto com sistemas que lidam com informação crítica reforçou a necessidade de implementar medidas de proteção adequadas, conhecimento fundamental para a área de cibersegurança. Estágio realizado no âmbito da formação na Escola Profissional de Valongo.
                 </p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2023 (1 mês)</div>
-                <h3 class="timeline-title">Estágio em desenvolvimento de software</h3>
+                <div class="timeline-date" data-i18n="exp.2.date">2023 (1 mês)</div>
+                <h3 class="timeline-title" data-i18n="exp.2.title">Estágio em desenvolvimento de software</h3>
                 <div class="timeline-company">Mobnor</div>
-                <p class="timeline-description">
+                <p class="timeline-description" data-i18n="exp.2.desc">
                     Primeiro contacto com o ambiente profissional de desenvolvimento web, responsável pela criação de um website corporativo para a empresa. Durante este estágio, implementei medidas básicas de segurança web, incluindo validação de inputs, proteção CSRF, e otimização SEO (Search Engine Optimization). Esta experiência inicial despertou o meu interesse pela importância da segurança no desenvolvimento web e estabeleceu as bases para o meu percurso na área de cibersegurança. Estágio realizado no âmbito da formação na Escola Profissional de Valongo.
                 </p>
             </div>
@@ -225,21 +227,21 @@
 
     <!-- Education Section -->
     <section class="section">
-        <h2 class="section-title fade-in">Formação Acadêmica</h2>
+        <h2 class="section-title fade-in" data-i18n="edu.title">Formação Acadêmica</h2>
         <div class="timeline fade-in">
             <div class="timeline-item">
-                <div class="timeline-date">2024 - 2026</div>
-                <h3 class="timeline-title">CTeSP de Cibersegurança</h3>
-                <div class="timeline-company">Instituto Superior de Tecnologias Avançadas do Porto</div>
-                <p class="timeline-description">
+                <div class="timeline-date" data-i18n="edu.1.date">2024 - 2026</div>
+                <h3 class="timeline-title" data-i18n="edu.1.title">CTeSP de Cibersegurança</h3>
+                <div class="timeline-company" data-i18n="edu.1.company">Instituto Superior de Tecnologias Avançadas do Porto</div>
+                <p class="timeline-description" data-i18n="edu.1.desc">
                     Curso Técnico Superior Profissional especializado em cibersegurança, abordando os fundamentos teóricos e práticos da proteção de sistemas informáticos. O programa inclui módulos de segurança de redes, análise de vulnerabilidades, gestão de incidentes de segurança, criptografia aplicada e conformidade com regulamentações. Esta formação está a proporcionar competências específicas e atualizadas para enfrentar os desafios modernos da cibersegurança empresarial.
                 </p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2021 - 2024</div>
-                <h3 class="timeline-title">Curso de Gestão de Programação de Sistemas Informáticos</h3>
-                <div class="timeline-company">Escola Profissional de Valongo</div>
-                <p class="timeline-description">
+                <div class="timeline-date" data-i18n="edu.2.date">2021 - 2024</div>
+                <h3 class="timeline-title" data-i18n="edu.2.title">Curso de Gestão de Programação de Sistemas Informáticos</h3>
+                <div class="timeline-company" data-i18n="edu.2.company">Escola Profissional de Valongo</div>
+                <p class="timeline-description" data-i18n="edu.2.desc">
                     Formação técnica profissional focada na programação e gestão de sistemas informáticos. Este curso foi fundamental para estabelecer uma base sólida em desenvolvimento de software, administração de sistemas e gestão de infraestruturas tecnológicas. O conhecimento adquirido sobre arquiteturas de sistemas, redes e programação revelou-se essencial para compreender as vulnerabilidades e vetores de ataque que são explorados em cibersegurança, proporcionando uma perspetiva técnica valiosa sobre como os sistemas podem ser protegidos desde a sua conceção.
                 </p>
             </div>
@@ -248,25 +250,92 @@
 
     <!-- Academic Projects Section -->
     <section class="section">
-        <h2 class="section-title fade-in">Projetos Académicos</h2>
+        <h2 class="section-title fade-in" data-i18n="acad.title">Projetos Académicos</h2>
         <div class="timeline fade-in">
             <div class="timeline-item">
-                <div class="timeline-date">2025</div>
-                <h3 class="timeline-title">Participação na Joteca</h3>
-                <div class="timeline-company">Instituto Superior de Tecnologias Avançadas do Porto</div>
-                <p class="timeline-description">
+                <div class="timeline-date" data-i18n="acad.1.date">2025</div>
+                <h3 class="timeline-title" data-i18n="acad.1.title">Participação na Joteca</h3>
+                <div class="timeline-company" data-i18n="acad.1.company">Instituto Superior de Tecnologias Avançadas do Porto</div>
+                <p class="timeline-description" data-i18n="acad.1.desc">
                     A Joteca foi uma organização académica do ISTEC no Porto, onde apresentei o projeto EyeWeb para representantes de empresas e outras instituições de ensino superior. Esta experiência desenvolveu competências de comunicação, trabalho em equipa, e exposição técnica em ambiente profissional, além de fortalecer o interesse por acessibilidade digital e segurança na web.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <h2 class="section-title fade-in" data-i18n="certs.title">Certificações e Qualificações</h2>
+        <div class="certifications-grid fade-in">
+            <div class="certification-category">
+                <h3><i class="fas fa-graduation-cap"></i> <span data-i18n="certs.academic">Certificações Académicas</span></h3>
+                <div class="certification-items">
+                    <a href="#" class="certification-item" data-cert-name="Certificado CTeSP Cibersegurança">
+                        <div>
+                            <div class="cert-name" data-i18n="certs.acad1.name">CTeSP de Cibersegurança</div>
+                            <div class="cert-status" data-i18n="certs.acad1.status">Instituto Superior de Tecnologias Avançadas do Porto</div>
+                        </div>
+                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
+                    </a>
+                    <a href="certeficados/JoseOliveira_certeficado_GPSI.pdf" class="certification-item" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado GPSI em nova aba (PDF)">
+                        <div>
+                            <div class="cert-name" data-i18n="certs.acad2.name">Gestão de Programação de Sistemas Informáticos</div>
+                            <div class="cert-status" data-i18n="certs.acad2.status">Escola Profissional de Valongo</div>
+                        </div>
+                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="certification-category">
+                <h3><i class="fas fa-award"></i> <span data-i18n="certs.professional">Certificações Profissionais</span></h3>
+                <div class="certification-items">
+                    <div class="certification-item" style="pointer-events: none; opacity: 0.7;">
+                        <div>
+                            <div class="cert-name" data-i18n="certs.none">Sem certificados profissionais adquiridos</div>
+                            <div class="cert-status" data-i18n="certs.inprogress">Em desenvolvimento de competências</div>
+                        </div>
+                        <i class="fas fa-clock cert-icon"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certification-category">
+                <h3><i class="fas fa-star"></i> <span data-i18n="certs.recognition">Certificados de Reconhecimento</span></h3>
+                <div class="certification-items">
+                    <a href="certeficados/JoseOliveira_certeficado_ISTEC_Recognition.pdf" class="certification-item" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de reconhecimento ISTEC em nova aba (PDF)">
+                        <div>
+                            <div class="cert-name" data-i18n="certs.recog1.name">Reconhecimento ISTEC</div>
+                            <div class="cert-status" data-i18n="certs.recog1.status">Instituto Superior de Tecnologias Avançadas do Porto</div>
+                        </div>
+                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="certification-category">
+                <h3><i class="fas fa-users"></i> <span data-i18n="certs.participation">Certificações de Participação</span></h3>
+                <div class="certification-items">
+                    <a href="certeficados/JoseOliveira_certeficado_Joteca.pdf" class="certification-item" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de participação Joteca em nova aba (PDF)">
+                        <div>
+                            <div class="cert-name" data-i18n="certs.part1.name">Participação na Joteca</div>
+                            <div class="cert-status" data-i18n="certs.part1.status">Projeto EyeWeb - ISTEC Porto</div>
+                        </div>
+                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="section">
-        <h2 class="section-title fade-in">Competências Técnicas</h2>
+        <h2 class="section-title fade-in" data-i18n="skills.title">Competências Técnicas</h2>
         <div class="skills-grid fade-in">
             <div class="skill-category">
-                <h3><i class="fas fa-shield-alt"></i> Áreas de Atuação</h3>
+                <h3><i class="fas fa-shield-alt"></i> <span data-i18n="skills.areas">Áreas de Atuação</span></h3>
                 <div class="skill-tags">
                     <span class="skill-tag">Análise de Vulnerabilidades</span>
                     <span class="skill-tag">Forense Digital</span>
@@ -281,7 +350,7 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Linguagens de Programação e Scripting</h3>
+                <h3><i class="fas fa-code"></i> <span data-i18n="skills.langs">Linguagens de Programação e Scripting</span></h3>
                 <div class="skill-tags">
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">JavaScript</span>
@@ -297,7 +366,7 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-database"></i> Banco de Dados</h3>
+                <h3><i class="fas fa-database"></i> <span data-i18n="skills.db">Banco de Dados</span></h3>
                 <div class="skill-tags">
                     <span class="skill-tag">MySQL</span>
                     <span class="skill-tag">SQL Server</span>
@@ -305,7 +374,7 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-file-code"></i> Linguagens e Formatos de Dados</h3>
+                <h3><i class="fas fa-file-code"></i> <span data-i18n="skills.dataformats">Linguagens e Formatos de Dados</span></h3>
                 <div class="skill-tags">
                     <span class="skill-tag">HTML</span>
                     <span class="skill-tag">CSS</span>
@@ -314,7 +383,7 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Ferramentas de Pentest</h3>
+                <h3><i class="fas fa-tools"></i> <span data-i18n="skills.pentest">Ferramentas de Pentest</span></h3>
                 <div class="skill-tags">
                     <span class="skill-tag">theHarvester</span>
                     <span class="skill-tag">Nikto</span>
@@ -331,7 +400,7 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-search"></i> Ferramentas Forense</h3>
+                <h3><i class="fas fa-search"></i> <span data-i18n="skills.forensics">Ferramentas Forense</span></h3>
                 <div class="skill-tags">
                     <span class="skill-tag">ExifTool</span>
                     <span class="skill-tag">FTK Imager</span>
@@ -343,7 +412,7 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-desktop"></i> Sistemas Operativos</h3>
+                <h3><i class="fas fa-desktop"></i> <span data-i18n="skills.os">Sistemas Operativos</span></h3>
                 <div class="skill-tags">
                     <span class="skill-tag">Ubuntu</span>
                     <span class="skill-tag">Kali Linux</span>
@@ -356,7 +425,7 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-flask"></i> Ambientes de Desenvolvimento e Testes</h3>
+                <h3><i class="fas fa-flask"></i> <span data-i18n="skills.env">Ambientes de Desenvolvimento e Testes</span></h3>
                 <div class="skill-tags">
                     <span class="skill-tag">Visual Studio 2017</span>
                     <span class="skill-tag">WAMP</span>
@@ -381,7 +450,7 @@
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-cogs"></i> Ferramentas de Produtividade</h3>
+                <h3><i class="fas fa-cogs"></i> <span data-i18n="skills.tools">Ferramentas de Produtividade</span></h3>
                 <div class="skill-tags">
                     <span class="skill-tag">VS Code</span>
                     <span class="skill-tag">PyCharm</span>
@@ -396,88 +465,91 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section class="section">
-        <h2 class="section-title fade-in">Certificações e Qualificações</h2>
-        <div class="certifications-grid fade-in">
-            <div class="certification-category">
-                <h3><i class="fas fa-graduation-cap"></i> Certificações Académicas</h3>
-                <div class="certification-items">
-                    <a href="#" class="certification-item" data-cert-name="Certificado CTeSP Cibersegurança">
-                        <div>
-                            <div class="cert-name">CTeSP de Cibersegurança</div>
-                            <div class="cert-status">Instituto Superior de Tecnologias Avançadas do Porto</div>
-                        </div>
-                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
-                    </a>
-                    <a href="certeficados/JoseOliveira_certeficado_GPSI.pdf" class="certification-item" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado GPSI em nova aba (PDF)">
-                        <div>
-                            <div class="cert-name">Gestão de Programação de Sistemas Informáticos</div>
-                            <div class="cert-status">Escola Profissional de Valongo</div>
-                        </div>
-                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="certification-category">
-                <h3><i class="fas fa-award"></i> Certificações Profissionais</h3>
-                <div class="certification-items">
-                    <div class="certification-item" style="pointer-events: none; opacity: 0.7;">
-                        <div>
-                            <div class="cert-name">Sem certificados profissionais adquiridos</div>
-                            <div class="cert-status">Em desenvolvimento de competências</div>
-                        </div>
-                        <i class="fas fa-clock cert-icon"></i>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="certification-category">
-                <h3><i class="fas fa-users"></i> Certificações de Participação</h3>
-                <div class="certification-items">
-                    <a href="certeficados/JoseOliveira_certeficado_Joteca.pdf" class="certification-item" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de participação Joteca em nova aba (PDF)">
-                        <div>
-                            <div class="cert-name">Participação na Joteca</div>
-                            <div class="cert-status">Projeto EyeWeb - ISTEC Porto</div>
-                        </div>
-                        <i class="fas fa-external-link-alt cert-icon" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-            
-
-        </div>
-    </section>
-
     <!-- Projects Section -->
     <section id="projects" class="section">
-        <h2 class="section-title fade-in">Projetos</h2>
+        <h2 class="section-title fade-in" data-i18n="projects.title">Projetos</h2>
         
-        <!-- Cybersecurity Projects -->
+        <!-- Offensive Security Projects -->
         <div class="projects-category fade-in">
             <h3 class="projects-category-title">
-                <i class="fas fa-shield-alt"></i>
-                Projetos de Cibersegurança
+                <i class="fas fa-crosshairs"></i>
+                <span data-i18n="projects.offensive">Segurança Ofensiva</span>
             </h3>
             <div class="projects-grid">
-                <button class="nav-button" id="cybersecurity-prev-btn" aria-label="Projetos de Cibersegurança: anterior" data-category="cybersecurity" data-dir="prev">
+                <button class="nav-button" id="offensive-prev-btn" aria-label="Segurança Ofensiva: anterior" data-category="offensive" data-dir="prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                <div class="projects-cards-container" id="cybersecurity-projects-container">
+                <div class="projects-cards-container" id="offensive-projects-container">
                     <!-- Projects will be dynamically loaded here -->
                 </div>
-                <button class="nav-button" id="cybersecurity-next-btn" aria-label="Projetos de Cibersegurança: seguinte" data-category="cybersecurity" data-dir="next">
+                <button class="nav-button" id="offensive-next-btn" aria-label="Segurança Ofensiva: seguinte" data-category="offensive" data-dir="next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Network Projects -->
+        <!-- Defensive Security Projects -->
+        <div class="projects-category fade-in">
+            <h3 class="projects-category-title">
+                <i class="fas fa-shield-alt"></i>
+                <span data-i18n="projects.defensive">Segurança Defensiva</span>
+            </h3>
+            <div class="projects-grid">
+                <button class="nav-button" id="defensive-prev-btn" aria-label="Segurança Defensiva: anterior" data-category="defensive" data-dir="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-cards-container" id="defensive-projects-container">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+                <button class="nav-button" id="defensive-next-btn" aria-label="Segurança Defensiva: seguinte" data-category="defensive" data-dir="next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Security Reports -->
+        <div class="projects-category fade-in">
+            <h3 class="projects-category-title">
+                <i class="fas fa-file-alt"></i>
+                <span data-i18n="projects.reports">Relatórios de Segurança</span>
+            </h3>
+            <div class="projects-grid">
+                <button class="nav-button" id="reports-prev-btn" aria-label="Relatórios de Segurança: anterior" data-category="reports" data-dir="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-cards-container" id="reports-projects-container">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+                <button class="nav-button" id="reports-next-btn" aria-label="Relatórios de Segurança: seguinte" data-category="reports" data-dir="next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Artificial Intelligence Projects -->
+        <div class="projects-category fade-in">
+            <h3 class="projects-category-title">
+                <i class="fas fa-brain"></i>
+                <span data-i18n="projects.ai">Inteligência Artificial</span>
+            </h3>
+            <div class="projects-grid">
+                <button class="nav-button" id="ai-prev-btn" aria-label="Inteligência Artificial: anterior" data-category="ai" data-dir="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-cards-container" id="ai-projects-container">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+                <button class="nav-button" id="ai-next-btn" aria-label="Inteligência Artificial: seguinte" data-category="ai" data-dir="next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Networking Projects -->
         <div class="projects-category fade-in">
             <h3 class="projects-category-title">
                 <i class="fas fa-network-wired"></i>
-                Projetos de Redes
+                <span data-i18n="projects.networking">Projetos de Redes</span>
             </h3>
             <div class="projects-grid">
                 <button class="nav-button" id="networking-prev-btn" aria-label="Projetos de Redes: anterior" data-category="networking" data-dir="prev">
@@ -492,20 +564,20 @@
             </div>
         </div>
 
-        <!-- Programming Projects -->
+        <!-- Software Development Projects -->
         <div class="projects-category fade-in">
             <h3 class="projects-category-title">
-                <i class="fas fa-code"></i>
-                Projetos de Programação
+                <i class="fas fa-laptop-code"></i>
+                <span data-i18n="projects.software">Desenvolvimento de Software</span>
             </h3>
             <div class="projects-grid">
-                <button class="nav-button" id="programming-prev-btn" aria-label="Projetos de Programação: anterior" data-category="programming" data-dir="prev">
+                <button class="nav-button" id="software-prev-btn" aria-label="Desenvolvimento de Software: anterior" data-category="software" data-dir="prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                <div class="projects-cards-container" id="programming-projects-container">
+                <div class="projects-cards-container" id="software-projects-container">
                     <!-- Projects will be dynamically loaded here -->
                 </div>
-                <button class="nav-button" id="programming-next-btn" aria-label="Projetos de Programação: seguinte" data-category="programming" data-dir="next">
+                <button class="nav-button" id="software-next-btn" aria-label="Desenvolvimento de Software: seguinte" data-category="software" data-dir="next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -515,16 +587,16 @@
         <div class="projects-category fade-in">
             <h3 class="projects-category-title">
                 <i class="fas fa-globe"></i>
-                Projetos Web & Bootstrap
+                <span data-i18n="projects.web">Desenvolvimento Web</span>
             </h3>
             <div class="projects-grid">
-                <button class="nav-button" id="web-prev-btn" aria-label="Projetos Web & Bootstrap: anterior" data-category="web" data-dir="prev">
+                <button class="nav-button" id="web-prev-btn" aria-label="Desenvolvimento Web: anterior" data-category="web" data-dir="prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="projects-cards-container" id="web-projects-container">
                     <!-- Projects will be dynamically loaded here -->
                 </div>
-                <button class="nav-button" id="web-next-btn" aria-label="Projetos Web & Bootstrap: seguinte" data-category="web" data-dir="next">
+                <button class="nav-button" id="web-next-btn" aria-label="Desenvolvimento Web: seguinte" data-category="web" data-dir="next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -534,7 +606,7 @@
         <div class="projects-category fade-in">
             <h3 class="projects-category-title">
                 <i class="fas fa-microchip"></i>
-                Projetos de Hardware
+                <span data-i18n="projects.hardware">Projetos de Hardware</span>
             </h3>
             <div class="projects-grid">
                 <button class="nav-button" id="hardware-prev-btn" aria-label="Projetos de Hardware: anterior" data-category="hardware" data-dir="prev">
@@ -552,7 +624,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <h2 class="section-title fade-in">Contacto</h2>
+        <h2 class="section-title fade-in" data-i18n="contact.title">Contacto</h2>
         <div class="contact-content fade-in">
             <div class="contact-info">
                 <div class="contact-item">
@@ -572,10 +644,10 @@
                             <i class="fas fa-phone" aria-hidden="true"></i>
                     </div>
                     <div>
-                        <h3>Telefone</h3>
+                        <h3 data-i18n="contact.phone.title">Telefone</h3>
                         <p>
                             <span class="copy-text" data-copy="phone-info" style="color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
-                                Número de telemóvel
+                                <span data-i18n="contact.phone">Número de telemóvel</span>
                                 <i class="fas fa-info-circle" style="font-size: 0.9rem; opacity: 0.7;"></i>
                             </span>
                         </p>
@@ -603,29 +675,29 @@
             
             <form class="contact-form" method="POST" autocomplete="off">
                 <div class="form-group">
-                    <label for="name">Nome</label>
+                    <label for="name" data-i18n="contact.name">Nome</label>
                     <input type="text" id="name" name="name" class="form-input" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Seu Email</label>
+                    <label for="email" data-i18n="contact.email">Seu Email</label>
                     <input type="email" id="email" name="email" class="form-input" required>
                 </div>
                 <div class="form-group">
-                    <label for="subject">Assunto</label>
+                    <label for="subject" data-i18n="contact.subject">Assunto</label>
                     <select id="subject" name="subject" class="form-input" required>
-                        <option value="" disabled selected hidden>Selecione um assunto</option>
-                        <option value="Interesse em Colaboração">Interesse em Colaboração</option>
-                        <option value="Oportunidade de Emprego">Oportunidade de Emprego</option>
-                        <option value="Projeto de Cibersegurança">Realização de um projeto</option>
-                        <option value="Consultoria em Segurança">Consultoria em Segurança</option>
-                        <option value="Parceria Empresarial">Parceria Empresarial</option>
-                        <option value="Pergunta Técnica">Pergunta Técnica</option>
-                        <option value="Feedback sobre Portfólio">Feedback sobre Portfólio</option>
-                        <option value="Outro Assunto">Outro Assunto</option>
+                        <option value="" disabled selected hidden data-i18n="contact.select">Selecione um assunto</option>
+                        <option value="Interesse em Colaboração" data-i18n="contact.opt1">Interesse em Colaboração</option>
+                        <option value="Oportunidade de Emprego" data-i18n="contact.opt2">Oportunidade de Emprego</option>
+                        <option value="Projeto de Cibersegurança" data-i18n="contact.opt3">Realização de um projeto</option>
+                        <option value="Consultoria em Segurança" data-i18n="contact.opt4">Consultoria em Segurança</option>
+                        <option value="Parceria Empresarial" data-i18n="contact.opt5">Parceria Empresarial</option>
+                        <option value="Pergunta Técnica" data-i18n="contact.opt6">Pergunta Técnica</option>
+                        <option value="Feedback sobre Portfólio" data-i18n="contact.opt7">Feedback sobre Portfólio</option>
+                        <option value="Outro Assunto" data-i18n="contact.opt8">Outro Assunto</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">Mensagem</label>
+                    <label for="message" data-i18n="contact.message">Mensagem</label>
                     <textarea id="message" name="message" class="form-input" required></textarea>
                 </div>
           <!-- Honeypots e armadilhas anti-bot (invisíveis para utilizadores reais) -->
@@ -646,7 +718,7 @@
                     <div class="cf-turnstile" data-sitekey="0x4AAAAAACKws8WKGgdv8CqP" data-theme="dark"></div>
                 </div>
                 
-                <button type="submit" class="btn btn-primary" id="submitBtn">
+                <button type="submit" class="btn btn-primary" id="submitBtn" data-i18n="contact.send">
                     <i class="fas fa-paper-plane"></i>
                     Enviar Mensagem
                 </button>
@@ -668,7 +740,7 @@
                     <i class="fas fa-envelope" aria-hidden="true"></i>
                 </span>
             </div>
-            <p>&copy; 2025 Samuel Oliveira. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Samuel Oliveira. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
         </div>
     </footer>
 

@@ -1,0 +1,69 @@
+# ============================================================
+# 🔄 Sync Portfolio Projects from GitHub
+# ============================================================
+# This workflow fetches repos with the "portfolio-project" topic
+# from Sam-Ciber-Dev's GitHub, reads each repo's .portfolio.json
+# metadata, downloads the social preview image from assets/,
+# and generates data/projects-data.json for the static site.
+#
+# Triggers:
+#   - Manual dispatch (workflow_dispatch)
+#   - Scheduled: every day at 06:00 UTC
+#   - When .github/workflows/sync-projects.yml itself changes
+#
+# Requirements:
+#   - Each project repo must have the topic "portfolio-project"
+#   - Each project repo must contain a .portfolio.json at root
+#   - Social preview image should be at assets/social-preview.png
+# ============================================================
+
+name: Sync Portfolio Projects
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs daily at 06:00 UTC
+    - cron: '0 6 * * *'
+  push:
+    paths:
+      - '.github/workflows/sync-projects.yml'
+
+# Ensure only one sync runs at a time
+concurrency:
+  group: sync-projects
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio site
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch projects and generate JSON
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: Sam-Ciber-Dev
+          TOPIC_FILTER: portfolio-project
+        run: node .github/scripts/sync-projects.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/projects-data.json data/images/
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync portfolio projects [skip ci]"
+            git push
+          fi

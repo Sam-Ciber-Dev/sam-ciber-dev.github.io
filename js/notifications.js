@@ -1,3 +1,5 @@
+import { t } from './i18n.js';
+
 // Accessible notification helpers
 export function showCopyNotification(message, { iconClass = 'fas fa-check-circle', live = 'polite' } = {}) {
   const existing = document.querySelectorAll('.copy-notification');
@@ -18,7 +20,7 @@ export function showCopyNotification(message, { iconClass = 'fas fa-check-circle
 export function handleCertificationClick(e, certificationName) {
   if (e) e.preventDefault();
   const message = certificationName === 'Certificado CTeSP Cibersegurança'
-    ? 'O Curso ainda não foi concluído'
+    ? t('popup.ctespcourse')
     : `Certificado "${certificationName}" selecionado!`;
   // Use the same immediate toast behavior as copy notifications (no artificial delay)
   showCopyNotification(message, { iconClass: 'fas fa-certificate' });
