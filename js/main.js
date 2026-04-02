@@ -19,7 +19,34 @@ initI18n();
 
 // Typing animation (uses i18n)
 const subtitle = qs('.hero-subtitle');
+const _toggleBtn = qs('#lang-toggle');
+let _isTyping = false;
+let _isUnlocking = false;
+
+function _lockButton() {
+  if (!_toggleBtn) return;
+  _toggleBtn.classList.remove('lang-unlocking');
+  _toggleBtn.classList.add('lang-locked');
+}
+
+function _unlockButton() {
+  if (!_toggleBtn) return;
+  _isUnlocking = true;
+  _toggleBtn.classList.remove('lang-locked');
+  _toggleBtn.classList.add('lang-unlocking');
+  const onEnd = () => {
+    _toggleBtn.removeEventListener('transitionend', onEnd);
+    _toggleBtn.classList.remove('lang-unlocking');
+    _isUnlocking = false;
+  };
+  _toggleBtn.addEventListener('transitionend', onEnd, { once: true });
+  // Fallback in case transitionend doesn't fire
+  setTimeout(onEnd, 500);
+}
+
 function typeWriter() {
+  _isTyping = true;
+  _lockButton();
   const text = t('hero.subtitle');
   let _typeIndex = 0;
   subtitle.textContent = '';
@@ -28,10 +55,21 @@ function typeWriter() {
       subtitle.textContent = text.slice(0, _typeIndex + 1);
       _typeIndex++;
       setTimeout(step, 100);
+    } else {
+      _isTyping = false;
+      _unlockButton();
     }
   }
   step();
 }
+
+/** Check if language switching is currently allowed */
+export function isLangLocked() {
+  return _isTyping || _isUnlocking;
+}
+// Expose to i18n module (avoids circular import)
+window.__langLock = { isLangLocked };
+
 on(window, 'load', () => { document.body.classList.add('loaded'); setTimeout(typeWriter, 2000); });
 // Re-run typing animation when language changes
 on(window, 'lang-change', () => { typeWriter(); });

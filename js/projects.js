@@ -1,7 +1,8 @@
-// Projects data, pagination, and rendering with i18n + image support
+// Projects data, pagination, and rendering with i18n + image support + detail modal
 import { projectsData, loadProjectsData } from './projects-data.js';
 import { resolveI18n, getLang, t } from './i18n.js';
-import { on } from './dom-utils.js';
+import { qs, on, qsa } from './dom-utils.js';
+import { trapFocus } from './dom-utils.js';
 
 export const paginationState = {
   offensive: { currentPage: 0 },
@@ -76,10 +77,10 @@ function createProjectCard(project) {
   }
 
   return `
-    <div class="project-card">
+    <div class="project-card" data-project-json="${encodeURIComponent(JSON.stringify(project))}">
       ${imageHTML}
       <div class="project-content">
-        <h3 class="project-title">${title}</h3>
+        <h3 class="project-title" title="${title}">${title}</h3>
         <p class="project-description">${description}</p>
         <div class="project-tech">${technologies}</div>
         <div class="project-links">${linksHTML}</div>
@@ -111,6 +112,8 @@ export function renderProjectsPage(category, direction = 'none') {
     };
     container.addEventListener('animationend', onAnimEnd);
     setTimeout(() => container.classList.remove('slide-in-left', 'slide-in-right', 'slide-out-left', 'slide-out-right'), 500);
+    // Detect truncated titles after DOM insertion
+    requestAnimationFrame(() => detectTruncatedTitles());
   }
 
   if (direction !== 'none') {
@@ -200,11 +203,17 @@ export async function initProjects() {
   renderProjectsPage('web');
   renderProjectsPage('hardware');
 
+  // Mark truncated titles and bind click-to-modal
+  detectTruncatedTitles();
+  initProjectModal();
+
   // Re-render when language changes
   on(window, 'lang-change', () => {
     Object.keys(paginationState).forEach(category => {
       renderProjectsPage(category);
     });
+    // Re-detect after re-render
+    setTimeout(detectTruncatedTitles, 350);
   });
 
   let resizeTimeout;
@@ -215,6 +224,105 @@ export async function initProjects() {
         paginationState[category].currentPage = 0;
         renderProjectsPage(category);
       });
+      setTimeout(detectTruncatedTitles, 350);
     }, 250);
+  });
+}
+
+// ======================== Truncation Detection ========================
+
+function detectTruncatedTitles() {
+  qsa('.project-title').forEach(el => {
+    // scrollWidth > clientWidth means text is truncated
+    if (el.scrollWidth > el.clientWidth) {
+      el.classList.add('truncated');
+    } else {
+      el.classList.remove('truncated');
+    }
+  });
+}
+
+// ======================== Project Detail Modal ========================
+
+function initProjectModal() {
+  const modal = qs('#project-modal');
+  if (!modal) return;
+
+  const titleEl = qs('#project-modal-title');
+  const descEl = qs('#project-modal-desc');
+  const techEl = qs('#project-modal-tech');
+  const linksEl = qs('#project-modal-links');
+  const imageEl = qs('#project-modal-image');
+  const dialog = modal.querySelector('.cv-modal__dialog');
+  let lastFocused = null;
+
+  function openModal(project) {
+    const lang = getLang();
+    const title = resolveI18n(project.title);
+    const description = resolveI18n(project.description);
+
+    // Image
+    if (project.image) {
+      imageEl.innerHTML = `<img src="${project.image}" alt="${title}" loading="lazy">`;
+    } else {
+      imageEl.innerHTML = `<i class="${project.icon || 'fas fa-folder-open'}"></i>`;
+    }
+
+    titleEl.textContent = title;
+    descEl.textContent = description;
+
+    // Technologies
+    techEl.innerHTML = (project.technologies || []).map(tech => `<span class="tech-tag">${tech}</span>`).join('');
+
+    // Links
+    let html = '';
+    if (project.links) {
+      if (typeof project.links === 'object' && project.links.github) {
+        html += `<a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>`;
+        const reportUrl = project.links.report?.[lang] || project.links.report?.pt || project.links.report?.en;
+        if (reportUrl) {
+          html += `<a href="${reportUrl}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-file-pdf"></i> ${t('projects.report')}</a>`;
+        }
+      }
+    }
+    linksEl.innerHTML = html;
+
+    lastFocused = document.activeElement;
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKeyDown);
+    const focusable = dialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+    if (focusable.length) focusable[0].focus();
+  }
+
+  function closeModal() {
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKeyDown);
+    if (lastFocused) lastFocused.focus();
+  }
+
+  function onKeyDown(e) {
+    if (e.key === 'Escape') { closeModal(); return; }
+    trapFocus(dialog, e);
+  }
+
+  // Close handlers
+  modal.querySelectorAll('[data-project-close]').forEach(el => {
+    on(el, 'click', e => { e.preventDefault(); closeModal(); });
+  });
+
+  // Delegate click on project titles
+  document.addEventListener('click', e => {
+    const titleEl2 = e.target.closest('.project-title');
+    if (!titleEl2) return;
+    const card = titleEl2.closest('.project-card');
+    if (!card || card.classList.contains('empty')) return;
+    const json = card.getAttribute('data-project-json');
+    if (!json) return;
+    try {
+      const project = JSON.parse(decodeURIComponent(json));
+      openModal(project);
+    } catch(_) {}
   });
 }

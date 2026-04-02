@@ -255,6 +255,11 @@ export function initI18n() {
     // Show the OTHER language as the toggle label
     updateToggleButton(toggleBtn);
     on(toggleBtn, 'click', () => {
+      // Block language switch during typing animation + cooldown
+      try {
+        const { isLangLocked } = window.__langLock || {};
+        if (isLangLocked && isLangLocked()) return;
+      } catch(_) {}
       setLang(currentLang === 'pt' ? 'en' : 'pt');
       updateToggleButton(toggleBtn);
     });
