@@ -70,7 +70,13 @@ export function isLangLocked() {
 // Expose to i18n module (avoids circular import)
 window.__langLock = { isLangLocked };
 
-on(window, 'load', () => { document.body.classList.add('loaded'); setTimeout(typeWriter, 2000); });
+on(window, 'load', () => {
+  document.body.classList.add('loaded');
+  // Lock immediately so the button is disabled during the 2s delay
+  _isTyping = true;
+  _lockButton();
+  setTimeout(typeWriter, 2000);
+});
 // Re-run typing animation when language changes
 on(window, 'lang-change', () => { typeWriter(); });
 
