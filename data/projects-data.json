@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-02T14:29:22.690Z",
+  "lastUpdated": "2026-04-03T00:00:00.000Z",
   "projects": {
     "offensive": [],
     "defensive": [],
@@ -37,6 +37,37 @@
     "networking": [],
     "software": [],
     "web": [],
-    "hardware": []
+    "hardware": [
+      {
+        "title": {
+          "pt": "Invictaeria — Deteção de Aviões com ESP32",
+          "en": "Invictaeria — ESP32 Airplane Detection System"
+        },
+        "description": {
+          "pt": "Sistema IoT com ESP32 que deteta o avião mais próximo em tempo real através da API OpenSky Network, apresentando dados de voo num ecrã OLED. Projeto académico desenvolvido no âmbito do CTeSP de Cibersegurança no ISTEC Porto.",
+          "en": "IoT system built with ESP32 that detects the nearest airplane in real time using the OpenSky Network API, displaying live flight data on an OLED screen. Academic project developed as part of the CTeSP in Cybersecurity at ISTEC Porto."
+        },
+        "technologies": [
+          "ESP32",
+          "C++",
+          "Arduino",
+          "OpenSky Network API",
+          "OLED SSD1306",
+          "ArduinoJson"
+        ],
+        "icon": "fas fa-microchip",
+        "image": "data/images/invictaeria.jpg",
+        "links": {
+          "github": "https://github.com/Sam-Ciber-Dev/invictaeria",
+          "report": {
+            "pt": "https://github.com/Sam-Ciber-Dev/invictaeria/blob/main/docs/Invictaeria_Relatorio_PT.pdf",
+            "en": "https://github.com/Sam-Ciber-Dev/invictaeria/blob/main/docs/Invictaeria_Report_ENG.pdf"
+          }
+        },
+        "order": 1,
+        "repo": "invictaeria",
+        "updatedAt": "2026-04-03T00:00:00Z"
+      }
+    ]
   }
 }
