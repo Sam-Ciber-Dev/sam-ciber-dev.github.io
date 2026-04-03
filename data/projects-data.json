@@ -1,17 +1,17 @@
 {
-  "lastUpdated": "2026-04-02T14:29:22.690Z",
+  "lastUpdated": "2026-04-03T06:56:59.014Z",
   "projects": {
     "offensive": [],
     "defensive": [],
     "reports": [
       {
         "title": {
-          "pt": "Análise de Vulnerabilidades: ISTEC Porto",
-          "en": "Vulnerability Assessment: ISTEC Porto"
+          "pt": "Análise de Vulnerabilidades — ISTEC Porto",
+          "en": "Vulnerability Analysis — ISTEC Porto"
         },
         "description": {
-          "pt": "Avaliação de vulnerabilidades black-box à infraestrutura pública do ISTEC Porto. Identificadas 6 vulnerabilidades (1 crítica, 4 altas, 1 média), incluindo RCE via SMBv2 e ataques de downgrade TLS. Todas remediadas após responsible disclosure com reconhecimento formal da instituição.",
-          "en": "Black-box vulnerability assessment of ISTEC Porto's public infrastructure. 6 vulnerabilities identified (1 critical, 4 high, 1 medium), including RCE via SMBv2 and TLS downgrade attacks. All remediated after responsible disclosure with formal recognition from the institution."
+          "pt": "Pentest externo autorizado à infraestrutura do ISTEC Porto. 6 vulnerabilidades identificadas (1 crítica, 4 altas, 1 média) — todas corrigidas via responsible disclosure.",
+          "en": "Authorized external pentest of ISTEC Porto's infrastructure. 6 vulnerabilities identified (1 critical, 4 high, 1 medium) — all remediated via responsible disclosure."
         },
         "technologies": [
           "Nmap",
@@ -30,7 +30,7 @@
         },
         "order": 1,
         "repo": "istec-vulnerability-assessment",
-        "updatedAt": "2026-04-02T14:27:09Z"
+        "updatedAt": "2026-04-02T15:07:37Z"
       }
     ],
     "ai": [],
