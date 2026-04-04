@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-03T06:56:59.014Z",
+  "lastUpdated": "2026-04-04T06:47:00.515Z",
   "projects": {
     "offensive": [],
     "defensive": [],
@@ -30,7 +30,7 @@
         },
         "order": 1,
         "repo": "istec-vulnerability-assessment",
-        "updatedAt": "2026-04-02T15:07:37Z"
+        "updatedAt": "2026-04-03T11:29:08Z"
       }
     ],
     "ai": [],
@@ -66,7 +66,7 @@
         },
         "order": 1,
         "repo": "invictaeria",
-        "updatedAt": "2026-04-03T00:00:00Z"
+        "updatedAt": "2026-04-03T12:02:57Z"
       }
     ]
   }
