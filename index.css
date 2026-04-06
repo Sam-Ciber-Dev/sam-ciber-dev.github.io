@@ -93,6 +93,10 @@ body {
     overflow-x: hidden;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
+    /* Safe area insets for notched devices and in-app browsers */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 body.loaded {
@@ -126,6 +130,10 @@ body.loaded {
     border-bottom: 1px solid rgba(59, 130, 246, 0.2);
     z-index: 1000;
     transition: var(--transition);
+    /* Safe area for notched devices */
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 .nav {
@@ -199,10 +207,10 @@ body.loaded {
 /* Hero Section                                                                */
 /* ========================================================================== */
 .hero {
-    /* Use dynamic viewport units to avoid mobile URL bar causing background seam */
+    /* Fallback chain: 100vh → 100svh → 100dvh for WebView/in-app browser compatibility */
     min-height: 100vh;
-    min-height: 100svh; /* small viewport height (Safari iOS) */
-    min-height: 100dvh; /* dynamic viewport height (modern browsers) */
+    min-height: 100svh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -401,8 +409,9 @@ button:focus-visible,
     position: relative;
     z-index: 2; /* ensure sections sit above hero decorative layer */
     background: var(--primary-color);
-    /* Make section occupy full viewport minus header for consistent layout */
+    /* Section min-height: dvh for in-app browsers, vh fallback for older */
     min-height: calc(100vh - var(--header-height-desktop));
+    min-height: calc(100dvh - var(--header-height-desktop));
     /* No scroll snap alignment */
 }
 
@@ -1154,7 +1163,9 @@ textarea.form-input {
 .scroll-top {
     position: fixed;
     bottom: 2rem;
+    bottom: calc(2rem + env(safe-area-inset-bottom));
     right: 2rem;
+    right: calc(2rem + env(safe-area-inset-right));
     width: 50px;
     height: 50px;
     background: var(--gradient);
@@ -1271,6 +1282,7 @@ textarea.form-input {
         right: 0;
         width: 280px;
         max-height: calc(100vh - 70px);
+        max-height: calc(100dvh - 70px);
         background: rgba(15, 23, 42, 0.98);
         backdrop-filter: blur(15px);
         border-left: 1px solid rgba(59, 130, 246, 0.2);
@@ -1385,8 +1397,9 @@ textarea.form-input {
 
     /* Hero Section */
     .hero {
-        /* Keep full viewport height for the first screen */
         min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
     }
     
     .hero-content {
@@ -1434,6 +1447,7 @@ textarea.form-input {
         padding-left: 1rem;
         padding-right: 1rem;
         min-height: calc(100vh - var(--header-height-mobile));
+        min-height: calc(100dvh - var(--header-height-mobile));
     }
     
     .section-title {
@@ -1699,6 +1713,7 @@ textarea.form-input {
     .section {
         padding: 2.5rem 0.8rem;
         min-height: calc(100vh - var(--header-height-mobile));
+        min-height: calc(100dvh - var(--header-height-mobile));
     }
     /* Removed per-element scroll-margin-top; global html scroll-padding-top handles offset */
 
@@ -1930,6 +1945,7 @@ textarea.form-input {
     .section {
         padding: 2rem 0.5rem;
         min-height: calc(100vh - var(--header-height-mobile));
+        min-height: calc(100dvh - var(--header-height-mobile));
     }
     /* Removed redundant scroll-margin-top; global strategy applied */
     
@@ -2053,7 +2069,9 @@ textarea.form-input {
 .copy-notification {
     position: fixed;
     top: 20px;
+    top: calc(20px + env(safe-area-inset-top));
     right: 20px;
+    right: calc(20px + env(safe-area-inset-right));
     background: var(--accent-color);
     color: white;
     padding: 1rem 1.5rem;
