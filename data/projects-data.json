@@ -1,17 +1,17 @@
 {
-  "lastUpdated": "2026-04-06T12:58:44.702Z",
+  "lastUpdated": "2026-04-06T13:07:19.763Z",
   "projects": {
     "offensive": [],
     "defensive": [],
     "reports": [
       {
         "title": {
-          "pt": "Vulnerability Analysis ISTEC Porto",
-          "en": "Vulnerability Analysis ISTEC Porto"
+          "pt": "Avaliação de Vulnerabilidades ISTEC Porto",
+          "en": "Vulnerability Assessment ISTEC Porto"
         },
         "description": {
-          "pt": "Authorized external pentest of ISTEC Porto. Six vulnerabilities confirmed and remediated via responsible disclosure.",
-          "en": "Authorized external pentest of ISTEC Porto. Six vulnerabilities confirmed and remediated via responsible disclosure."
+          "pt": "Avaliação de vulnerabilidades externo e autorizado ao ISTEC Porto. Seis vulnerabilidades confirmadas e remediadas através de divulgação responsável.",
+          "en": "Authorized external vulnerability assessment of ISTEC Porto. Six vulnerabilities confirmed and remediated via responsible disclosure."
         },
         "technologies": [
           "Nmap",
@@ -20,17 +20,17 @@
           "Black-Box"
         ],
         "icon": "fas fa-file-alt",
-        "image": "data/images/istec-vulnerability-assessment.png?v=1775478815000",
+        "image": "data/images/istec-vulnerability-assessment.png?v=1775480746000",
         "links": {
           "github": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment",
           "report": {
-            "pt": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment/blob/main/docs/Ph0enix_Analise_Vuln_ISTEC_PT.pdf",
-            "en": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment/blob/main/docs/Ph0enix_Analise_Vuln_ISTEC_ENG.pdf"
+            "pt": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment/blob/main/docs/Ph0enix_ISTEC_Avaliacao_de_Vulnerabilidades_PT.pdf",
+            "en": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment/blob/main/docs/Ph0enix_ISTEC_Vulnerability_Assessment_EN.pdf"
           }
         },
         "order": 1,
         "repo": "istec-vulnerability-assessment",
-        "updatedAt": "2026-04-06T12:33:35Z"
+        "updatedAt": "2026-04-06T13:05:46Z"
       }
     ],
     "ai": [],
