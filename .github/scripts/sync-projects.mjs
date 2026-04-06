@@ -44,6 +44,9 @@ const TOKEN = process.env.GITHUB_TOKEN || '';
 
 const VALID_CATEGORIES = ['offensive', 'defensive', 'reports', 'ai', 'networking', 'software', 'web', 'hardware'];
 
+// Timestamp used to bust CDN / browser caches during this sync run
+const BUILD_TS = Date.now();
+
 const HEADERS = {
   Accept: 'application/vnd.github+json',
   'User-Agent': 'portfolio-sync',
@@ -77,7 +80,8 @@ async function fetchPortfolioRepos() {
  * Returns null if not found.
  */
 async function fetchPortfolioMeta(repo) {
-  const url = `https://api.github.com/repos/${repo.full_name}/contents/.portfolio.json`;
+  // Use ref param + cache-buster to ensure fresh content from the API
+  const url = `https://api.github.com/repos/${repo.full_name}/contents/.portfolio.json?ref=${repo.default_branch}&_=${BUILD_TS}`;
   try {
     const data = await fetchJSON(url);
     // Content is base64-encoded
@@ -99,9 +103,9 @@ async function downloadSocialPreview(repo) {
   const extensions = ['png', 'jpg', 'jpeg', 'webp'];
 
   for (const ext of extensions) {
-    const rawUrl = `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch}/assets/social-preview.${ext}`;
+    const rawUrl = `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch}/assets/social-preview.${ext}?cb=${BUILD_TS}`;
     try {
-      const res = await fetch(rawUrl, { headers: { 'User-Agent': 'portfolio-sync' } });
+      const res = await fetch(rawUrl, { headers: { 'User-Agent': 'portfolio-sync', 'Cache-Control': 'no-cache, no-store', 'Pragma': 'no-cache' } });
       if (!res.ok) continue;
 
       const buffer = Buffer.from(await res.arrayBuffer());
@@ -154,7 +158,8 @@ function buildProjectEntry(repo, meta, imagePath) {
     icon: meta.icon || 'fas fa-folder-open',
 
     // Social preview image path (relative to site root)
-    image: imagePath,
+    // Append repo update timestamp as cache-buster so browsers fetch the latest version
+    image: imagePath ? `${imagePath}?v=${new Date(repo.updated_at).getTime()}` : null,
 
     // Links
     links: {

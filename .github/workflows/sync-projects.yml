@@ -9,7 +9,7 @@
 # Triggers:
 #   - Manual dispatch (workflow_dispatch)
 #   - Scheduled: every day at 06:00 UTC
-#   - When .github/workflows/sync-projects.yml itself changes
+#   - When sync workflow or script changes
 #
 # Requirements:
 #   - Each project repo must have the topic "portfolio-project"
@@ -27,6 +27,7 @@ on:
   push:
     paths:
       - '.github/workflows/sync-projects.yml'
+      - '.github/scripts/sync-projects.mjs'
 
 # Ensure only one sync runs at a time
 concurrency:
