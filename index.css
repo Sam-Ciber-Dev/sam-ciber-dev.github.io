@@ -573,9 +573,9 @@ button:focus-visible,
 .cv-modal[aria-hidden="false"] { opacity: 1; visibility: visible; pointer-events: auto; }
 .cv-modal__backdrop { position: absolute; inset: 0; background: #030617; opacity: 0; transition: opacity .28s ease; }
 .cv-modal[aria-hidden="false"] .cv-modal__backdrop { opacity: 0.6; }
-.cv-modal__dialog { position: relative; background: var(--primary-color); border-radius: 12px; padding: 1.25rem; width: 92%; max-width: 480px; box-shadow: var(--shadow); z-index: 70; transform: translateY(-10px) scale(.98); opacity: 0; transition: transform .28s ease, opacity .28s ease; max-height: calc(100dvh - 24px); overflow: auto; }
+.cv-modal__dialog { position: relative; background: var(--primary-color); border-radius: 12px; padding: 1.25rem; width: 92%; max-width: 480px; box-shadow: var(--shadow); z-index: 70; transform: translateY(-10px) scale(.98); opacity: 0; transition: transform .28s ease, opacity .28s ease; max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); margin-top: env(safe-area-inset-top); overflow: auto; }
 .cv-modal[aria-hidden="false"] .cv-modal__dialog { transform: translateY(0) scale(1); opacity: 1; }
-.cv-modal__close { position: absolute; top: .6rem; right: .6rem; background: transparent; border: none; color: var(--text-color); font-size: 1.1rem; cursor: pointer; }
+.cv-modal__close { position: sticky; top: 0; float: right; background: rgba(15, 23, 42, 0.85); border: none; color: var(--text-color); font-size: 1.3rem; cursor: pointer; z-index: 75; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; backdrop-filter: blur(4px); }
 .cv-modal__title { margin: 0 0 .75rem 0; font-size: 1.25rem; }
 .cv-modal__actions { display: flex; gap: .75rem; justify-content: center; margin-top: .75rem; }
 .cv-modal__actions .btn { min-width: 140px; }
