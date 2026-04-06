@@ -29,7 +29,7 @@ The site is fully static and client-driven, yet behaves like a small application
 Projects are automatically discovered and synced from GitHub repositories:
 
 1. Any repo with the topic `portfolio-project` is picked up by the sync workflow.
-2. Each project repo contains a `.portfolio.json` file with metadata (title, description, category, technologies, report links — all with PT/EN i18n support).
+2. Each project repo contains a `.portfolio.json` file with metadata (title, description, category, technologies, report links, all with PT/EN i18n support).
 3. A GitHub Actions workflow runs daily at 06:00 UTC (or manually via `workflow_dispatch`).
 4. The Node.js sync script fetches each repo's `.portfolio.json`, downloads the social preview image from `assets/social-preview.png`, and generates `data/projects-data.json`.
 5. The site loads this JSON at runtime and renders project cards dynamically.
