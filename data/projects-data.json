@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-06T07:17:02.256Z",
+  "lastUpdated": "2026-04-06T12:47:38.150Z",
   "projects": {
     "offensive": [],
     "defensive": [],
@@ -20,7 +20,7 @@
           "Black-Box"
         ],
         "icon": "fas fa-file-alt",
-        "image": "data/images/istec-vulnerability-assessment.png",
+        "image": "data/images/istec-vulnerability-assessment.png?v=1775478815000",
         "links": {
           "github": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment",
           "report": {
@@ -30,7 +30,7 @@
         },
         "order": 1,
         "repo": "istec-vulnerability-assessment",
-        "updatedAt": "2026-04-03T11:29:08Z"
+        "updatedAt": "2026-04-06T12:33:35Z"
       }
     ],
     "ai": [],
@@ -56,7 +56,7 @@
           "ArduinoJson"
         ],
         "icon": "fas fa-microchip",
-        "image": "data/images/invictaeria.png",
+        "image": "data/images/invictaeria.png?v=1775217777000",
         "links": {
           "github": "https://github.com/Sam-Ciber-Dev/invictaeria",
           "report": {
