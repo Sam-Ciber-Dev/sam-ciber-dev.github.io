@@ -333,6 +333,11 @@ function initProjectModal() {
     });
   });
 
+  // Close modal on keyboard section navigation (Shift+S / Shift+A)
+  on(window, 'section-navigate', () => {
+    if (modal.getAttribute('aria-hidden') === 'false') closeModal();
+  });
+
   // Delegate click on project titles
   document.addEventListener('click', e => {
     const titleEl2 = e.target.closest('.project-title');

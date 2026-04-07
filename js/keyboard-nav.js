@@ -80,6 +80,7 @@ export function initKeyboardNavigator(){
       // If we're mid-navigation, ignore until arrival
       if (navLock) { e.preventDefault(); return; }
       e.preventDefault();
+      window.dispatchEvent(new CustomEvent('section-navigate'));
       if(key==='s') goNext(); else goPrev();
     }
   });
