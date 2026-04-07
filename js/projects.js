@@ -326,6 +326,13 @@ function initProjectModal() {
     on(el, 'click', e => { e.preventDefault(); closeModal(); });
   });
 
+  // Close modal when navbar links are clicked
+  qsa('.nav-link').forEach(link => {
+    on(link, 'click', () => {
+      if (modal.getAttribute('aria-hidden') === 'false') closeModal();
+    });
+  });
+
   // Delegate click on project titles
   document.addEventListener('click', e => {
     const titleEl2 = e.target.closest('.project-title');
