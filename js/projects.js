@@ -255,8 +255,9 @@ function initProjectModal() {
   const imageEl = qs('#project-modal-image');
   const dialog = modal.querySelector('.cv-modal__dialog');
   let lastFocused = null;
+  let currentProject = null;
 
-  function openModal(project) {
+  function updateModalContent(project) {
     const lang = getLang();
     const title = resolveI18n(project.title);
     const description = resolveI18n(project.description);
@@ -286,6 +287,11 @@ function initProjectModal() {
       }
     }
     linksEl.innerHTML = html;
+  }
+
+  function openModal(project) {
+    currentProject = project;
+    updateModalContent(project);
 
     lastFocused = document.activeElement;
     modal.setAttribute('aria-hidden', 'false');
@@ -299,8 +305,16 @@ function initProjectModal() {
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     document.removeEventListener('keydown', onKeyDown);
+    currentProject = null;
     if (lastFocused) lastFocused.focus();
   }
+
+  // Update modal content when language changes while modal is open
+  on(window, 'lang-change', () => {
+    if (currentProject && modal.getAttribute('aria-hidden') === 'false') {
+      updateModalContent(currentProject);
+    }
+  });
 
   function onKeyDown(e) {
     if (e.key === 'Escape') { closeModal(); return; }
