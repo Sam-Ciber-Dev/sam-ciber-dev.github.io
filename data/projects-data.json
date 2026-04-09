@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-09T06:29:04.729Z",
+  "lastUpdated": "2026-04-09T13:28:42.706Z",
   "projects": {
     "offensive": [],
     "defensive": [
@@ -70,7 +70,41 @@
     "ai": [],
     "networking": [],
     "software": [],
-    "web": [],
+    "web": [
+      {
+        "title": {
+          "pt": "Lunark",
+          "en": "Lunark"
+        },
+        "description": {
+          "pt": "Plataforma e-commerce moderna de roupa. Frontend em Next.js (Vercel), API em Hono.js (Fly.io), base de dados Turso, emails por Brevo, e proteção Cloudflare Turnstile + Workers.",
+          "en": "Modern e-commerce clothing platform. Next.js frontend (Vercel), Hono.js API (Fly.io), Turso database, Brevo emails, and Cloudflare Turnstile + Workers protection."
+        },
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Hono.js",
+          "Turso",
+          "Drizzle ORM",
+          "Tailwind CSS",
+          "Cloudflare Workers",
+          "Brevo",
+          "Vercel"
+        ],
+        "icon": "fas fa-shopping-bag",
+        "image": "data/images/lunark.png?v=1775741167000",
+        "links": {
+          "github": "https://github.com/Sam-Ciber-Dev/lunark",
+          "report": {
+            "pt": "https://github.com/Sam-Ciber-Dev/lunark#readme",
+            "en": "https://github.com/Sam-Ciber-Dev/lunark#readme"
+          }
+        },
+        "order": 2,
+        "repo": "lunark",
+        "updatedAt": "2026-04-09T13:26:07Z"
+      }
+    ],
     "hardware": [
       {
         "title": {
