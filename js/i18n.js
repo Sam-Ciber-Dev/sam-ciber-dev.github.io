@@ -83,7 +83,7 @@ const translations = {
     en: 'Professional Higher Technical Course specialized in cybersecurity, covering theoretical and practical fundamentals of computer systems protection. The program includes modules on network security, vulnerability analysis, security incident management, applied cryptography and compliance with regulations. This training is providing specific, up-to-date skills to face modern enterprise cybersecurity challenges.'
   },
   'edu.2.date':      { pt: '2021 - 2024', en: '2021 - 2024' },
-  'edu.2.title':     { pt: 'Curso de Gestão de Programação de Sistemas Informáticos', en: 'IT Systems Programming & Management Course' },
+  'edu.2.title':     { pt: 'Curso Profissional de Técnico de Gestão e Programação de Sistemas Informáticos', en: 'Professional Course in IT Systems Management & Programming' },
   'edu.2.company':   { pt: 'Escola Profissional de Valongo', en: 'Escola Profissional de Valongo' },
   'edu.2.desc': {
     pt: 'Formação técnica profissional focada na programação e gestão de sistemas informáticos. Este curso foi fundamental para estabelecer uma base sólida em desenvolvimento de software, administração de sistemas e gestão de infraestruturas tecnológicas. O conhecimento adquirido sobre arquiteturas de sistemas, redes e programação revelou-se essencial para compreender as vulnerabilidades e vetores de ataque que são explorados em cibersegurança, proporcionando uma perspetiva técnica valiosa sobre como os sistemas podem ser protegidos desde a sua conceção.',
@@ -121,12 +121,12 @@ const translations = {
   'certs.inprogress':{ pt: 'Em desenvolvimento de competências', en: 'Developing competences' },
   'certs.acad1.name': { pt: 'CTeSP de Cibersegurança', en: 'CTeSP in Cybersecurity' },
   'certs.acad1.status': { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
-  'certs.acad2.name': { pt: 'Gestão de Programação de Sistemas Informáticos', en: 'IT Systems Programming & Management' },
+  'certs.acad2.name': { pt: 'Curso Profissional de Técnico de Gestão e Programação de Sistemas Informáticos', en: 'Professional Course in IT Systems Management & Programming' },
   'certs.acad2.status': { pt: 'Escola Profissional de Valongo', en: 'Escola Profissional de Valongo' },
   'certs.part1.name': { pt: 'Participação na Joteca', en: 'Joteca Participation' },
   'certs.part1.status': { pt: 'Projeto EyeWeb - ISTEC Porto', en: 'EyeWeb Project - ISTEC Porto' },
-  'certs.recognition': { pt: 'Certificados de Reconhecimento', en: 'Recognition Certificates' },
-  'certs.recog1.name': { pt: 'Reconhecimento ISTEC', en: 'ISTEC Recognition' },
+  'certs.recognition': { pt: 'Certificações de Mérito', en: 'Merit Certifications' },
+  'certs.recog1.name': { pt: 'Reconhecimento por Divulgação Responsável de Vulnerabilidades', en: 'Recognition for Responsible Vulnerability Disclosure' },
   'certs.recog1.status': { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
 
   // Projects section
