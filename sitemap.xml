@@ -2,20 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sam-ciber-dev.github.io/</loc>
-    <lastmod>2025-12-03</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://sam-ciber-dev.github.io/CV/Samuel_Oliveira_CV_Publico_PT.pdf</loc>
-    <lastmod>2025-12-03</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sam-ciber-dev.github.io/CV/Samuel_Oliveira_CV_Public_ENG.pdf</loc>
-    <lastmod>2025-12-03</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/Certificates/Academic/EPV/GPSI_Certificate.pdf</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/Certificates/Professional/CTI/ArcX/ArcX_Cyber_Threat_Intelligence_101_Certificate.pdf</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/Certificates/Professional/OSINT/F1NDX/F1NDX_OSINT_Level1_Certificate.pdf</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/Certificates/Professional/OSINT/F1NDX/F1NDX_OSINT_Level2_Certificate.pdf</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/Certificates/Professional/OSINT/F1NDX/F1NDX_OSINT_Level3_Certificate.pdf</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/Certificates/Professional/Privacy/FINDX/F1NDX_Digital_Privacy_Fundamentals_Certificate.pdf</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/Certificates/Recognition/ISTEC/ISTEC_Certificate_Recognition.pdf</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/Certificates/Participation/Joteca/Joteca_Participation_Certificate.pdf</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

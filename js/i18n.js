@@ -60,14 +60,23 @@ const translations = {
 
   // Experience
   'exp.title':       { pt: 'Experiência Profissional', en: 'Professional Experience' },
+  'exp.0.date':    { pt: 'Mar 2026 - Atividade atual', en: 'Mar 2026 - Present' },
+  'exp.0.title':   { pt: 'Estágio em CTI e Pentest', en: 'CTI & Pentest Internship' },
+  'exp.0.company': { pt: 'FIN-PRISMA, Papiro, Lda. (Grupo EAD)', en: 'FIN-PRISMA, Papiro, Lda. (EAD Group)' },
+  'exp.0.desc': {
+    pt: 'Estágio curricular com foco em segurança ofensiva e auditoria de aplicações web na FIN-PRISMA, Lda. Realização de auditorias de segurança em ambientes reais de produção e desenvolvimento, seguindo as metodologias OWASP WSTG e PTES, com identificação e documentação de múltiplas vulnerabilidades classificadas por severidade CVSS e mapeadas para o OWASP Top 10. Desenvolvimento de duas ferramentas independentes: Ph0enix, um framework modular de pentesting automatizado com mais de 30 módulos de teste, e NexusGuard Scanner, uma ferramenta de deteção de pacotes NPM e NuGet potencialmente comprometidos. Todas as atividades foram realizadas com autorização e seguindo princípios de responsible disclosure. O estágio será realizado no âmbito do CTeSP de Cibersegurança no ISTEC Porto.',
+    en: 'Curricular internship focused on offensive security and web application auditing at FIN-PRISMA, Lda. (EAD Group). Conducted security audits on real production and development environments following OWASP WSTG and PTES methodologies, identifying and documenting multiple vulnerabilities classified by CVSS severity and mapped to OWASP Top 10. Developed two independent tools: Ph0enix, a modular automated pentesting framework with over 30 test modules, and NexusGuard Scanner, a tool for detecting potentially compromised NPM and NuGet packages. All activities were performed with authorization and following responsible disclosure principles. The internship will be completed as part of the CTeSP in Cybersecurity at ISTEC Porto.'
+},
   'exp.1.date':      { pt: '2024 (3 meses)', en: '2024 (3 months)' },
   'exp.1.title':     { pt: 'Estágio em desenvolvimento de software e base de dados', en: 'Software Development & Database Internship' },
+  'exp.1.company': { pt: 'Mindforge Tech Solutions, Lda', en: 'Mindforge Tech Solutions, Lda' },
   'exp.1.desc': {
     pt: 'Desenvolvimento de uma plataforma web para gestão hospitalar, focando na criação e estruturação de bases de dados para armazenamento de informação clínica. Esta experiência proporcionou uma compreensão valiosa sobre a sensibilidade dos dados de saúde e a importância da sua proteção, despertando o interesse pelas questões de privacidade e segurança de dados. O contacto com sistemas que lidam com informação crítica reforçou a necessidade de implementar medidas de proteção adequadas, conhecimento fundamental para a área de cibersegurança. Estágio realizado no âmbito da formação na Escola Profissional de Valongo.',
     en: 'Development of a web platform for hospital management, focusing on creating and structuring databases for clinical information storage. This experience provided valuable understanding of health data sensitivity and the importance of its protection, sparking interest in data privacy and security. Working with systems handling critical information reinforced the need to implement adequate protection measures — fundamental knowledge for the cybersecurity field. Internship completed as part of training at Escola Profissional de Valongo.'
   },
   'exp.2.date':      { pt: '2023 (1 mês)', en: '2023 (1 month)' },
   'exp.2.title':     { pt: 'Estágio em desenvolvimento de software', en: 'Software Development Internship' },
+  'exp.2.company': { pt: 'Mobnor', en: 'Mobnor' },
   'exp.2.desc': {
     pt: 'Primeiro contacto com o ambiente profissional de desenvolvimento web, responsável pela criação de um website corporativo para a empresa. Durante este estágio, implementei medidas básicas de segurança web, incluindo validação de inputs, proteção CSRF, e otimização SEO (Search Engine Optimization). Esta experiência inicial despertou o meu interesse pela importância da segurança no desenvolvimento web e estabeleceu as bases para o meu percurso na área de cibersegurança. Estágio realizado no âmbito da formação na Escola Profissional de Valongo.',
     en: 'First contact with a professional web development environment, responsible for creating a corporate website. During this internship, I implemented basic web security measures, including input validation, CSRF protection, and SEO optimization. This initial experience sparked my interest in the importance of security in web development and established the foundations for my path in cybersecurity. Internship completed as part of training at Escola Profissional de Valongo.'
@@ -119,6 +128,14 @@ const translations = {
   'certs.participation': { pt: 'Certificações de Participação', en: 'Participation Certifications' },
 'certs.prof1.name':   { pt: 'Cyber Threat Intelligence 101', en: 'Cyber Threat Intelligence 101' },
 'certs.prof1.status': { pt: 'arcX', en: 'arcX' },
+'certs.prof2.name':   { pt: 'OSINT — Fundamentos (Nível 1)', en: 'OSINT — Foundations (Level 1)' },
+'certs.prof2.status': { pt: 'F1NDX', en: 'F1NDX' },
+'certs.prof3.name':   { pt: 'OSINT — Praticante (Nível 2)', en: 'OSINT — Practitioner (Level 2)' },
+'certs.prof3.status': { pt: 'F1NDX', en: 'F1NDX' },
+'certs.prof4.name':   { pt: 'OSINT — Especialista (Nível 3)', en: 'OSINT — Specialist (Level 3)' },
+'certs.prof4.status': { pt: 'F1NDX', en: 'F1NDX' },
+'certs.prof5.name':   { pt: 'Fundamentos de Privacidade Digital', en: 'Digital Privacy Fundamentals' },
+'certs.prof5.status': { pt: 'F1NDX', en: 'F1NDX' },
   'certs.acad1.name': { pt: 'CTeSP de Cibersegurança', en: 'CTeSP in Cybersecurity' },
   'certs.acad1.status': { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
   'certs.acad2.name': { pt: 'Curso Profissional de Técnico de Gestão e Programação de Sistemas Informáticos', en: 'Professional Course in IT Systems Management & Programming' },
