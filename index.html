@@ -19,6 +19,14 @@
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <meta name="theme-color" content="#0b1220">
 
+        <!-- Security headers (defense-in-depth via meta http-equiv, since GitHub Pages doesn't allow custom HTTP headers) -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https:; connect-src 'self' https://contact-shield.sam-oliveira-dev.workers.dev https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://contact-shield.sam-oliveira-dev.workers.dev; object-src 'none'; upgrade-insecure-requests">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+        <!-- Bing Webmaster Tools verification (substitui o content abaixo pelo código dado em https://www.bing.com/webmasters) -->
+        <!-- <meta name="msvalidate.01" content="COLAR-AQUI-O-CODIGO"> -->
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://sam-ciber-dev.github.io/">
 
@@ -95,13 +103,57 @@
                         "name": "Samuel Oliveira"
                     },
                     "description": "Portfólio de Samuel Oliveira, focado em CTI e em Análise de vulnerabilidades. Exibição de projetos com foco em Cibersegurança, CV e certificados."
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "Cyber Threat Intelligence 101",
+                    "credentialCategory": "certificate",
+                    "educationalLevel": "Professional",
+                    "recognizedBy": { "@type": "Organization", "name": "arcX" },
+                    "url": "https://sam-ciber-dev.github.io/Certificates/Professional/CTI/ArcX/ArcX_Cyber_Threat_Intelligence_101_Certificate.pdf"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "OSINT Level 1 • Foundations",
+                    "credentialCategory": "certificate",
+                    "educationalLevel": "Professional",
+                    "recognizedBy": { "@type": "Organization", "name": "F1NDX" },
+                    "url": "https://sam-ciber-dev.github.io/Certificates/Professional/OSINT/F1NDX/F1NDX_OSINT_Level1_Certificate.pdf"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "OSINT Level 2 • Investigations",
+                    "credentialCategory": "certificate",
+                    "educationalLevel": "Professional",
+                    "recognizedBy": { "@type": "Organization", "name": "F1NDX" },
+                    "url": "https://sam-ciber-dev.github.io/Certificates/Professional/OSINT/F1NDX/F1NDX_OSINT_Level2_Certificate.pdf"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "OSINT Level 3 • Advanced Techniques",
+                    "credentialCategory": "certificate",
+                    "educationalLevel": "Professional",
+                    "recognizedBy": { "@type": "Organization", "name": "F1NDX" },
+                    "url": "https://sam-ciber-dev.github.io/Certificates/Professional/OSINT/F1NDX/F1NDX_OSINT_Level3_Certificate.pdf"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "Digital Privacy Fundamentals",
+                    "credentialCategory": "certificate",
+                    "educationalLevel": "Professional",
+                    "recognizedBy": { "@type": "Organization", "name": "F1NDX" },
+                    "url": "https://sam-ciber-dev.github.io/Certificates/Professional/Privacy/FINDX/F1NDX_Digital_Privacy_Fundamentals_Certificate.pdf"
                 }
             ]
         }
         </script>
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome (com SRI para garantir integridade do CDN) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
     
     <!-- Cloudflare Turnstile -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -769,6 +821,12 @@
               style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;" />
           <!-- 2) Decoy extra comum "website" (muitos bots preenchem) -->
           <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" aria-hidden="true"
+              style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;" />
+          <!-- 3) Decoy "url" (validado pelo Worker) -->
+          <input type="url" id="url" name="url" autocomplete="off" tabindex="-1" aria-hidden="true"
+              style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;" />
+          <!-- 4) Decoy "phone2" (validado pelo Worker) -->
+          <input type="tel" id="phone2" name="phone2" autocomplete="off" tabindex="-1" aria-hidden="true"
               style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;" />
           <!-- 3) Armadilha de tempo: timestamp de carregamento -->
           <input type="hidden" id="ts" name="ts" value="">
