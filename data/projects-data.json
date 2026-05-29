@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-28T07:12:59.254Z",
+  "lastUpdated": "2026-05-29T07:13:24.423Z",
   "projects": {
     "offensive": [],
     "defensive": [
@@ -54,7 +54,7 @@
           "Black-Box"
         ],
         "icon": "fas fa-file-alt",
-        "image": "data/images/istec-vulnerability-assessment.png?v=1779775252000",
+        "image": "data/images/istec-vulnerability-assessment.png?v=1779975687000",
         "links": {
           "github": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment",
           "report": {
@@ -64,7 +64,7 @@
         },
         "order": 1,
         "repo": "istec-vulnerability-assessment",
-        "updatedAt": "2026-05-26T06:00:52Z"
+        "updatedAt": "2026-05-28T13:41:27Z"
       }
     ],
     "ai": [],
