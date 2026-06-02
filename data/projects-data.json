@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-01T07:37:36.180Z",
+  "lastUpdated": "2026-06-02T07:31:32.765Z",
   "projects": {
     "offensive": [],
     "defensive": [
@@ -43,18 +43,17 @@
           "en": "Vulnerability Assessment ISTEC Porto"
         },
         "description": {
-          "pt": "Avaliação de vulnerabilidades externas e autorizadas ao ISTEC Porto. Seis vulnerabilidades confirmadas e remediadas através de divulgação responsável.",
-          "en": "Authorized external vulnerability assessment of ISTEC Porto. Six vulnerabilities confirmed and remediated via responsible disclosure."
+          "pt": "Avaliação de vulnerabilidades externas e autorizadas ao ISTEC Porto. Cinco vulnerabilidades confirmadas e remediadas através de divulgação responsável.",
+          "en": "Authorized external vulnerability assessment of ISTEC Porto. Five vulnerabilities confirmed and remediated via responsible disclosure."
         },
         "technologies": [
           "Nmap",
-          "Wireshark",
           "Termux",
           "Responsible Disclosure",
           "Black-Box"
         ],
         "icon": "fas fa-file-alt",
-        "image": "data/images/istec-vulnerability-assessment.png?v=1779975687000",
+        "image": "data/images/istec-vulnerability-assessment.png?v=1780313798000",
         "links": {
           "github": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment",
           "report": {
@@ -64,7 +63,7 @@
         },
         "order": 1,
         "repo": "istec-vulnerability-assessment",
-        "updatedAt": "2026-05-28T13:41:27Z"
+        "updatedAt": "2026-06-01T11:36:38Z"
       }
     ],
     "ai": [],
