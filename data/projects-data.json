@@ -1,8 +1,47 @@
 {
-  "lastUpdated": "2026-08-17T06:06:53.504Z",
+  "lastUpdated": "2026-08-17T19:43:06.585Z",
   "projects": {
     "offensive": [],
     "defensive": [
+      {
+        "title": {
+          "pt": "HoneyLab",
+          "en": "HoneyLab"
+        },
+        "description": {
+          "pt": "Honeypot com multi-serviço pré-configurado e pronto a importar, numa VM Ubuntu Server 26.04 (VMware). Combina serviços-isco (SSH, Telnet, FTP, HTTP, MySQL, web), uma pipeline de deteção e análise ELK com GeoIP e mapeamento MITRE ATT&CK, alertas por email (ElastAlert 2) e um painel de controlo bilingue com assistente de primeira configuração.",
+          "en": "Honeypot with pre-configured, ready-to-import multi-service on an Ubuntu Server 26.04 VM (VMware). It combines decoy services (SSH, Telnet, FTP, HTTP, MySQL, web), an ELK detection and analysis pipeline with GeoIP and MITRE ATT&CK mapping, email alerts (ElastAlert 2), and a bilingual control panel with a first-run setup wizard."
+        },
+        "technologies": [
+          "Ubuntu Server",
+          "VMware",
+          "Cowrie",
+          "OpenCanary",
+          "SNARE",
+          "Tanner",
+          "Docker",
+          "Elasticsearch",
+          "Kibana",
+          "Logstash",
+          "Filebeat",
+          "ElastAlert 2",
+          "MITRE ATT&CK",
+          "Bash",
+          "Python"
+        ],
+        "icon": "fas fa-shield-halved",
+        "image": "data/images/honeylab.png?v=1786995709000",
+        "links": {
+          "github": "https://github.com/Sam-Ciber-Dev/honeylab",
+          "report": {
+            "pt": "https://github.com/Sam-Ciber-Dev/honeylab/blob/main/docs/HoneyLab_Relatorio_Tecnico_PT.pdf",
+            "en": "https://github.com/Sam-Ciber-Dev/honeylab/blob/main/docs/HoneyLab_Technical_Report_EN.pdf"
+          }
+        },
+        "order": 1,
+        "repo": "honeylab",
+        "updatedAt": "2026-08-17T19:41:49Z"
+      },
       {
         "title": {
           "pt": "EyeWeb",
