@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-17T19:43:06.585Z",
+  "lastUpdated": "2026-08-17T21:07:17.143Z",
   "projects": {
     "offensive": [],
     "defensive": [
@@ -30,17 +30,17 @@
           "Python"
         ],
         "icon": "fas fa-shield-halved",
-        "image": "data/images/honeylab.png?v=1786995709000",
+        "image": "data/images/honeylab.png?v=1787000699000",
         "links": {
           "github": "https://github.com/Sam-Ciber-Dev/honeylab",
           "report": {
-            "pt": "https://github.com/Sam-Ciber-Dev/honeylab/blob/main/docs/HoneyLab_Relatorio_Tecnico_PT.pdf",
-            "en": "https://github.com/Sam-Ciber-Dev/honeylab/blob/main/docs/HoneyLab_Technical_Report_EN.pdf"
+            "pt": "https://github.com/Sam-Ciber-Dev/honeylab/blob/main/docs/HoneyLab_Relatório_PT.pdf",
+            "en": "https://github.com/Sam-Ciber-Dev/honeylab/blob/main/docs/HoneyLab_Report_ENG.pdf"
           }
         },
         "order": 1,
         "repo": "honeylab",
-        "updatedAt": "2026-08-17T19:41:49Z"
+        "updatedAt": "2026-08-17T21:04:59Z"
       },
       {
         "title": {
