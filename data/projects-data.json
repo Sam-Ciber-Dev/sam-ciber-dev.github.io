@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-18T03:03:53.198Z",
+  "lastUpdated": "2026-08-18T03:09:18.755Z",
   "projects": {
     "offensive": [],
     "defensive": [
@@ -76,6 +76,37 @@
       }
     ],
     "reports": [
+      {
+        "title": {
+          "pt": "Bootcamp CSCPT 2026",
+          "en": "Bootcamp CSCPT 2026"
+        },
+        "description": {
+          "pt": "Relatório da minha participação no bootcamp de seleção final do Cybersecurity Challenge PT 2026, em Rio Maior. Documenta o percurso desde a fase de treino online até à competição presencial, incluindo os resultados obtidos no OMNI CTFe no CTF interno, com desafios de Crypto, Web, OSINT, Forensics e Reverse Engineering, além de uma análise crítica da experiência e recomendações para futuras edições.",
+          "en": "Report on my participation in the final selection bootcamp of the Cybersecurity Challenge PT 2026, held in Rio Maior. It documents the journey from online training to the on-site competition, including my results in the OMNI CTF and the internal CTF, covering Crypto, Web, OSINT, Forensics, and Reverse Engineering challenges, along with a critical analysis of the experience and recommendations for future editions."
+        },
+        "technologies": [
+          "capture-the-flag",
+          "cscpt",
+          "ctf",
+          "cybersecurity",
+          "cybersecurity-challenge-pt",
+          "infosec",
+          "osint"
+        ],
+        "icon": "fas fa-shield-halved",
+        "image": "data/images/Bootcamp-CSCPT-2026.png?v=1787022247000",
+        "links": {
+          "github": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026",
+          "report": {
+            "pt": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026/blob/main/docs/CSCPT_Bootcamp_2026_Relatório_PT.pdf",
+            "en": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026/blob/main/docs/CSCPT_Bootcamp_2026_Report_ENG.pdf"
+          }
+        },
+        "order": 1,
+        "repo": "Bootcamp-CSCPT-2026",
+        "updatedAt": "2026-08-18T03:04:07Z"
+      },
       {
         "title": {
           "pt": "Avaliação de Vulnerabilidades ISTEC Porto",
