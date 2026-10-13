@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-12T06:10:10.231Z",
+  "lastUpdated": "2026-10-13T06:07:09.052Z",
   "projects": {
     "offensive": [],
     "defensive": [
@@ -95,7 +95,7 @@
           "osint"
         ],
         "icon": "fas fa-shield-halved",
-        "image": "data/images/Bootcamp-CSCPT-2026.png?v=1787069551000",
+        "image": "data/images/Bootcamp-CSCPT-2026.png?v=1791860852000",
         "links": {
           "github": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026",
           "report": {
@@ -105,7 +105,7 @@
         },
         "order": 1,
         "repo": "Bootcamp-CSCPT-2026",
-        "updatedAt": "2026-08-18T16:12:31Z"
+        "updatedAt": "2026-10-13T03:07:32Z"
       },
       {
         "title": {
