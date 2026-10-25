@@ -704,6 +704,102 @@ button:focus-visible,
     color: var(--accent-color);
 }
 
+/* -- Professional certifications: dropdown por organização > área -------------- */
+.cert-org,
+.cert-area {
+    border-radius: var(--border-radius);
+}
+
+.cert-org + .cert-org {
+    margin-top: 1rem;
+}
+
+.cert-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    cursor: pointer;
+    list-style: none;            /* remove a seta nativa (Firefox/Chrome) */
+    user-select: none;
+    transition: var(--transition);
+}
+
+.cert-summary::-webkit-details-marker {
+    display: none;               /* remove a seta nativa (Safari) */
+}
+
+.cert-summary:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.cert-org-summary {
+    padding: 1rem 1.5rem;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.cert-org-summary:hover,
+.cert-org[open]:not([data-closing]) > .cert-org-summary {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: var(--accent-color);
+}
+
+.cert-org-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 0 0 0.75rem;
+}
+
+.cert-area-summary {
+    padding: 0.6rem 1rem;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.cert-area-summary:hover,
+.cert-area[open]:not([data-closing]) > .cert-area-summary {
+    background: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.4);
+    color: var(--text-primary);
+}
+
+.cert-area-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    padding-left: 0.75rem;
+}
+
+.cert-chevron {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    transition: transform 0.3s ease;   /* keep in sync with DURATION_MS in js/dropdowns.js */
+}
+
+/* [data-closing] is set by js/dropdowns.js while the close animation runs ([open] is removed at the end) */
+details[open]:not([data-closing]) > .cert-summary > .cert-chevron {
+    transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cert-chevron {
+        transition: none;
+    }
+}
+
 /* ========================================================================== */
 /* Projects Section                                                            */
 /* ========================================================================== */
@@ -1884,6 +1980,15 @@ textarea.form-input {
     
     .cert-status {
         font-size: 0.75rem;
+    }
+
+    .cert-org-summary {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .cert-org-body {
+        padding-left: 0.25rem;
     }
 
     /* Contact */

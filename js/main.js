@@ -5,6 +5,7 @@ import { showCopyNotification } from './notifications.js';
 import { initAnchors } from './anchors.js';
 import { initNavigation } from './navigation.js';
 import { initFadeInObserver } from './observer.js';
+import { initAnimatedDetails } from './dropdowns.js';
 import { initMobileMenu } from './menu.js';
 import { initCopyFeatures } from './copy.js';
 import { initCvModal } from './modal.js';
@@ -92,6 +93,7 @@ initCopyFeatures();
 initCvModal();
 initContactForm();
 initKeyboardNavigator();
+initAnimatedDetails('.cert-org, .cert-area');
 
 // Public namespace (unchanged surface)
 window.App = Object.freeze({

@@ -138,6 +138,7 @@ The site uses a lightweight, no-build architecture optimized for a fast first pa
   - menu.js - mobile hamburger menu toggle
   - anchors.js - smooth anchors + hero/about seam fix
   - observer.js - fade-in animations via IntersectionObserver
+  - dropdowns.js - smooth open/close animation for <details> dropdowns (certifications)
   - notifications.js - copy/feedback toast helpers
   - copy.js - copy-to-clipboard + clickable contact icons
   - layout.js - header height + layout utilities

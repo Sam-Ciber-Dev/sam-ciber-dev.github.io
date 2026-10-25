@@ -60,7 +60,7 @@ const translations = {
 
   // Experience
   'exp.title':       { pt: 'Experiência Profissional', en: 'Professional Experience' },
-  'exp.0.date':    { pt: 'Mar 2026 - Atividade atual', en: 'Mar 2026 - Present' },
+  'exp.0.date':    { pt: 'mar. de 2026 - jul. de 2026 (5 meses)', en: 'Mar 2026 - Jul 2026 (5 months)' },
   'exp.0.title':   { pt: 'Estágio em CTI e Pentest', en: 'CTI & Pentest Internship' },
   'exp.0.company': { pt: 'FIN-PRISMA, Papiro, Lda. (Grupo EAD)', en: 'FIN-PRISMA, Papiro, Lda. (EAD Group)' },
   'exp.0.desc': {
@@ -84,6 +84,13 @@ const translations = {
 
   // Education
   'edu.title':       { pt: 'Formação Acadêmica', en: 'Education' },
+  'edu.0.date':      { pt: '2026 - Atualidade', en: '2026 - Present' },
+  'edu.0.title':     { pt: 'Licenciatura em Engenharia Informática', en: 'Bachelor\'s Degree in Computer Engineering' },
+  'edu.0.company':   { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
+  'edu.0.desc': {
+    pt: 'Licenciatura em Engenharia Informática, em curso, com o objetivo de expandir os conhecimentos no ramo da tecnologia. Compreender melhor como os sistemas, as redes, o software e as infraestruturas são concebidos e funcionam permite saber onde e como aplicar a cibersegurança em cada situação, adaptando a proteção às necessidades de cada contexto. Esta formação está a complementar a especialização em cibersegurança e a proporcionar uma visão mais ampla e integrada da tecnologia.',
+    en: 'Bachelor\'s degree in Computer Engineering, currently in progress, aimed at broadening knowledge across the technology field. A deeper understanding of how systems, networks, software and infrastructure are designed and work makes it possible to know where and how to apply cybersecurity in each situation, adapting protection to the needs of every context. This degree is complementing the cybersecurity specialization and providing a broader, more integrated view of technology.'
+  },
   'edu.1.date':      { pt: '2024 - 2026', en: '2024 - 2026' },
   'edu.1.title':     { pt: 'CTeSP de Cibersegurança', en: 'CTeSP in Cybersecurity' },
   'edu.1.company':   { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
@@ -99,12 +106,26 @@ const translations = {
     en: 'Professional technical training focused on programming and IT systems management. This course was fundamental in establishing a solid foundation in software development, systems administration and technological infrastructure management. The knowledge acquired about system architectures, networks and programming proved essential for understanding the vulnerabilities and attack vectors exploited in cybersecurity, providing a valuable technical perspective on how systems can be protected from their conception.'
   },
 
-  // Academic Projects
-  'acad.title':      { pt: 'Projetos Académicos', en: 'Academic Projects' },
-  'acad.1.date':     { pt: '2025', en: '2025' },
-  'acad.1.title':    { pt: 'Participação na Joteca', en: 'Joteca Participation' },
-  'acad.1.company':  { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
+  // Events (section formerly titled "Academic Projects")
+  'acad.title':      { pt: 'Eventos', en: 'Events' },
+  'acad.0.date':     { pt: 'Outubro 2026', en: 'October 2026' },
+  'acad.0.title':    { pt: 'Organização de Evento Capture the Flag', en: 'Capture the Flag Event Organization' },
+  'acad.0.company':  { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
+  'acad.0.desc': {
+    pt: 'Participei na organização de um evento de Capture the Flag (CTF) no ISTEC Porto, composto por um bootcamp de preparação, realizado a 22 de outubro, e pelo CTF, que decorreu dia 29 de outubro. Criei exercícios para o bootcamp e desafios para o CTF. O evento contou com mais de 20 equipas de 4 elementos cada e premiou os três primeiros classificados. Como fazia parte dos organizadores, recebi um troféu e um certificado. Esta experiência desenvolveu competências de organização de eventos, planeamento e criação de desafios de cibersegurança.',
+    en: 'I took part in organizing a Capture the Flag (CTF) event at ISTEC Porto, made up of a preparation bootcamp, held on 22 October, and the CTF, which took place on 29 October. I created exercises for the bootcamp and challenges for the CTF. The event brought together more than 20 teams of 4 members each and awarded the top three finishers. As I was part of the organizing team, I received a trophy and a certificate. This experience developed skills in event organization, planning and cybersecurity challenge design.'
+  },
+  'acad.1.date':     { pt: 'Julho 2026', en: 'July 2026' },
+  'acad.1.title':    { pt: 'Bootcamp de Seleção Final do CSCPT 2026', en: 'CSCPT 2026 Final Selection Bootcamp' },
+  'acad.1.company':  { pt: 'Cybersecurity Challenge PT - Centro Nacional de Cibersegurança (CNCS)', en: 'Cybersecurity Challenge PT - Centro Nacional de Cibersegurança (CNCS)' },
   'acad.1.desc': {
+    pt: 'Participei na fase final de seleção nacional do Cybersecurity Challenge PT (CSCPT) 2026, um programa nacional de identificação e desenvolvimento de talento em cibersegurança, promovido pelo Centro Nacional de Cibersegurança (CNCS), que tem como objetivo selecionar e preparar representantes nacionais para competições internacionais da área. O bootcamp de seleção final decorreu de 17 a 20 de julho de 2026, em Rio Maior, e reuniu 30 participantes selecionados após meses de treino e uma exigente fase de qualificação. No primeiro dia de competição participámos na plataforma internacional OMNI CTF, uma competição de cibersegurança no formato Capture the Flag (CTF), onde resolvi desafios de várias categorias ao lado de 786 concorrentes de todo o mundo, uma experiência muito enriquecedora a nível técnico e pessoal.',
+    en: 'I took part in the final national selection phase of the Cybersecurity Challenge PT (CSCPT) 2026, a national program for identifying and developing cybersecurity talent, promoted by the Portuguese National Cybersecurity Centre (CNCS), which aims to select and prepare national representatives for international competitions in the field. The final selection bootcamp took place from 17 to 20 July 2026, in Rio Maior, and brought together 30 participants selected after months of training and a demanding qualification phase. On the first day of competition, we took part in the international OMNI CTF platform, a cybersecurity competition in Capture the Flag (CTF) format, where I solved challenges across several categories alongside 786 competitors from all over the world, a very enriching experience, both technically and personally.'
+  },
+  'acad.2.date':     { pt: 'Julho 2025', en: 'July 2025' },
+  'acad.2.title':    { pt: 'Participação na Joteca', en: 'Joteca Participation' },
+  'acad.2.company':  { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
+  'acad.2.desc': {
     pt: 'A Joteca foi uma organização académica do ISTEC no Porto, onde apresentei o projeto EyeWeb para representantes de empresas e outras instituições de ensino superior. Esta experiência desenvolveu competências de comunicação, trabalho em equipa, e exposição técnica em ambiente profissional, além de fortalecer o interesse por acessibilidade digital e segurança na web.',
     en: 'Joteca was an academic organization at ISTEC Porto, where I presented the EyeWeb project to representatives of companies and other higher education institutions. This experience developed communication skills, teamwork, and technical presentation in a professional environment, while strengthening interest in digital accessibility and web security.'
   },
@@ -122,29 +143,42 @@ const translations = {
   'skills.tools':    { pt: 'Ferramentas de Produtividade', en: 'Productivity Tools' },
 
   // Certifications
-  'certs.title':     { pt: 'Certificações e Qualificações', en: 'Certifications & Qualifications' },
-  'certs.academic':  { pt: 'Certificações Académicas', en: 'Academic Certifications' },
+  'certs.title': { pt: 'Certificações e Qualificações', en: 'Certifications & Qualifications' },
+  'certs.academic': { pt: 'Certificações Académicas', en: 'Academic Certifications' },
   'certs.professional': { pt: 'Certificações Profissionais', en: 'Professional Certifications' },
+  'certs.recognition': { pt: 'Certificações de Mérito', en: 'Merit Certifications' },
   'certs.participation': { pt: 'Certificações de Participação', en: 'Participation Certifications' },
-'certs.prof1.name':   { pt: 'Cyber Threat Intelligence 101', en: 'Cyber Threat Intelligence 101' },
-'certs.prof1.status': { pt: 'arcX', en: 'arcX' },
-'certs.prof2.name':   { pt: 'OSINT Level 1 • Foundations', en: 'OSINT Level 1 • Foundations' },
-'certs.prof2.status': { pt: 'F1NDX', en: 'F1NDX' },
-'certs.prof3.name':   { pt: 'OSINT Level 2 • Investigations', en: 'OSINT Level 2 • Investigations' },
-'certs.prof3.status': { pt: 'F1NDX', en: 'F1NDX' },
-'certs.prof4.name':   { pt: 'OSINT Level 3 • Advanced Techniques', en: 'OSINT Level 3 • Advanced Techniques' },
-'certs.prof4.status': { pt: 'F1NDX', en: 'F1NDX' },
-'certs.prof5.name':   { pt: 'Fundamentos de Privacidade Digital', en: 'Digital Privacy Fundamentals' },
-'certs.prof5.status': { pt: 'F1NDX', en: 'F1NDX' },
+
+  // Certifications - academic
   'certs.acad1.name': { pt: 'CTeSP de Cibersegurança', en: 'CTeSP in Cybersecurity' },
   'certs.acad1.status': { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
   'certs.acad2.name': { pt: 'Curso Profissional de Técnico de Gestão e Programação de Sistemas Informáticos', en: 'Professional Course in IT Systems Management & Programming' },
   'certs.acad2.status': { pt: 'Escola Profissional de Valongo', en: 'Escola Profissional de Valongo' },
-  'certs.part1.name': { pt: 'Participação na Joteca', en: 'Joteca Participation' },
-  'certs.part1.status': { pt: 'Projeto EyeWeb - ISTEC Porto', en: 'EyeWeb Project - ISTEC Porto' },
-  'certs.recognition': { pt: 'Certificações de Mérito', en: 'Merit Certifications' },
+
+  // Certifications - professional (area labels + one name/status pair per certificate)
+  'certs.area.privacy': { pt: 'Privacidade', en: 'Privacy' },
+  'certs.prof1.name': { pt: 'Inteligência de Ameaças Cibernéticas 101', en: 'Cyber Threat Intelligence 101' },
+  'certs.prof1.status': { pt: 'arcX', en: 'arcX' },
+  'certs.prof2.name': { pt: 'OSINT Nível 1 • Fundamentos', en: 'OSINT Level 1 • Foundations' },
+  'certs.prof2.status': { pt: 'F1NDX', en: 'F1NDX' },
+  'certs.prof3.name': { pt: 'OSINT Nível 2 • Investigações', en: 'OSINT Level 2 • Investigations' },
+  'certs.prof3.status': { pt: 'F1NDX', en: 'F1NDX' },
+  'certs.prof4.name': { pt: 'OSINT Nível 3 • Técnicas Avançadas', en: 'OSINT Level 3 • Advanced Techniques' },
+  'certs.prof4.status': { pt: 'F1NDX', en: 'F1NDX' },
+  'certs.prof5.name': { pt: 'Fundamentos de Privacidade Digital', en: 'Digital Privacy Fundamentals' },
+  'certs.prof5.status': { pt: 'F1NDX', en: 'F1NDX' },
+  'certs.prof6.name': { pt: 'Investigações de Burlas com Criptomoedas: Seguindo o Rasto do Dinheiro', en: 'Crypto Scam Investigations: Tracing the Money Trail' },
+  'certs.prof6.status': { pt: 'F1NDX', en: 'F1NDX' },
+
+  // Certifications - recognition
   'certs.recog1.name': { pt: 'Reconhecimento por Divulgação Responsável de Vulnerabilidades', en: 'Recognition for Responsible Vulnerability Disclosure' },
   'certs.recog1.status': { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
+
+  // Certifications - participation
+  'certs.part2.name':   { pt: 'Participação no OmniCTF 2026 Qualifiers', en: 'OmniCTF 2026 Qualifiers Participation' },
+  'certs.part2.status': { pt: 'OmniCTF - CSCPT 2026', en: 'OmniCTF - CSCPT 2026' },
+  'certs.part1.name': { pt: 'Participação na Joteca', en: 'Joteca Participation' },
+  'certs.part1.status': { pt: 'Projeto EyeWeb - ISTEC Porto', en: 'EyeWeb Project - ISTEC Porto' },
 
   // Projects section
   'projects.title':       { pt: 'Projetos', en: 'Projects' },

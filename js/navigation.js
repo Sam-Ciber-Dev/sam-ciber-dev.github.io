@@ -2,6 +2,9 @@
 import { qs, qsa, on, raf } from './dom-utils.js';
 import { getHeaderHeight } from './layout.js';
 
+// Sections without an id that are highlighted under the "Experiência" nav link
+const EXPERIENCE_GROUP_TITLES = ['exp.title', 'edu.title', 'acad.title'];
+
 let scrollTopBtn, header;
 let _scrollScheduled = false;
 
@@ -35,12 +38,12 @@ function computeCurrentSection() {
       if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
         const sectionTitle = section.querySelector('.section-title');
         if (sectionTitle) {
-          const titleText = sectionTitle.textContent.trim();
-            if (['Experiência Profissional','Formação Acadêmica','Projetos Académicos'].includes(titleText)) {
+          const titleKey = sectionTitle.dataset.i18n; // language-independent (the visible text changes with PT/EN)
+            if (EXPERIENCE_GROUP_TITLES.includes(titleKey)) {
               const distance = Math.abs(scrollPos - sectionTop);
               if (distance < bestMatchDistance) { bestMatchDistance = distance; currentSection = 'experience'; }
             }
-            if (titleText === 'Certificações e Qualificações') {
+            if (titleKey === 'certs.title') {
               const distance = Math.abs(scrollPos - sectionTop);
               if (distance < bestMatchDistance) { bestMatchDistance = distance; currentSection = 'skills'; }
             }
