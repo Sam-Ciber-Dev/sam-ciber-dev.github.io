@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05T06:03:23.672Z",
+  "lastUpdated": "2026-11-06T00:20:16.164Z",
   "projects": {
     "offensive": [],
     "defensive": [
@@ -76,6 +76,38 @@
       }
     ],
     "reports": [
+      {
+        "title": {
+          "pt": "CTF ISTEC Porto 2026",
+          "en": "CTF ISTEC Porto 2026"
+        },
+        "description": {
+          "pt": "Relatório da minha participação na organização da 1.ª edição do CTF ISTEC Porto: Capture the Flag, promovido pelo ISTEC Porto. Documenta o evento desde a sessão de preparação (bootcamp, 22 de outubro) até ao dia da competição CTF (29 de outubro), em que 22 equipas resolveram mais de 30 desafios de OSINT, CTI, Web, Forense, Criptografia, Reverse, Misc e Programação/Lógica. Inclui o regulamento, as estatísticas e a classificação final da plataforma CTFd, o pódio e os reconhecimentos, além de uma análise crítica e recomendações para futuras edições.",
+          "en": "Report on my participation in the organisation of the 1st edition of the CTF ISTEC Porto: Capture the Flag, promoted by ISTEC Porto. It documents the event from the preparation session (bootcamp, 22 October) to competition day CTF (29 October), where 22 teams solved more than 30 challenges across OSINT, CTI, Web, Forensics, Cryptography, Reverse, Misc and Programming/Logic. It covers the regulations, the CTFd platform statistics and final leaderboard, the podium and awards, along with a critical analysis and recommendations for future editions."
+        },
+        "technologies": [
+          "capture-the-flag",
+          "ctf",
+          "ctfd",
+          "cybersecurity",
+          "infosec",
+          "istec",
+          "jeopardy",
+          "osint"
+        ],
+        "icon": "fas fa-flag",
+        "image": "data/images/CTF-ISTEC-2026.png?v=1793924345000",
+        "links": {
+          "github": "https://github.com/Sam-Ciber-Dev/CTF-ISTEC-2026",
+          "report": {
+            "pt": "https://github.com/Sam-Ciber-Dev/CTF-ISTEC-2026/blob/main/docs/ISTEC_CTF_2026_Relatório_PT.pdf",
+            "en": "https://github.com/Sam-Ciber-Dev/CTF-ISTEC-2026/blob/main/docs/ISTEC_CTF_2026_Report_ENG.pdf"
+          }
+        },
+        "order": 1,
+        "repo": "CTF-ISTEC-2026",
+        "updatedAt": "2026-11-06T00:19:05Z"
+      },
       {
         "title": {
           "pt": "Bootcamp CSCPT 2026",
