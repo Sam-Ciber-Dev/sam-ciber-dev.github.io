@@ -78,4 +78,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://sam-ciber-dev.github.io/Certificates/Organization/ISTEC/ISTEC_CTF_Organization_Certificate.pdf</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

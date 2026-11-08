@@ -148,6 +148,7 @@ const translations = {
   'certs.professional': { pt: 'Certificações Profissionais', en: 'Professional Certifications' },
   'certs.recognition': { pt: 'Certificações de Mérito', en: 'Merit Certifications' },
   'certs.participation': { pt: 'Certificações de Participação', en: 'Participation Certifications' },
+  'certs.organization': { pt: 'Certificações de Organização', en: 'Organization Certifications' },
 
   // Certifications - academic
   'certs.acad1.name': { pt: 'CTeSP de Cibersegurança', en: 'CTeSP in Cybersecurity' },
@@ -179,6 +180,10 @@ const translations = {
   'certs.part2.status': { pt: 'OmniCTF - CSCPT 2026', en: 'OmniCTF - CSCPT 2026' },
   'certs.part1.name': { pt: 'Participação na Joteca', en: 'Joteca Participation' },
   'certs.part1.status': { pt: 'Projeto EyeWeb - ISTEC Porto', en: 'EyeWeb Project - ISTEC Porto' },
+
+  // Certifications - organization
+  'certs.org1.name': { pt: 'Organização do 1.º CTF ISTEC Porto', en: '1st ISTEC Porto CTF Organization' },
+  'certs.org1.status': { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
 
   // Projects section
   'projects.title':       { pt: 'Projetos', en: 'Projects' },
