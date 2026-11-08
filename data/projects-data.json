@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-07T06:02:49.146Z",
+  "lastUpdated": "2026-11-08T06:02:50.825Z",
   "projects": {
     "offensive": [],
     "defensive": [
@@ -96,7 +96,7 @@
           "osint"
         ],
         "icon": "fas fa-flag",
-        "image": "data/images/CTF-ISTEC-2026.png?v=1793924345000",
+        "image": "data/images/CTF-ISTEC-2026.png?v=1794108350000",
         "links": {
           "github": "https://github.com/Sam-Ciber-Dev/CTF-ISTEC-2026",
           "report": {
@@ -106,7 +106,7 @@
         },
         "order": 1,
         "repo": "CTF-ISTEC-2026",
-        "updatedAt": "2026-11-06T00:19:05Z"
+        "updatedAt": "2026-11-08T03:25:50Z"
       },
       {
         "title": {
