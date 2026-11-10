@@ -32,11 +32,11 @@ const translations = {
   // Hero
   'hero.subtitle':      { pt: 'Estudante em Cibersegurança', en: 'Cybersecurity Student' },
   'hero.description':   {
-    pt: 'Estudante dedicado ao estudo de cibersegurança, de sistemas e dados, com foco em CTI, pentesting, análise de vulnerabilidades, segurança digital, proteção de dados e ethical hacking, aplicando práticas de Red e Blue Team.',
-    en: 'Dedicated student of cybersecurity, systems and data, focused on CTI, pentesting, vulnerability analysis, digital security, data protection and ethical hacking, applying Red and Blue Team practices.'
+    pt: 'Estudante de cibersegurança, focado em OSINT e CTI e com interesse em SOC, análise de vulnerabilidades e pentest. Desenvolvo ferramentas de segurança, e participo em competições CTF nacionais e internacionais.',
+    en: 'Cybersecurity student focused on OSINT and CTI, with interest in SOC, vulnerability analysis and pentesting. I develop security tools and take part in national and international CTF competitions.'
   },
   'hero.contact':    { pt: 'Contactar',    en: 'Contact' },
-  'hero.cv':         { pt: 'Download CV',  en: 'Download CV' },
+  'hero.cv':         { pt: 'Descarregar CV',  en: 'Download CV' },
 
   // CV Modal
   'cv.title':        { pt: 'Escolher versão do CV', en: 'Choose CV version' },
@@ -46,35 +46,35 @@ const translations = {
   // About
   'about.title':     { pt: 'Sobre Mim',    en: 'About Me' },
   'about.p1': {
-    pt: 'Eu sempre tive uma paixão enorme pela informática. Desde muito jovem sempre tive aquela curiosidade de perceber como as coisas funcionavam por trás dos ecrãs, e isso ao longo do tempo levou-me a explorar diversas áreas da informática, programação, gestão, redes, entre outras.',
-    en: 'I have always had an enormous passion for technology. From a very young age I was curious to understand how things worked behind the screens, and over time that led me to explore various areas of IT, programming, management, networking, among others.'
+    pt: 'Sempre tive uma paixão enorme pela informática. Desde muito jovem tive curiosidade em perceber como as coisas funcionavam por trás dos ecrãs, e isso levou-me a explorar diversas áreas, como a programação, a gestão de sistemas e as redes.',
+    en: 'I have always had an enormous passion for technology. From a very young age I was curious to understand how things worked behind the screens, and that led me to explore various areas, such as programming, systems management and networking.'
   },
   'about.p2': {
-    pt: 'Mas foi na área de cibersegurança que eu realmente encontrei o meu lugar. Eu sempre fui uma pessoa que gosta de ajudar as outras pessoas, e isso é o que mais me motiva a continuar a aprender nesta área. Proteger dados, prevenir ataques e garantir que toda a gente está seguro no mundo digital.',
-    en: 'But it was in cybersecurity that I truly found my place. I have always been someone who likes to help others, and that is what motivates me most to keep learning in this field. Protecting data, preventing attacks and ensuring everyone is safe in the digital world.'
+    pt: 'Foi na cibersegurança que encontrei o meu lugar. Gosto de ajudar os outros, e é isso que mais me motiva: proteger dados, prevenir ataques e contribuir para que toda a gente esteja segura no mundo digital.',
+    en: 'It was in cybersecurity that I found my place. I like helping others, and that is what motivates me most: protecting data, preventing attacks and helping to keep everyone safe in the digital world.'
   },
   'about.p3': {
-    pt: 'Atualmente, estudo mais profundamente cibersegurança, com interesse especial em CTI, análise de vulnerabilidades e pentesting. Faço questão de me manter atualizado em todas as áreas e estou comprometido em aprender continuamente. Espero, um dia, trabalhar como profissional de cibersegurança e continuar a crescer, tanto a nível técnico como pessoal.',
-    en: 'Currently, I study cybersecurity in more depth, with special interest in CTI, vulnerability analysis and pentesting. I make a point of staying up to date in all areas and am committed to continuous learning. I hope to one day work as a cybersecurity professional and continue to grow, both technically and personally.'
+    pt: 'Atualmente, estudo cibersegurança, com interesse especial em OSINT e CTI, mas também em análise de vulnerabilidades, pentest e deteção de ameaças. Procuro a minha primeira oportunidade como profissional de cibersegurança, para continuar a crescer a nível técnico e pessoal.',
+    en: 'Currently, I study cybersecurity, with special interest in OSINT and CTI, but also in vulnerability analysis, pentesting and threat detection. I am looking for my first opportunity as a cybersecurity professional, to keep growing both technically and personally.'
   },
 
   // Experience
   'exp.title':       { pt: 'Experiência Profissional', en: 'Professional Experience' },
   'exp.0.date':    { pt: 'mar. de 2026 - jul. de 2026 (5 meses)', en: 'Mar 2026 - Jul 2026 (5 months)' },
-  'exp.0.title':   { pt: 'Estágio em CTI e Pentest', en: 'CTI & Pentest Internship' },
+  'exp.0.title':   { pt: 'Estágio em desenvolvimento de ferramentas, pentest e deteção de ameaças', en: 'Internship in Tool Development, Pentesting & Threat Detection' },
   'exp.0.company': { pt: 'FIN-PRISMA, Papiro, Lda. (Grupo EAD)', en: 'FIN-PRISMA, Papiro, Lda. (EAD Group)' },
   'exp.0.desc': {
-    pt: 'Estágio curricular com foco em segurança ofensiva e auditoria de aplicações web na FIN-PRISMA, Lda. Realização de auditorias de segurança em ambientes reais de produção e desenvolvimento, seguindo as metodologias OWASP WSTG e PTES, com identificação e documentação de múltiplas vulnerabilidades classificadas por severidade CVSS e mapeadas para o OWASP Top 10. Desenvolvimento de duas ferramentas independentes: Ph0enix, um framework modular de pentesting automatizado com mais de 30 módulos de teste, e NexusGuard Scanner, uma ferramenta de deteção de pacotes NPM e NuGet potencialmente comprometidos. Todas as atividades foram realizadas com autorização e seguindo princípios de responsible disclosure. O estágio será realizado no âmbito do CTeSP de Cibersegurança no ISTEC Porto.',
-    en: 'Curricular internship focused on offensive security and web application auditing at FIN-PRISMA, Lda. (EAD Group). Conducted security audits on real production and development environments following OWASP WSTG and PTES methodologies, identifying and documenting multiple vulnerabilities classified by CVSS severity and mapped to OWASP Top 10. Developed two independent tools: Ph0enix, a modular automated pentesting framework with over 30 test modules, and NexusGuard Scanner, a tool for detecting potentially compromised NPM and NuGet packages. All activities were performed with authorization and following responsible disclosure principles. The internship will be completed as part of the CTeSP in Cybersecurity at ISTEC Porto.'
+    pt: 'Estágio curricular em segurança ofensiva e deteção de ameaças, realizado no âmbito do CTeSP de Cibersegurança do ISTEC Porto. Realização de auditorias de segurança em ambientes reais de produção e desenvolvimento, seguindo as metodologias OWASP WSTG e PTES, com identificação e documentação de múltiplas vulnerabilidades classificadas por severidade CVSS e mapeadas para o OWASP Top 10. Desenvolvimento de duas ferramentas independentes: o Ph0enix, um framework modular de pentest automatizado com mais de 30 módulos de teste, e o NexusGuard Scanner, uma ferramenta de deteção de pacotes NPM e NuGet potencialmente comprometidos. Conceção e implementação de um ecossistema de honeypots (SSH, Telnet, serviços web e bases de dados falsos e um NAS simulado) com um pipeline de recolha, processamento e indexação de logs, dashboards visuais e alertas em tempo real por email. Todas as atividades foram realizadas com autorização e seguindo princípios de responsible disclosure.',
+    en: 'Curricular internship in offensive security and threat detection, carried out as part of the CTeSP in Cybersecurity at ISTEC Porto. Conducted security audits on real production and development environments following OWASP WSTG and PTES methodologies, identifying and documenting multiple vulnerabilities classified by CVSS severity and mapped to the OWASP Top 10. Developed two independent tools: Ph0enix, a modular automated pentesting framework with over 30 test modules, and NexusGuard Scanner, a tool for detecting potentially compromised NPM and NuGet packages. Designed and implemented a honeypot ecosystem (fake SSH, Telnet, web services and databases, and a simulated NAS) with a log collection, processing and indexing pipeline, visual dashboards and real-time email alerts. All activities were performed with authorization and following responsible disclosure principles.'
 },
-  'exp.1.date':      { pt: '2024 (3 meses)', en: '2024 (3 months)' },
+  'exp.1.date':      { pt: 'abr. de 2024 - jul. de 2024', en: 'Apr 2024 - Jul 2024' },
   'exp.1.title':     { pt: 'Estágio em desenvolvimento de software e base de dados', en: 'Software Development & Database Internship' },
   'exp.1.company': { pt: 'Mindforge Tech Solutions, Lda', en: 'Mindforge Tech Solutions, Lda' },
   'exp.1.desc': {
     pt: 'Desenvolvimento de uma plataforma web para gestão hospitalar, focando na criação e estruturação de bases de dados para armazenamento de informação clínica. Esta experiência proporcionou uma compreensão valiosa sobre a sensibilidade dos dados de saúde e a importância da sua proteção, despertando o interesse pelas questões de privacidade e segurança de dados. O contacto com sistemas que lidam com informação crítica reforçou a necessidade de implementar medidas de proteção adequadas, conhecimento fundamental para a área de cibersegurança. Estágio realizado no âmbito da formação na Escola Profissional de Valongo.',
     en: 'Development of a web platform for hospital management, focusing on creating and structuring databases for clinical information storage. This experience provided valuable understanding of health data sensitivity and the importance of its protection, sparking interest in data privacy and security. Working with systems handling critical information reinforced the need to implement adequate protection measures — fundamental knowledge for the cybersecurity field. Internship completed as part of training at Escola Profissional de Valongo.'
   },
-  'exp.2.date':      { pt: '2023 (1 mês)', en: '2023 (1 month)' },
+  'exp.2.date':      { pt: 'jul. de 2023 (1 mês)', en: 'Jul 2023 (1 month)' },
   'exp.2.title':     { pt: 'Estágio em desenvolvimento de software', en: 'Software Development Internship' },
   'exp.2.company': { pt: 'Mobnor', en: 'Mobnor' },
   'exp.2.desc': {
@@ -83,7 +83,7 @@ const translations = {
   },
 
   // Education
-  'edu.title':       { pt: 'Formação Acadêmica', en: 'Education' },
+  'edu.title':       { pt: 'Formação Académica', en: 'Education' },
   'edu.0.date':      { pt: '2026 - Atualidade', en: '2026 - Present' },
   'edu.0.title':     { pt: 'Licenciatura em Engenharia Informática', en: 'Bachelor\'s Degree in Computer Engineering' },
   'edu.0.company':   { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
@@ -95,8 +95,8 @@ const translations = {
   'edu.1.title':     { pt: 'CTeSP de Cibersegurança', en: 'CTeSP in Cybersecurity' },
   'edu.1.company':   { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
   'edu.1.desc': {
-    pt: 'Curso Técnico Superior Profissional especializado em cibersegurança, abordando os fundamentos teóricos e práticos da proteção de sistemas informáticos. O programa inclui módulos de segurança de redes, análise de vulnerabilidades, gestão de incidentes de segurança, criptografia aplicada e conformidade com regulamentações. Esta formação está a proporcionar competências específicas e atualizadas para enfrentar os desafios modernos da cibersegurança empresarial.',
-    en: 'Professional Higher Technical Course specialized in cybersecurity, covering theoretical and practical fundamentals of computer systems protection. The program includes modules on network security, vulnerability analysis, security incident management, applied cryptography and compliance with regulations. This training is providing specific, up-to-date skills to face modern enterprise cybersecurity challenges.'
+    pt: 'Curso Técnico Superior Profissional especializado em cibersegurança, abordando os fundamentos teóricos e práticos da proteção de sistemas informáticos. O programa inclui módulos de segurança de redes, análise de vulnerabilidades, gestão de incidentes de segurança, criptografia aplicada e conformidade com regulamentações. Esta formação desenvolveu competências específicas e atualizadas para enfrentar os desafios modernos da cibersegurança empresarial.',
+    en: 'Professional Higher Technical Course specialized in cybersecurity, covering theoretical and practical fundamentals of computer systems protection. The program includes modules on network security, vulnerability analysis, security incident management, applied cryptography and compliance with regulations. This training developed specific, up-to-date skills to face modern enterprise cybersecurity challenges.'
   },
   'edu.2.date':      { pt: '2021 - 2024', en: '2021 - 2024' },
   'edu.2.title':     { pt: 'Curso Profissional de Técnico de Gestão e Programação de Sistemas Informáticos', en: 'Professional Course in IT Systems Management & Programming' },
@@ -119,25 +119,25 @@ const translations = {
   'acad.1.title':    { pt: 'Bootcamp de Seleção Final do CSCPT 2026', en: 'CSCPT 2026 Final Selection Bootcamp' },
   'acad.1.company':  { pt: 'Cybersecurity Challenge PT - Centro Nacional de Cibersegurança (CNCS)', en: 'Cybersecurity Challenge PT - Centro Nacional de Cibersegurança (CNCS)' },
   'acad.1.desc': {
-    pt: 'Participei na fase final de seleção nacional do Cybersecurity Challenge PT (CSCPT) 2026, um programa nacional de identificação e desenvolvimento de talento em cibersegurança, promovido pelo Centro Nacional de Cibersegurança (CNCS), que tem como objetivo selecionar e preparar representantes nacionais para competições internacionais da área. O bootcamp de seleção final decorreu de 17 a 20 de julho de 2026, em Rio Maior, e reuniu 30 participantes selecionados após meses de treino e uma exigente fase de qualificação. No primeiro dia de competição participámos na plataforma internacional OMNI CTF, uma competição de cibersegurança no formato Capture the Flag (CTF), onde resolvi desafios de várias categorias ao lado de 786 concorrentes de todo o mundo, uma experiência muito enriquecedora a nível técnico e pessoal.',
-    en: 'I took part in the final national selection phase of the Cybersecurity Challenge PT (CSCPT) 2026, a national program for identifying and developing cybersecurity talent, promoted by the Portuguese National Cybersecurity Centre (CNCS), which aims to select and prepare national representatives for international competitions in the field. The final selection bootcamp took place from 17 to 20 July 2026, in Rio Maior, and brought together 30 participants selected after months of training and a demanding qualification phase. On the first day of competition, we took part in the international OMNI CTF platform, a cybersecurity competition in Capture the Flag (CTF) format, where I solved challenges across several categories alongside 786 competitors from all over the world, a very enriching experience, both technically and personally.'
-  },
+    pt: 'Participei na fase final de seleção nacional do Cybersecurity Challenge PT (CSCPT) 2026, um programa nacional de identificação e desenvolvimento de talento em cibersegurança, promovido pelo Centro Nacional de Cibersegurança (CNCS), que tem como objetivo selecionar e preparar representantes nacionais para competições internacionais da área. O bootcamp decorreu de 17 a 20 de julho de 2026, em Rio Maior, e reuniu 30 participantes selecionados a nível nacional, após o 1.º lugar na fase de formação online (236 participantes) e o 13.º lugar na CTF de seleção. No primeiro dia participámos na plataforma internacional OMNI CTF, onde obtive a melhor classificação portuguesa entre 786 concorrentes de todo o mundo, com destaque em OSINT (203.º lugar global, 186.º na divisão e 5 flags capturadas). No segundo dia fiquei em 5.º lugar na CTF interna do bootcamp, nas categorias de Forense e Reverse Engineering.',
+    en: 'I took part in the final national selection phase of the Cybersecurity Challenge PT (CSCPT) 2026, a national program for identifying and developing cybersecurity talent, promoted by the Portuguese National Cybersecurity Centre (CNCS), which aims to select and prepare national representatives for international competitions in the field. The bootcamp took place from 17 to 20 July 2026, in Rio Maior, and brought together 30 participants selected nationally, after 1st place in the online training phase (236 participants) and 13th place in the selection CTF. On the first day we took part in the international OMNI CTF platform, where I achieved the best Portuguese ranking among 786 competitors from around the world, standing out in OSINT (203rd globally, 186th in the division and 5 flags captured). On the second day I finished 5th in the bootcamp\'s internal CTF,     in the Forensics and Reverse Engineering categories.'
+      },
   'acad.2.date':     { pt: 'Julho 2025', en: 'July 2025' },
   'acad.2.title':    { pt: 'Participação na Joteca', en: 'Joteca Participation' },
   'acad.2.company':  { pt: 'Instituto Superior de Tecnologias Avançadas do Porto', en: 'Instituto Superior de Tecnologias Avançadas do Porto' },
   'acad.2.desc': {
-    pt: 'A Joteca foi uma organização académica do ISTEC no Porto, onde apresentei o projeto EyeWeb para representantes de empresas e outras instituições de ensino superior. Esta experiência desenvolveu competências de comunicação, trabalho em equipa, e exposição técnica em ambiente profissional, além de fortalecer o interesse por acessibilidade digital e segurança na web.',
-    en: 'Joteca was an academic organization at ISTEC Porto, where I presented the EyeWeb project to representatives of companies and other higher education institutions. This experience developed communication skills, teamwork, and technical presentation in a professional environment, while strengthening interest in digital accessibility and web security.'
+    pt: 'A Joteca foi uma organização académica do ISTEC no Porto, onde apresentei o projeto EyeWeb para representantes de empresas e outras instituições de ensino superior. Esta experiência desenvolveu competências de comunicação, trabalho em equipa, e exposição técnica em ambiente profissional, além de fortalecer o interesse pela privacidade e proteção de dados.',
+    en: 'Joteca was an academic organization at ISTEC Porto, where I presented the EyeWeb project to representatives of companies and other higher education institutions. This experience developed communication skills, teamwork, and technical presentation in a professional environment, while strengthening interest in privacy and data protection.'
   },
 
   // Skills section
   'skills.title':    { pt: 'Competências Técnicas', en: 'Technical Skills' },
   'skills.areas':    { pt: 'Áreas de Atuação', en: 'Focus Areas' },
   'skills.langs':    { pt: 'Linguagens de Programação e Scripting', en: 'Programming & Scripting Languages' },
-  'skills.db':       { pt: 'Banco de Dados', en: 'Databases' },
+  'skills.db':       { pt: 'Bases de Dados', en: 'Databases' },
   'skills.dataformats': { pt: 'Linguagens e Formatos de Dados', en: 'Data Languages & Formats' },
   'skills.pentest':  { pt: 'Ferramentas de Pentest', en: 'Pentest Tools' },
-  'skills.forensics':{ pt: 'Ferramentas Forense', en: 'Forensics Tools' },
+  'skills.forensics':{ pt: 'Ferramentas de Forense Digital', en: 'Digital Forensics Tools' },
   'skills.os':       { pt: 'Sistemas Operativos', en: 'Operating Systems' },
   'skills.env':      { pt: 'Ambientes de Desenvolvimento e Testes', en: 'Development & Testing Environments' },
   'skills.tools':    { pt: 'Ferramentas de Produtividade', en: 'Productivity Tools' },
@@ -203,8 +203,8 @@ const translations = {
 
   // Contact
   'contact.title':   { pt: 'Contacto', en: 'Contact' },
-  'contact.name':    { pt: 'Nome', en: 'Name' },
-  'contact.email':   { pt: 'Seu Email', en: 'Your Email' },
+  'contact.name':    { pt: 'O seu nome', en: 'Name' },
+  'contact.email':   { pt: 'O seu Email', en: 'Your Email' },
   'contact.subject': { pt: 'Assunto', en: 'Subject' },
   'contact.message': { pt: 'Mensagem', en: 'Message' },
   'contact.send':    { pt: 'Enviar Mensagem', en: 'Send Message' },
@@ -217,12 +217,12 @@ const translations = {
   'contact.opt6':    { pt: 'Pergunta Técnica', en: 'Technical Question' },
   'contact.opt7':    { pt: 'Feedback sobre Portfólio', en: 'Portfolio Feedback' },
   'contact.opt8':    { pt: 'Outro Assunto', en: 'Other Subject' },
-  'contact.phone':   { pt: 'Número de telemóvel', en: 'Phone number' },
+  'contact.phone':   { pt: 'Disponível a pedido', en: 'Available on request' },
   'contact.phone.title': { pt: 'Telefone', en: 'Phone' },
 
   // Popup messages
-  'popup.phone':     { pt: 'Para mais informações, entre em contacto por email / Linkdin', en: 'For more information, please contact via email / LinkedIn' },
-  'popup.ctespcourse': { pt: 'O Curso ainda não foi concluído', en: 'The course has not yet been completed' },
+  'popup.phone':     { pt: 'Para obter o contacto telefónico, envie-me um email ou uma mensagem no LinkedIn.', en: 'To get my phone contact, send me an email or a message on LinkedIn.' },
+  'popup.ctespcourse': { pt: 'O certificado do CTeSP ainda não está disponível.', en: 'The CTeSP certificate is not yet available.' },
 
   // Footer
   'footer.rights':   { pt: 'Todos os direitos reservados.', en: 'All rights reserved.' },
