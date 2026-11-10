@@ -30,9 +30,9 @@ const translations = {
   'nav.contact':     { pt: 'Contacto',     en: 'Contact' },
 
   // Hero
-  'hero.subtitle':      { pt: 'Estudante em Cibersegurança', en: 'Cybersecurity Student' },
+  'hero.subtitle':      { pt: 'Estudante de Cibersegurança', en: 'Cybersecurity Student' },
   'hero.description':   {
-    pt: 'Estudante de cibersegurança, focado em OSINT e CTI e com interesse em SOC, análise de vulnerabilidades e pentest. Desenvolvo ferramentas de segurança, e participo em competições CTF nacionais e internacionais.',
+    pt: 'Estudante de cibersegurança, focado em OSINT e CTI e com interesse em SOC, análise de vulnerabilidades e pentest. Desenvolvo ferramentas de segurança e participo em competições CTF nacionais e internacionais.',
     en: 'Cybersecurity student focused on OSINT and CTI, with interest in SOC, vulnerability analysis and pentesting. I develop security tools and take part in national and international CTF competitions.'
   },
   'hero.contact':    { pt: 'Contactar',    en: 'Contact' },
@@ -67,7 +67,7 @@ const translations = {
     pt: 'Estágio curricular em segurança ofensiva e deteção de ameaças, realizado no âmbito do CTeSP de Cibersegurança do ISTEC Porto. Realização de auditorias de segurança em ambientes reais de produção e desenvolvimento, seguindo as metodologias OWASP WSTG e PTES, com identificação e documentação de múltiplas vulnerabilidades classificadas por severidade CVSS e mapeadas para o OWASP Top 10. Desenvolvimento de duas ferramentas independentes: o Ph0enix, um framework modular de pentest automatizado com mais de 30 módulos de teste, e o NexusGuard Scanner, uma ferramenta de deteção de pacotes NPM e NuGet potencialmente comprometidos. Conceção e implementação de um ecossistema de honeypots (SSH, Telnet, serviços web e bases de dados falsos e um NAS simulado) com um pipeline de recolha, processamento e indexação de logs, dashboards visuais e alertas em tempo real por email. Todas as atividades foram realizadas com autorização e seguindo princípios de responsible disclosure.',
     en: 'Curricular internship in offensive security and threat detection, carried out as part of the CTeSP in Cybersecurity at ISTEC Porto. Conducted security audits on real production and development environments following OWASP WSTG and PTES methodologies, identifying and documenting multiple vulnerabilities classified by CVSS severity and mapped to the OWASP Top 10. Developed two independent tools: Ph0enix, a modular automated pentesting framework with over 30 test modules, and NexusGuard Scanner, a tool for detecting potentially compromised NPM and NuGet packages. Designed and implemented a honeypot ecosystem (fake SSH, Telnet, web services and databases, and a simulated NAS) with a log collection, processing and indexing pipeline, visual dashboards and real-time email alerts. All activities were performed with authorization and following responsible disclosure principles.'
 },
-  'exp.1.date':      { pt: 'abr. de 2024 - jul. de 2024', en: 'Apr 2024 - Jul 2024' },
+  'exp.1.date':      { pt: 'abr. de 2024 - jul. de 2024 (4 meses)', en: 'Apr 2024 - Jul 2024 (4 months)' },
   'exp.1.title':     { pt: 'Estágio em desenvolvimento de software e base de dados', en: 'Software Development & Database Internship' },
   'exp.1.company': { pt: 'Mindforge Tech Solutions, Lda', en: 'Mindforge Tech Solutions, Lda' },
   'exp.1.desc': {
@@ -204,7 +204,7 @@ const translations = {
   // Contact
   'contact.title':   { pt: 'Contacto', en: 'Contact' },
   'contact.name':    { pt: 'O seu nome', en: 'Name' },
-  'contact.email':   { pt: 'O seu Email', en: 'Your Email' },
+  'contact.email':   { pt: 'O seu email', en: 'Your Email' },
   'contact.subject': { pt: 'Assunto', en: 'Subject' },
   'contact.message': { pt: 'Mensagem', en: 'Message' },
   'contact.send':    { pt: 'Enviar Mensagem', en: 'Send Message' },
