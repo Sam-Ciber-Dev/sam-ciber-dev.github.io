@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T06:03:08.720Z",
+  "lastUpdated": "2026-11-11T15:15:39.469Z",
   "projects": {
     "offensive": [],
     "defensive": [
@@ -78,6 +78,65 @@
     "reports": [
       {
         "title": {
+          "pt": "Bootcamp CSCPT 2026",
+          "en": "Bootcamp CSCPT 2026"
+        },
+        "description": {
+          "pt": "Relatório da minha participação no bootcamp de seleção final do Cybersecurity Challenge PT 2026, em Rio Maior, onde fui um dos 30 finalistas nacionais. Documenta o percurso desde a fase de treino online (1.º lugar entre 236 participantes) e a CTF de seleção (13.º lugar) até à competição presencial, incluindo a melhor classificação portuguesa na OMNI CTF e o 5.º lugar na CTF interna, com desafios de Crypto, Web, OSINT, Forensics e Reverse Engineering, além de uma análise crítica da experiência e recomendações para futuras edições.",
+          "en": "Report on my participation in the final selection bootcamp of the Cybersecurity Challenge PT 2026, held in Rio Maior, where I was one of the 30 national finalists. It documents the journey from the online training phase (1st of 236 participants) and the qualification CTF (13th) to the on-site competition, including the best Portuguese result at the OMNI CTF and 5th place in the internal CTF, covering Crypto, Web, OSINT, Forensics and Reverse Engineering challenges, along with a critical analysis of the experience and recommendations for future editions."
+        },
+        "technologies": [
+          "capture-the-flag",
+          "cscpt",
+          "ctf",
+          "cybersecurity",
+          "cybersecurity-challenge-pt",
+          "infosec",
+          "osint"
+        ],
+        "icon": "fas fa-shield-halved",
+        "image": "data/images/Bootcamp-CSCPT-2026.png?v=1794409992000",
+        "links": {
+          "github": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026",
+          "report": {
+            "pt": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026/blob/main/docs/CSCPT_Bootcamp_2026_Relatório_PT.pdf",
+            "en": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026/blob/main/docs/CSCPT_Bootcamp_2026_Report_ENG.pdf"
+          }
+        },
+        "order": 1,
+        "repo": "Bootcamp-CSCPT-2026",
+        "updatedAt": "2026-11-11T15:13:12Z"
+      },
+      {
+        "title": {
+          "pt": "Avaliação de Vulnerabilidades ISTEC Porto",
+          "en": "Vulnerability Assessment ISTEC Porto"
+        },
+        "description": {
+          "pt": "Avaliação de vulnerabilidades externa, autorizada e não intrusiva à infraestrutura pública do ISTEC Porto, realizada em conjunto com uma colega no âmbito do CTeSP em Cibersegurança. Cinco vulnerabilidades confirmadas e corrigidas através de divulgação responsável, com reconhecimento formal da instituição. O relatório público omite provas de conceito e procedimentos de reprodução.",
+          "en": "Authorized, non-intrusive external vulnerability assessment of ISTEC Porto’s public infrastructure, carried out with a classmate as part of the CTeSP in Cybersecurity. Five vulnerabilities confirmed and remediated via responsible disclosure, with formal recognition from the institution. The public report omits proof-of-concept material and reproduction procedures."
+        },
+        "technologies": [
+          "Nmap",
+          "Termux",
+          "Responsible Disclosure",
+          "Black-Box"
+        ],
+        "icon": "fas fa-file-alt",
+        "image": "data/images/istec-vulnerability-assessment.png?v=1794409826000",
+        "links": {
+          "github": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment",
+          "report": {
+            "pt": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment/blob/main/docs/Ph0enix_ISTEC_Avaliacao_de_Vulnerabilidades_PT.pdf",
+            "en": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment/blob/main/docs/Ph0enix_ISTEC_Vulnerability_Assessment_EN.pdf"
+          }
+        },
+        "order": 1,
+        "repo": "istec-vulnerability-assessment",
+        "updatedAt": "2026-11-11T15:10:26Z"
+      },
+      {
+        "title": {
           "pt": "CTF ISTEC Porto 2026",
           "en": "CTF ISTEC Porto 2026"
         },
@@ -107,65 +166,6 @@
         "order": 1,
         "repo": "CTF-ISTEC-2026",
         "updatedAt": "2026-11-11T00:33:13Z"
-      },
-      {
-        "title": {
-          "pt": "Bootcamp CSCPT 2026",
-          "en": "Bootcamp CSCPT 2026"
-        },
-        "description": {
-          "pt": "Relatório da minha participação no bootcamp de seleção final do Cybersecurity Challenge PT 2026, em Rio Maior. Documenta o percurso desde a fase de treino online até à competição presencial, incluindo os resultados obtidos no OMNI CTFe no CTF interno, com desafios de Crypto, Web, OSINT, Forensics e Reverse Engineering, além de uma análise crítica da experiência e recomendações para futuras edições.",
-          "en": "Report on my participation in the final selection bootcamp of the Cybersecurity Challenge PT 2026, held in Rio Maior. It documents the journey from online training to the on-site competition, including my results in the OMNI CTF and the internal CTF, covering Crypto, Web, OSINT, Forensics, and Reverse Engineering challenges, along with a critical analysis of the experience and recommendations for future editions."
-        },
-        "technologies": [
-          "capture-the-flag",
-          "cscpt",
-          "ctf",
-          "cybersecurity",
-          "cybersecurity-challenge-pt",
-          "infosec",
-          "osint"
-        ],
-        "icon": "fas fa-shield-halved",
-        "image": "data/images/Bootcamp-CSCPT-2026.png?v=1791860852000",
-        "links": {
-          "github": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026",
-          "report": {
-            "pt": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026/blob/main/docs/CSCPT_Bootcamp_2026_Relatório_PT.pdf",
-            "en": "https://github.com/Sam-Ciber-Dev/Bootcamp-CSCPT-2026/blob/main/docs/CSCPT_Bootcamp_2026_Report_ENG.pdf"
-          }
-        },
-        "order": 1,
-        "repo": "Bootcamp-CSCPT-2026",
-        "updatedAt": "2026-10-13T03:07:32Z"
-      },
-      {
-        "title": {
-          "pt": "Avaliação de Vulnerabilidades ISTEC Porto",
-          "en": "Vulnerability Assessment ISTEC Porto"
-        },
-        "description": {
-          "pt": "Avaliação de vulnerabilidades externas e autorizadas ao ISTEC Porto. Cinco vulnerabilidades confirmadas e remediadas através de divulgação responsável.",
-          "en": "Authorized external vulnerability assessment of ISTEC Porto. Five vulnerabilities confirmed and remediated via responsible disclosure."
-        },
-        "technologies": [
-          "Nmap",
-          "Termux",
-          "Responsible Disclosure",
-          "Black-Box"
-        ],
-        "icon": "fas fa-file-alt",
-        "image": "data/images/istec-vulnerability-assessment.png?v=1780313798000",
-        "links": {
-          "github": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment",
-          "report": {
-            "pt": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment/blob/main/docs/Ph0enix_ISTEC_Avaliacao_de_Vulnerabilidades_PT.pdf",
-            "en": "https://github.com/Sam-Ciber-Dev/istec-vulnerability-assessment/blob/main/docs/Ph0enix_ISTEC_Vulnerability_Assessment_EN.pdf"
-          }
-        },
-        "order": 1,
-        "repo": "istec-vulnerability-assessment",
-        "updatedAt": "2026-06-01T11:36:38Z"
       }
     ],
     "ai": [],
